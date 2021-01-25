@@ -33,6 +33,7 @@ namespace SEBlueprintCalc
             {
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
+                label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
                 Dictionary<string, int> bp = readXMLBlueprint(bpFile);
 
 
