@@ -36,6 +36,10 @@ namespace SEBlueprintCalc
 
                 dataGridView1.DataSource = getComponents(bp).ToList();
                 dataGridView2.DataSource = bp.ToList();
+                dataGridView1.Columns[0].HeaderText = "Component name";
+                dataGridView2.Columns[0].HeaderText = "Block name";
+                dataGridView1.Columns[0].Width = 175;
+                dataGridView2.Columns[0].Width = 175;
             }
             catch (Exception ex)
             {
@@ -128,40 +132,56 @@ namespace SEBlueprintCalc
         public void UpdateBlocksData()
         {
             Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
-            string path = readGameDir() + "\\Content\\Data\\CubeBlocks\\";
 
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor_2.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Automation.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Communications.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Control.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack2.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Doors.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Economy.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Energy.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Extras.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Frostbite.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Gravity.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Interiors.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_LCDPanels.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Lights.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Logistics.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Mechanical.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Medical.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Production.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_ScrapRacePack.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_SparksOfTheFuturePack.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Symbols.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Thrusters.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Tools.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Utility.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Weapons.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Wheels.sbc"), blockDict);
-            readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
+            try
+            {
+                string path = readGameDir() + "\\Content\\Data\\CubeBlocks\\";
 
-            string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(@"../../Data/Blocks.json", output);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor_2.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Automation.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Communications.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Control.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack2.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Doors.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Economy.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Energy.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Extras.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Frostbite.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Gravity.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Interiors.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_LCDPanels.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Lights.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Logistics.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Mechanical.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Medical.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Production.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_ScrapRacePack.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_SparksOfTheFuturePack.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Symbols.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Thrusters.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Tools.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Utility.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Weapons.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Wheels.sbc"), blockDict);
+                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
+
+                string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(@"../../Data/Blocks.json", output);
+                MessageBox.Show("Blocks info updated");
+            }
+            catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show("Couldnt update blocks info. Make sure your game directory setting is correct.");
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "NullDirectory")
+                {
+                    MessageBox.Show("Set space engineers game directory location");
+                }
+            }
         }
 
         public Dictionary<string, Dictionary<string, int>> readBlocksData()
@@ -199,6 +219,16 @@ namespace SEBlueprintCalc
                 throw new Exception("NullDirectory");
             }
             return s;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+                UpdateBlocksData();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("SEBlueprintCalc v1 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc");
         }
     }
 }
