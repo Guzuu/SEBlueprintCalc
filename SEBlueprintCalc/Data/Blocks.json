@@ -1,0 +1,2990 @@
+{
+  "LargeBlockArmorBlock": {
+    "SteelPlate": 25
+  },
+  "LargeBlockArmorSlope": {
+    "SteelPlate": 13
+  },
+  "LargeBlockArmorCorner": {
+    "SteelPlate": 4
+  },
+  "LargeBlockArmorCornerInv": {
+    "SteelPlate": 21
+  },
+  "LargeRoundArmor_Slope": {
+    "SteelPlate": 13
+  },
+  "LargeRoundArmor_Corner": {
+    "SteelPlate": 4
+  },
+  "LargeRoundArmor_CornerInv": {
+    "SteelPlate": 21
+  },
+  "LargeHeavyBlockArmorBlock": {
+    "SteelPlate": 150,
+    "MetalGrid": 50
+  },
+  "LargeHeavyBlockArmorSlope": {
+    "SteelPlate": 75,
+    "MetalGrid": 25
+  },
+  "LargeHeavyBlockArmorCorner": {
+    "SteelPlate": 25,
+    "MetalGrid": 10
+  },
+  "LargeHeavyBlockArmorCornerInv": {
+    "SteelPlate": 125,
+    "MetalGrid": 50
+  },
+  "SmallBlockArmorBlock": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorSlope": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorCorner": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorCornerInv": {
+    "SteelPlate": 1
+  },
+  "SmallHeavyBlockArmorBlock": {
+    "SteelPlate": 5,
+    "MetalGrid": 2
+  },
+  "SmallHeavyBlockArmorSlope": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorCorner": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorCornerInv": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "LargeHalfArmorBlock": {
+    "SteelPlate": 12
+  },
+  "LargeHeavyHalfArmorBlock": {
+    "SteelPlate": 75,
+    "MetalGrid": 25
+  },
+  "LargeHalfSlopeArmorBlock": {
+    "SteelPlate": 7
+  },
+  "LargeHeavyHalfSlopeArmorBlock": {
+    "SteelPlate": 45,
+    "MetalGrid": 15
+  },
+  "HalfArmorBlock": {
+    "SteelPlate": 1
+  },
+  "HeavyHalfArmorBlock": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "HalfSlopeArmorBlock": {
+    "SteelPlate": 1
+  },
+  "HeavyHalfSlopeArmorBlock": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorRoundSlope": {
+    "SteelPlate": 13
+  },
+  "LargeBlockArmorRoundCorner": {
+    "SteelPlate": 4
+  },
+  "LargeBlockArmorRoundCornerInv": {
+    "SteelPlate": 21
+  },
+  "LargeHeavyBlockArmorRoundSlope": {
+    "SteelPlate": 130,
+    "MetalGrid": 50
+  },
+  "LargeHeavyBlockArmorRoundCorner": {
+    "SteelPlate": 125,
+    "MetalGrid": 40
+  },
+  "LargeHeavyBlockArmorRoundCornerInv": {
+    "SteelPlate": 140,
+    "MetalGrid": 50
+  },
+  "SmallBlockArmorRoundSlope": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorRoundCorner": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorRoundCornerInv": {
+    "SteelPlate": 1
+  },
+  "SmallHeavyBlockArmorRoundSlope": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorRoundCorner": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorRoundCornerInv": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorSlope2Base": {
+    "SteelPlate": 19
+  },
+  "LargeBlockArmorSlope2Tip": {
+    "SteelPlate": 7
+  },
+  "LargeBlockArmorCorner2Base": {
+    "SteelPlate": 10
+  },
+  "LargeBlockArmorCorner2Tip": {
+    "SteelPlate": 4
+  },
+  "LargeBlockArmorInvCorner2Base": {
+    "SteelPlate": 22
+  },
+  "LargeBlockArmorInvCorner2Tip": {
+    "SteelPlate": 16
+  },
+  "LargeHeavyBlockArmorSlope2Base": {
+    "SteelPlate": 112,
+    "MetalGrid": 45
+  },
+  "LargeHeavyBlockArmorSlope2Tip": {
+    "SteelPlate": 35,
+    "MetalGrid": 6
+  },
+  "LargeHeavyBlockArmorCorner2Base": {
+    "SteelPlate": 55,
+    "MetalGrid": 15
+  },
+  "LargeHeavyBlockArmorCorner2Tip": {
+    "SteelPlate": 19,
+    "MetalGrid": 6
+  },
+  "LargeHeavyBlockArmorInvCorner2Base": {
+    "SteelPlate": 133,
+    "MetalGrid": 45
+  },
+  "LargeHeavyBlockArmorInvCorner2Tip": {
+    "SteelPlate": 94,
+    "MetalGrid": 25
+  },
+  "SmallBlockArmorSlope2Base": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorSlope2Tip": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorCorner2Base": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorCorner2Tip": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorInvCorner2Base": {
+    "SteelPlate": 1
+  },
+  "SmallBlockArmorInvCorner2Tip": {
+    "SteelPlate": 1
+  },
+  "SmallHeavyBlockArmorSlope2Base": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorSlope2Tip": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorCorner2Base": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorCorner2Tip": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorInvCorner2Base": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "SmallHeavyBlockArmorInvCorner2Tip": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorCornerSquare": {
+    "SteelPlate": 7
+  },
+  "SmallBlockArmorCornerSquare": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorCornerSquare": {
+    "SteelPlate": 40,
+    "MetalGrid": 15
+  },
+  "SmallBlockHeavyArmorCornerSquare": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorCornerSquareInverted": {
+    "SteelPlate": 19
+  },
+  "SmallBlockArmorCornerSquareInverted": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorCornerSquareInverted": {
+    "SteelPlate": 112,
+    "MetalGrid": 40
+  },
+  "SmallBlockHeavyArmorCornerSquareInverted": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfCorner": {
+    "SteelPlate": 6
+  },
+  "SmallBlockArmorHalfCorner": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfCorner": {
+    "SteelPlate": 35,
+    "MetalGrid": 12
+  },
+  "SmallBlockHeavyArmorHalfCorner": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfSlopeCorner": {
+    "SteelPlate": 3
+  },
+  "SmallBlockArmorHalfSlopeCorner": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfSlopeCorner": {
+    "SteelPlate": 12,
+    "MetalGrid": 4
+  },
+  "SmallBlockHeavyArmorHalfSlopeCorner": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfSlopeCornerInverted": {
+    "SteelPlate": 23
+  },
+  "SmallBlockArmorHalfSlopeCornerInverted": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfSlopeCornerInverted": {
+    "SteelPlate": 139,
+    "MetalGrid": 45
+  },
+  "SmallBlockHeavyArmorHalfSlopeCornerInverted": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfSlopedCorner": {
+    "SteelPlate": 11
+  },
+  "SmallBlockArmorHalfSlopedCorner": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfSlopedCorner": {
+    "SteelPlate": 45,
+    "MetalGrid": 5
+  },
+  "SmallBlockHeavyArmorHalfSlopedCorner": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfSlopedCornerBase": {
+    "SteelPlate": 11
+  },
+  "SmallBlockArmorHalfSlopedCornerBase": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfSlopedCornerBase": {
+    "SteelPlate": 45,
+    "MetalGrid": 15
+  },
+  "SmallBlockHeavyArmorHalfSlopedCornerBase": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorHalfSlopeInverted": {
+    "SteelPlate": 22
+  },
+  "SmallBlockArmorHalfSlopeInverted": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorHalfSlopeInverted": {
+    "SteelPlate": 133,
+    "MetalGrid": 45
+  },
+  "SmallBlockHeavyArmorHalfSlopeInverted": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorSlopedCorner": {
+    "SteelPlate": 13
+  },
+  "SmallBlockArmorSlopedCorner": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorSlopedCorner": {
+    "SteelPlate": 75,
+    "MetalGrid": 25
+  },
+  "SmallBlockHeavyArmorSlopedCorner": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorSlopedCornerBase": {
+    "SteelPlate": 20
+  },
+  "SmallBlockArmorSlopedCornerBase": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorSlopedCornerBase": {
+    "SteelPlate": 127,
+    "MetalGrid": 40
+  },
+  "SmallBlockHeavyArmorSlopedCornerBase": {
+    "SteelPlate": 5,
+    "MetalGrid": 1
+  },
+  "LargeBlockArmorSlopedCornerTip": {
+    "SteelPlate": 5
+  },
+  "SmallBlockArmorSlopedCornerTip": {
+    "SteelPlate": 1
+  },
+  "LargeBlockHeavyArmorSlopedCornerTip": {
+    "SteelPlate": 4,
+    "MetalGrid": 1
+  },
+  "SmallBlockHeavyArmorSlopedCornerTip": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallProgrammableBlock": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "LargeTube": 2,
+    "Motor": 1,
+    "Display": 1,
+    "Computer": 2
+  },
+  "LargeProjector": {
+    "SteelPlate": 21,
+    "Construction": 4,
+    "LargeTube": 2,
+    "Motor": 1,
+    "Computer": 2
+  },
+  "SmallProjector": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "LargeTube": 2,
+    "Motor": 1,
+    "Computer": 2
+  },
+  "SmallBlockSensor": {
+    "InteriorPlate": 5,
+    "Construction": 5,
+    "Computer": 6,
+    "RadioCommunication": 4,
+    "Detector": 6,
+    "SteelPlate": 2
+  },
+  "LargeBlockSensor": {
+    "InteriorPlate": 5,
+    "Construction": 5,
+    "Computer": 6,
+    "RadioCommunication": 4,
+    "Detector": 6,
+    "SteelPlate": 2
+  },
+  "SmallBlockSoundBlock": {
+    "InteriorPlate": 4,
+    "Construction": 6,
+    "Computer": 3
+  },
+  "LargeBlockSoundBlock": {
+    "InteriorPlate": 4,
+    "Construction": 6,
+    "Computer": 3
+  },
+  "ButtonPanelLarge": {
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "Computer": 20
+  },
+  "ButtonPanelSmall": {
+    "InteriorPlate": 2,
+    "Construction": 2,
+    "Computer": 1
+  },
+  "TimerBlockLarge": {
+    "InteriorPlate": 6,
+    "Construction": 30,
+    "Computer": 5
+  },
+  "TimerBlockSmall": {
+    "InteriorPlate": 2,
+    "Construction": 3,
+    "Computer": 1
+  },
+  "LargeProgrammableBlock": {
+    "SteelPlate": 21,
+    "Construction": 4,
+    "LargeTube": 2,
+    "Motor": 1,
+    "Display": 1,
+    "Computer": 2
+  },
+  "LargeBlockRadioAntenna": {
+    "SteelPlate": 80,
+    "LargeTube": 40,
+    "SmallTube": 60,
+    "Construction": 30,
+    "Computer": 8,
+    "RadioCommunication": 40
+  },
+  "LargeBlockBeacon": {
+    "SteelPlate": 80,
+    "Construction": 30,
+    "LargeTube": 20,
+    "Computer": 10,
+    "RadioCommunication": 40
+  },
+  "SmallBlockBeacon": {
+    "SteelPlate": 2,
+    "Construction": 1,
+    "SmallTube": 1,
+    "Computer": 1,
+    "RadioCommunication": 4
+  },
+  "SmallBlockRadioAntenna": {
+    "SteelPlate": 1,
+    "SmallTube": 1,
+    "Construction": 2,
+    "Computer": 1,
+    "RadioCommunication": 4
+  },
+  "LargeBlockRemoteControl": {
+    "InteriorPlate": 10,
+    "Construction": 10,
+    "Motor": 1,
+    "Computer": 15
+  },
+  "SmallBlockRemoteControl": {
+    "InteriorPlate": 2,
+    "Construction": 1,
+    "Motor": 1,
+    "Computer": 1
+  },
+  "LargeBlockLaserAntenna": {
+    "SteelPlate": 50,
+    "Construction": 40,
+    "Motor": 16,
+    "Detector": 30,
+    "RadioCommunication": 20,
+    "Superconductor": 100,
+    "Computer": 50,
+    "BulletproofGlass": 4
+  },
+  "SmallBlockLaserAntenna": {
+    "SteelPlate": 10,
+    "SmallTube": 10,
+    "Construction": 10,
+    "Motor": 5,
+    "RadioCommunication": 5,
+    "Superconductor": 10,
+    "Computer": 30,
+    "BulletproofGlass": 2
+  },
+  "ControlPanel": {
+    "SteelPlate": 1,
+    "Construction": 1,
+    "Computer": 1,
+    "Display": 1
+  },
+  "SmallControlPanel": {
+    "SteelPlate": 1,
+    "Construction": 1,
+    "Computer": 1,
+    "Display": 1
+  },
+  "LargeBlockCockpit": {
+    "InteriorPlate": 20,
+    "Construction": 20,
+    "Motor": 2,
+    "Computer": 100,
+    "Display": 10
+  },
+  "LargeBlockCockpitSeat": {
+    "SteelPlate": 30,
+    "Construction": 20,
+    "Motor": 1,
+    "Display": 8,
+    "Computer": 100,
+    "BulletproofGlass": 60
+  },
+  "SmallBlockCockpit": {
+    "SteelPlate": 10,
+    "Construction": 10,
+    "Motor": 1,
+    "Display": 5,
+    "Computer": 15,
+    "BulletproofGlass": 30
+  },
+  "DBSmallBlockFighterCockpit": {
+    "Construction": 20,
+    "Motor": 1,
+    "SteelPlate": 20,
+    "MetalGrid": 10,
+    "InteriorPlate": 15,
+    "Display": 4,
+    "Computer": 20,
+    "BulletproofGlass": 40
+  },
+  "CockpitOpen": {
+    "InteriorPlate": 20,
+    "Construction": 20,
+    "Motor": 2,
+    "Computer": 100,
+    "Display": 4
+  },
+  "RoverCockpit": {
+    "InteriorPlate": 30,
+    "Construction": 25,
+    "Motor": 2,
+    "Computer": 20,
+    "Display": 4
+  },
+  "LargeBlockGyro": {
+    "SteelPlate": 600,
+    "Construction": 40,
+    "LargeTube": 4,
+    "MetalGrid": 50,
+    "Motor": 4,
+    "Computer": 5
+  },
+  "SmallBlockGyro": {
+    "SteelPlate": 25,
+    "Construction": 5,
+    "LargeTube": 1,
+    "Motor": 2,
+    "Computer": 3
+  },
+  "OpenCockpitSmall": {
+    "InteriorPlate": 20,
+    "Construction": 20,
+    "Motor": 1,
+    "Computer": 15,
+    "Display": 2
+  },
+  "OpenCockpitLarge": {
+    "InteriorPlate": 30,
+    "Construction": 30,
+    "Motor": 2,
+    "Computer": 100,
+    "Display": 6
+  },
+  "LargeBlockDesk": {
+    "InteriorPlate": 30,
+    "Construction": 30
+  },
+  "LargeBlockDeskCorner": {
+    "InteriorPlate": 20,
+    "Construction": 20
+  },
+  "LargeBlockDeskChairless": {
+    "InteriorPlate": 30,
+    "Construction": 30
+  },
+  "LargeBlockDeskChairlessCorner": {
+    "InteriorPlate": 20,
+    "Construction": 20
+  },
+  "LargeBlockKitchen": {
+    "InteriorPlate": 20,
+    "Construction": 30,
+    "LargeTube": 6,
+    "Motor": 6,
+    "BulletproofGlass": 4
+  },
+  "LargeBlockBed": {
+    "InteriorPlate": 30,
+    "Construction": 30,
+    "SmallTube": 8,
+    "BulletproofGlass": 10
+  },
+  "LargeBlockLockerRoom": {
+    "InteriorPlate": 30,
+    "Construction": 30,
+    "Display": 4,
+    "BulletproofGlass": 10
+  },
+  "LargeBlockLockerRoomCorner": {
+    "InteriorPlate": 25,
+    "Construction": 30,
+    "Display": 4,
+    "BulletproofGlass": 10
+  },
+  "LargeBlockPlanters": {
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "SmallTube": 8,
+    "BulletproofGlass": 8
+  },
+  "LargeBlockCouch": {
+    "InteriorPlate": 30,
+    "Construction": 30
+  },
+  "LargeBlockCouchCorner": {
+    "InteriorPlate": 35,
+    "Construction": 35
+  },
+  "LargeBlockLockers": {
+    "InteriorPlate": 20,
+    "Construction": 20,
+    "Display": 3,
+    "Computer": 2
+  },
+  "LargeBlockBathroomOpen": {
+    "InteriorPlate": 30,
+    "Construction": 30,
+    "SmallTube": 8,
+    "Motor": 4,
+    "LargeTube": 2
+  },
+  "LargeBlockBathroom": {
+    "InteriorPlate": 30,
+    "Construction": 40,
+    "SmallTube": 8,
+    "Motor": 4,
+    "LargeTube": 2
+  },
+  "LargeBlockToilet": {
+    "InteriorPlate": 10,
+    "Construction": 15,
+    "SmallTube": 2,
+    "Motor": 2,
+    "LargeTube": 1
+  },
+  "LargeBlockConsole": {
+    "InteriorPlate": 20,
+    "Construction": 30,
+    "Computer": 8,
+    "Display": 10
+  },
+  "SmallBlockCockpitIndustrial": {
+    "SteelPlate": 10,
+    "Construction": 20,
+    "MetalGrid": 10,
+    "Motor": 2,
+    "Display": 6,
+    "Computer": 20,
+    "BulletproofGlass": 60,
+    "SmallTube": 10
+  },
+  "LargeBlockCockpitIndustrial": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "MetalGrid": 15,
+    "Motor": 2,
+    "Display": 10,
+    "Computer": 60,
+    "BulletproofGlass": 80,
+    "SmallTube": 10
+  },
+  "FoodDispenser": {
+    "InteriorPlate": 20,
+    "Construction": 10,
+    "Motor": 4,
+    "Display": 10,
+    "Computer": 10
+  },
+  "Jukebox": {
+    "InteriorPlate": 15,
+    "Construction": 10,
+    "Computer": 4,
+    "Display": 4
+  },
+  "LabEquipment": {
+    "InteriorPlate": 15,
+    "Construction": 15,
+    "Motor": 1,
+    "BulletproofGlass": 4
+  },
+  "Shower": {
+    "InteriorPlate": 20,
+    "Construction": 20,
+    "SmallTube": 12,
+    "BulletproofGlass": 8
+  },
+  "WindowWall": {
+    "SteelPlate": 8,
+    "Construction": 10,
+    "BulletproofGlass": 10
+  },
+  "WindowWallLeft": {
+    "SteelPlate": 10,
+    "Construction": 10,
+    "BulletproofGlass": 8
+  },
+  "WindowWallRight": {
+    "SteelPlate": 10,
+    "Construction": 10,
+    "BulletproofGlass": 8
+  },
+  "MedicalStation": {
+    "InteriorPlate": 15,
+    "Construction": 15,
+    "Motor": 2,
+    "Medical": 1,
+    "Display": 2
+  },
+  "TransparentLCDLarge": {
+    "Construction": 8,
+    "Computer": 6,
+    "Display": 10,
+    "BulletproofGlass": 10
+  },
+  "TransparentLCDSmall": {
+    "Construction": 4,
+    "Computer": 4,
+    "Display": 3,
+    "BulletproofGlass": 1
+  },
+  "Catwalk": {
+    "Construction": 16,
+    "Girder": 4,
+    "SmallTube": 20
+  },
+  "CatwalkCorner": {
+    "Construction": 24,
+    "Girder": 4,
+    "SmallTube": 32
+  },
+  "CatwalkStraight": {
+    "Construction": 24,
+    "Girder": 4,
+    "SmallTube": 32
+  },
+  "CatwalkWall": {
+    "Construction": 20,
+    "Girder": 4,
+    "SmallTube": 26
+  },
+  "CatwalkRailingEnd": {
+    "Construction": 28,
+    "Girder": 4,
+    "SmallTube": 38
+  },
+  "CatwalkRailingHalfRight": {
+    "Construction": 28,
+    "Girder": 4,
+    "SmallTube": 36
+  },
+  "CatwalkRailingHalfLeft": {
+    "Construction": 28,
+    "Girder": 4,
+    "SmallTube": 36
+  },
+  "GratedStairs": {
+    "Construction": 22,
+    "SmallTube": 12,
+    "InteriorPlate": 16
+  },
+  "GratedHalfStairs": {
+    "Construction": 20,
+    "SmallTube": 6,
+    "InteriorPlate": 8
+  },
+  "GratedHalfStairsMirrored": {
+    "Construction": 20,
+    "SmallTube": 6,
+    "InteriorPlate": 8
+  },
+  "RailingStraight": {
+    "Construction": 8,
+    "SmallTube": 6
+  },
+  "RailingDouble": {
+    "Construction": 16,
+    "SmallTube": 12
+  },
+  "RailingCorner": {
+    "Construction": 16,
+    "SmallTube": 12
+  },
+  "RailingDiagonal": {
+    "Construction": 12,
+    "SmallTube": 9
+  },
+  "RailingHalfRight": {
+    "Construction": 8,
+    "SmallTube": 4
+  },
+  "RailingHalfLeft": {
+    "Construction": 8,
+    "SmallTube": 4
+  },
+  "RotatingLightLarge": {
+    "Construction": 3,
+    "Motor": 1
+  },
+  "RotatingLightSmall": {
+    "Construction": 3,
+    "Motor": 1
+  },
+  "Freight1": {
+    "InteriorPlate": 6,
+    "Construction": 8
+  },
+  "Freight2": {
+    "InteriorPlate": 12,
+    "Construction": 16
+  },
+  "Freight3": {
+    "InteriorPlate": 18,
+    "Construction": 24
+  },
+  "": {
+    "InteriorPlate": 10,
+    "Construction": 40,
+    "SmallTube": 4,
+    "Motor": 2,
+    "Display": 1,
+    "Computer": 2,
+    "SteelPlate": 8
+  },
+  "SmallDoor": {
+    "InteriorPlate": 8,
+    "Construction": 30,
+    "SmallTube": 4,
+    "Motor": 2,
+    "Display": 1,
+    "Computer": 2,
+    "SteelPlate": 6
+  },
+  "LargeBlockSlideDoor": {
+    "SteelPlate": 370,
+    "Construction": 80,
+    "SmallTube": 44,
+    "Motor": 20,
+    "Computer": 4,
+    "Display": 1,
+    "BulletproofGlass": 15
+  },
+  "ArmorCenter": {
+    "SteelPlate": 140
+  },
+  "ArmorCorner": {
+    "SteelPlate": 120
+  },
+  "ArmorInvCorner": {
+    "SteelPlate": 135
+  },
+  "ArmorSide": {
+    "SteelPlate": 130
+  },
+  "SmallArmorCenter": {
+    "SteelPlate": 5
+  },
+  "SmallArmorCorner": {
+    "SteelPlate": 5
+  },
+  "SmallArmorInvCorner": {
+    "SteelPlate": 5
+  },
+  "SmallArmorSide": {
+    "SteelPlate": 5
+  },
+  "StoreBlock": {
+    "SteelPlate": 30,
+    "Construction": 20,
+    "Motor": 6,
+    "Display": 4,
+    "Computer": 10
+  },
+  "SafeZoneBlock": {
+    "SteelPlate": 800,
+    "Construction": 180,
+    "GravityGenerator": 10,
+    "ZoneChip": 5,
+    "MetalGrid": 80,
+    "Computer": 120
+  },
+  "ContractBlock": {
+    "SteelPlate": 30,
+    "Construction": 20,
+    "Motor": 6,
+    "Display": 4,
+    "Computer": 10
+  },
+  "VendingMachine": {
+    "InteriorPlate": 20,
+    "Construction": 10,
+    "Motor": 4,
+    "Display": 4,
+    "Computer": 10
+  },
+  "AtmBlock": {
+    "SteelPlate": 20,
+    "Construction": 20,
+    "Motor": 2,
+    "Computer": 10,
+    "Display": 4
+  },
+  "LargeBlockBatteryBlock": {
+    "SteelPlate": 80,
+    "Construction": 30,
+    "PowerCell": 80,
+    "Computer": 25
+  },
+  "SmallBlockBatteryBlock": {
+    "SteelPlate": 25,
+    "Construction": 5,
+    "PowerCell": 20,
+    "Computer": 2
+  },
+  "SmallBlockSmallBatteryBlock": {
+    "SteelPlate": 4,
+    "Construction": 2,
+    "PowerCell": 2,
+    "Computer": 2
+  },
+  "SmallBlockSmallGenerator": {
+    "SteelPlate": 3,
+    "Construction": 10,
+    "MetalGrid": 2,
+    "LargeTube": 1,
+    "Reactor": 3,
+    "Motor": 1,
+    "Computer": 10
+  },
+  "SmallBlockLargeGenerator": {
+    "SteelPlate": 60,
+    "Construction": 9,
+    "MetalGrid": 9,
+    "LargeTube": 3,
+    "Reactor": 95,
+    "Motor": 5,
+    "Computer": 25
+  },
+  "LargeBlockSmallGenerator": {
+    "SteelPlate": 80,
+    "Construction": 40,
+    "MetalGrid": 4,
+    "LargeTube": 8,
+    "Reactor": 100,
+    "Motor": 6,
+    "Computer": 25
+  },
+  "LargeBlockLargeGenerator": {
+    "SteelPlate": 1000,
+    "Construction": 70,
+    "MetalGrid": 40,
+    "LargeTube": 40,
+    "Superconductor": 100,
+    "Reactor": 2000,
+    "Motor": 20,
+    "Computer": 75
+  },
+  "LargeHydrogenEngine": {
+    "SteelPlate": 100,
+    "Construction": 70,
+    "LargeTube": 12,
+    "SmallTube": 20,
+    "Motor": 12,
+    "Computer": 4,
+    "PowerCell": 1
+  },
+  "SmallHydrogenEngine": {
+    "SteelPlate": 30,
+    "Construction": 20,
+    "LargeTube": 4,
+    "SmallTube": 6,
+    "Motor": 4,
+    "Computer": 1,
+    "PowerCell": 1
+  },
+  "LargeBlockWindTurbine": {
+    "InteriorPlate": 40,
+    "Motor": 8,
+    "Construction": 20,
+    "Girder": 24,
+    "Computer": 2
+  },
+  "LargeBlockSolarPanel": {
+    "SteelPlate": 4,
+    "Construction": 14,
+    "Girder": 12,
+    "Computer": 4,
+    "SolarCell": 32,
+    "BulletproofGlass": 4
+  },
+  "SmallBlockSolarPanel": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "Girder": 4,
+    "Computer": 1,
+    "SolarCell": 8,
+    "BulletproofGlass": 1
+  },
+  "Monolith": {
+    "SteelPlate": 130,
+    "Superconductor": 130
+  },
+  "Stereolith": {
+    "SteelPlate": 130,
+    "Superconductor": 130
+  },
+  "DeadAstronaut": {
+    "SteelPlate": 13,
+    "Superconductor": 13
+  },
+  "LargeDeadAstronaut": {
+    "SteelPlate": 13,
+    "Superconductor": 13
+  },
+  "LargeBlockRadioAntennaDish": {
+    "Construction": 40,
+    "Girder": 120,
+    "SteelPlate": 80,
+    "Computer": 8,
+    "RadioCommunication": 40
+  },
+  "LargeBlockGate": {
+    "SteelPlate": 800,
+    "Construction": 100,
+    "SmallTube": 100,
+    "Motor": 20,
+    "Computer": 10
+  },
+  "LargeBlockOffsetDoor": {
+    "SteelPlate": 25,
+    "Construction": 35,
+    "SmallTube": 4,
+    "Motor": 4,
+    "Display": 1,
+    "Computer": 2,
+    "BulletproofGlass": 6
+  },
+  "DeadBody01": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "DeadBody02": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "DeadBody03": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "DeadBody04": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "DeadBody05": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "DeadBody06": {
+    "BulletproofGlass": 1,
+    "RadioCommunication": 1,
+    "Display": 1
+  },
+  "VirtualMassLarge": {
+    "SteelPlate": 390,
+    "GravityGenerator": 21,
+    "Construction": 150,
+    "LargeTube": 8,
+    "Motor": 12,
+    "Computer": 100,
+    "Superconductor": 20
+  },
+  "VirtualMassSmall": {
+    "SteelPlate": 3,
+    "Superconductor": 2,
+    "Construction": 2,
+    "Computer": 2,
+    "GravityGenerator": 1
+  },
+  "SpaceBallLarge": {
+    "SteelPlate": 225,
+    "Construction": 30,
+    "Computer": 20,
+    "GravityGenerator": 3
+  },
+  "SpaceBallSmall": {
+    "SteelPlate": 70,
+    "Construction": 10,
+    "Computer": 7,
+    "GravityGenerator": 1
+  },
+  "LargeStairs": {
+    "InteriorPlate": 124,
+    "Construction": 50,
+    "SmallTube": 48
+  },
+  "LargeRamp": {
+    "InteriorPlate": 70,
+    "Construction": 16
+  },
+  "LargeSteelCatwalk": {
+    "InteriorPlate": 27,
+    "Construction": 5,
+    "SmallTube": 20
+  },
+  "LargeSteelCatwalk2Sides": {
+    "InteriorPlate": 32,
+    "Construction": 7,
+    "SmallTube": 25
+  },
+  "LargeSteelCatwalkCorner": {
+    "InteriorPlate": 32,
+    "Construction": 7,
+    "SmallTube": 25
+  },
+  "LargeSteelCatwalkPlate": {
+    "InteriorPlate": 23,
+    "Construction": 7,
+    "SmallTube": 17
+  },
+  "LargeCoverWall": {
+    "SteelPlate": 4,
+    "Construction": 10
+  },
+  "LargeCoverWallHalf": {
+    "SteelPlate": 2,
+    "Construction": 6
+  },
+  "LargeBlockInteriorWall": {
+    "InteriorPlate": 25,
+    "Construction": 10
+  },
+  "LargeInteriorPillar": {
+    "InteriorPlate": 25,
+    "Construction": 10,
+    "SmallTube": 4
+  },
+  "PassengerSeatLarge": {
+    "InteriorPlate": 20,
+    "Construction": 20
+  },
+  "PassengerSeatSmall": {
+    "InteriorPlate": 20,
+    "Construction": 20
+  },
+  "LadderSmall": {
+    "InteriorPlate": 20,
+    "Construction": 40,
+    "SmallTube": 20
+  },
+  "SmallTextPanel": {
+    "InteriorPlate": 1,
+    "Construction": 4,
+    "Computer": 4,
+    "Display": 3,
+    "BulletproofGlass": 1
+  },
+  "SmallLCDPanelWide": {
+    "InteriorPlate": 1,
+    "Construction": 8,
+    "Computer": 8,
+    "Display": 6,
+    "BulletproofGlass": 2
+  },
+  "SmallLCDPanel": {
+    "InteriorPlate": 1,
+    "Construction": 4,
+    "Computer": 4,
+    "Display": 3,
+    "BulletproofGlass": 2
+  },
+  "LargeBlockCorner_LCD_1": {
+    "Construction": 5,
+    "Computer": 3,
+    "Display": 1
+  },
+  "LargeBlockCorner_LCD_2": {
+    "Construction": 5,
+    "Computer": 3,
+    "Display": 1
+  },
+  "LargeBlockCorner_LCD_Flat_1": {
+    "Construction": 5,
+    "Computer": 3,
+    "Display": 1
+  },
+  "LargeBlockCorner_LCD_Flat_2": {
+    "Construction": 5,
+    "Computer": 3,
+    "Display": 1
+  },
+  "SmallBlockCorner_LCD_1": {
+    "Construction": 3,
+    "Computer": 2,
+    "Display": 1
+  },
+  "SmallBlockCorner_LCD_2": {
+    "Construction": 3,
+    "Computer": 2,
+    "Display": 1
+  },
+  "SmallBlockCorner_LCD_Flat_1": {
+    "Construction": 3,
+    "Computer": 2,
+    "Display": 1
+  },
+  "SmallBlockCorner_LCD_Flat_2": {
+    "Construction": 3,
+    "Computer": 2,
+    "Display": 1
+  },
+  "LargeTextPanel": {
+    "InteriorPlate": 1,
+    "Construction": 6,
+    "Computer": 6,
+    "Display": 10,
+    "BulletproofGlass": 2
+  },
+  "LargeLCDPanel": {
+    "InteriorPlate": 1,
+    "Construction": 6,
+    "Computer": 6,
+    "Display": 10,
+    "BulletproofGlass": 6
+  },
+  "LargeLCDPanelWide": {
+    "InteriorPlate": 2,
+    "Construction": 12,
+    "Computer": 12,
+    "Display": 20,
+    "BulletproofGlass": 12
+  },
+  "LargeBlockFrontLight": {
+    "SteelPlate": 8,
+    "LargeTube": 2,
+    "InteriorPlate": 20,
+    "Construction": 15,
+    "BulletproofGlass": 4
+  },
+  "SmallBlockFrontLight": {
+    "SteelPlate": 1,
+    "LargeTube": 1,
+    "InteriorPlate": 1,
+    "Construction": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallLight": {
+    "Construction": 2
+  },
+  "SmallBlockSmallLight": {
+    "Construction": 2
+  },
+  "LargeBlockLight_1corner": {
+    "Construction": 3
+  },
+  "LargeBlockLight_2corner": {
+    "Construction": 6
+  },
+  "SmallBlockLight_1corner": {
+    "Construction": 2
+  },
+  "SmallBlockLight_2corner": {
+    "Construction": 4
+  },
+  "OxygenTankSmall": {
+    "SteelPlate": 16,
+    "LargeTube": 8,
+    "SmallTube": 10,
+    "Computer": 8,
+    "Construction": 10
+  },
+  "LargeHydrogenTank": {
+    "SteelPlate": 360,
+    "LargeTube": 120,
+    "SmallTube": 120,
+    "Computer": 16,
+    "Construction": 80
+  },
+  "LargeHydrogenTankSmall": {
+    "SteelPlate": 80,
+    "LargeTube": 40,
+    "SmallTube": 60,
+    "Computer": 8,
+    "Construction": 40
+  },
+  "SmallHydrogenTank": {
+    "SteelPlate": 40,
+    "LargeTube": 20,
+    "SmallTube": 30,
+    "Computer": 4,
+    "Construction": 20
+  },
+  "SmallHydrogenTankSmall": {
+    "SteelPlate": 3,
+    "LargeTube": 1,
+    "SmallTube": 2,
+    "Computer": 4,
+    "Construction": 2
+  },
+  "SmallAirVent": {
+    "SteelPlate": 53,
+    "Construction": 30,
+    "Motor": 12,
+    "Computer": 10
+  },
+  "SmallBlockSmallContainer": {
+    "InteriorPlate": 3,
+    "Construction": 1,
+    "Computer": 1,
+    "Motor": 1,
+    "Display": 1
+  },
+  "SmallBlockMediumContainer": {
+    "InteriorPlate": 30,
+    "Construction": 10,
+    "Computer": 4,
+    "Motor": 4,
+    "Display": 1
+  },
+  "SmallBlockLargeContainer": {
+    "InteriorPlate": 75,
+    "Construction": 25,
+    "Computer": 6,
+    "Motor": 8,
+    "Display": 1
+  },
+  "LargeBlockSmallContainer": {
+    "InteriorPlate": 40,
+    "Construction": 40,
+    "MetalGrid": 4,
+    "SmallTube": 20,
+    "Motor": 4,
+    "Display": 1,
+    "Computer": 2
+  },
+  "LargeBlockLargeContainer": {
+    "InteriorPlate": 360,
+    "Construction": 80,
+    "MetalGrid": 24,
+    "SmallTube": 60,
+    "Motor": 20,
+    "Display": 1,
+    "Computer": 8
+  },
+  "SmallBlockConveyor": {
+    "InteriorPlate": 4,
+    "Construction": 4,
+    "Motor": 1
+  },
+  "LargeBlockConveyor": {
+    "InteriorPlate": 20,
+    "Construction": 30,
+    "SmallTube": 20,
+    "Motor": 6
+  },
+  "Collector": {
+    "SteelPlate": 45,
+    "Construction": 50,
+    "SmallTube": 12,
+    "Motor": 8,
+    "Display": 4,
+    "Computer": 10
+  },
+  "CollectorSmall": {
+    "SteelPlate": 35,
+    "Construction": 35,
+    "SmallTube": 12,
+    "Motor": 8,
+    "Display": 2,
+    "Computer": 8
+  },
+  "Connector": {
+    "SteelPlate": 150,
+    "Construction": 40,
+    "SmallTube": 12,
+    "Motor": 8,
+    "Computer": 20
+  },
+  "ConnectorSmall": {
+    "SteelPlate": 7,
+    "Construction": 4,
+    "SmallTube": 2,
+    "Motor": 1,
+    "Computer": 4
+  },
+  "ConnectorMedium": {
+    "SteelPlate": 21,
+    "Construction": 12,
+    "SmallTube": 6,
+    "Motor": 6,
+    "Computer": 6
+  },
+  "ConveyorTube": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "ConveyorTubeSmall": {
+    "InteriorPlate": 1,
+    "Motor": 1,
+    "Construction": 1
+  },
+  "ConveyorTubeMedium": {
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "SmallTube": 10,
+    "Motor": 6
+  },
+  "ConveyorFrameMedium": {
+    "InteriorPlate": 5,
+    "Construction": 12,
+    "SmallTube": 5,
+    "Motor": 2
+  },
+  "ConveyorTubeCurved": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "ConveyorTubeSmallCurved": {
+    "InteriorPlate": 1,
+    "Motor": 1,
+    "Construction": 1
+  },
+  "ConveyorTubeCurvedMedium": {
+    "InteriorPlate": 7,
+    "Construction": 20,
+    "SmallTube": 10,
+    "Motor": 6
+  },
+  "SmallShipConveyorHub": {
+    "InteriorPlate": 25,
+    "Construction": 45,
+    "SmallTube": 25,
+    "Motor": 2
+  },
+  "LargeBlockConveyorSorter": {
+    "InteriorPlate": 50,
+    "Construction": 120,
+    "SmallTube": 50,
+    "Computer": 20,
+    "Motor": 2
+  },
+  "MediumBlockConveyorSorter": {
+    "InteriorPlate": 5,
+    "Construction": 12,
+    "SmallTube": 5,
+    "Computer": 5,
+    "Motor": 2
+  },
+  "SmallBlockConveyorSorter": {
+    "InteriorPlate": 5,
+    "Construction": 12,
+    "SmallTube": 5,
+    "Computer": 5,
+    "Motor": 2
+  },
+  "LargePistonBase": {
+    "SteelPlate": 15,
+    "Construction": 10,
+    "LargeTube": 4,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "LargePistonTop": {
+    "SteelPlate": 25,
+    "Construction": 10,
+    "LargeTube": 12,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "SmallPistonBase": {
+    "SteelPlate": 4,
+    "Construction": 4,
+    "SmallTube": 4,
+    "Motor": 2,
+    "Computer": 1
+  },
+  "SmallPistonTop": {
+    "SteelPlate": 8,
+    "Construction": 4,
+    "SmallTube": 4,
+    "Motor": 2,
+    "Computer": 1,
+    "LargeTube": 2
+  },
+  "LargeStator": {
+    "SteelPlate": 15,
+    "Construction": 10,
+    "LargeTube": 4,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "LargeRotor": {
+    "SteelPlate": 30,
+    "LargeTube": 6
+  },
+  "SmallStator": {
+    "SteelPlate": 5,
+    "Construction": 5,
+    "SmallTube": 1,
+    "Motor": 1,
+    "Computer": 1
+  },
+  "SmallRotor": {
+    "SteelPlate": 12,
+    "SmallTube": 6
+  },
+  "LargeAdvancedStator": {
+    "SteelPlate": 15,
+    "Construction": 10,
+    "LargeTube": 4,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "LargeAdvancedRotor": {
+    "SteelPlate": 30,
+    "LargeTube": 10
+  },
+  "SmallAdvancedStator": {
+    "SteelPlate": 5,
+    "Construction": 5,
+    "SmallTube": 1,
+    "Motor": 1,
+    "Computer": 1
+  },
+  "SmallAdvancedRotor": {
+    "SteelPlate": 30,
+    "LargeTube": 10
+  },
+  "LargeHinge": {
+    "SteelPlate": 16,
+    "Construction": 10,
+    "LargeTube": 4,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "LargeHingeHead": {
+    "SteelPlate": 12,
+    "LargeTube": 4,
+    "Construction": 8
+  },
+  "MediumHinge": {
+    "SteelPlate": 10,
+    "Construction": 6,
+    "LargeTube": 2,
+    "Motor": 2,
+    "Computer": 2
+  },
+  "MediumHingeHead": {
+    "SteelPlate": 6,
+    "LargeTube": 2,
+    "Construction": 4
+  },
+  "SmallHinge": {
+    "SteelPlate": 6,
+    "Construction": 4,
+    "LargeTube": 1,
+    "Motor": 2,
+    "Computer": 2
+  },
+  "SmallHingeHead": {
+    "SteelPlate": 3,
+    "LargeTube": 1,
+    "Construction": 2
+  },
+  "LargeMedicalRoom": {
+    "InteriorPlate": 240,
+    "Construction": 80,
+    "MetalGrid": 60,
+    "SmallTube": 20,
+    "LargeTube": 5,
+    "Display": 10,
+    "Computer": 10,
+    "Medical": 15
+  },
+  "LargeBlockCryoChamber": {
+    "InteriorPlate": 40,
+    "Construction": 20,
+    "Motor": 8,
+    "Display": 8,
+    "Medical": 3,
+    "Computer": 30,
+    "BulletproofGlass": 10
+  },
+  "SmallBlockCryoChamber": {
+    "InteriorPlate": 20,
+    "Construction": 10,
+    "Motor": 4,
+    "Display": 4,
+    "Medical": 3,
+    "Computer": 15,
+    "BulletproofGlass": 5
+  },
+  "LargeRefinery": {
+    "SteelPlate": 1200,
+    "Construction": 40,
+    "LargeTube": 20,
+    "Motor": 16,
+    "MetalGrid": 20,
+    "Computer": 20
+  },
+  "Blast Furnace": {
+    "SteelPlate": 120,
+    "Construction": 20,
+    "Motor": 10,
+    "Computer": 10
+  },
+  "OxygenGeneratorSmall": {
+    "SteelPlate": 128,
+    "Construction": 13,
+    "LargeTube": 4,
+    "Motor": 5,
+    "Computer": 8
+  },
+  "LargeAssembler": {
+    "SteelPlate": 140,
+    "Construction": 80,
+    "Motor": 20,
+    "Display": 10,
+    "MetalGrid": 10,
+    "Computer": 160
+  },
+  "BasicAssembler": {
+    "SteelPlate": 80,
+    "Construction": 40,
+    "Motor": 10,
+    "Display": 4,
+    "Computer": 80
+  },
+  "SurvivalKitLarge": {
+    "SteelPlate": 30,
+    "Construction": 2,
+    "Medical": 3,
+    "Motor": 4,
+    "Display": 1,
+    "Computer": 5
+  },
+  "SurvivalKit": {
+    "SteelPlate": 6,
+    "Construction": 2,
+    "Medical": 3,
+    "Motor": 4,
+    "Display": 1,
+    "Computer": 5
+  },
+  "LargeBlockOxygenFarm": {
+    "SteelPlate": 40,
+    "BulletproofGlass": 100,
+    "LargeTube": 20,
+    "SmallTube": 10,
+    "Construction": 20,
+    "Computer": 20
+  },
+  "LargeProductivityModule": {
+    "SteelPlate": 100,
+    "Construction": 40,
+    "SmallTube": 20,
+    "Computer": 60,
+    "Motor": 4
+  },
+  "LargeEffectivenessModule": {
+    "SteelPlate": 100,
+    "Construction": 50,
+    "SmallTube": 15,
+    "Superconductor": 20,
+    "Motor": 4
+  },
+  "LargeEnergyModule": {
+    "SteelPlate": 100,
+    "Construction": 40,
+    "SmallTube": 20,
+    "PowerCell": 20,
+    "Motor": 4
+  },
+  "SmallExhaustPipe": {
+    "SteelPlate": 2,
+    "Construction": 1,
+    "SmallTube": 2,
+    "Motor": 2
+  },
+  "LargeExhaustPipe": {
+    "SteelPlate": 15,
+    "Construction": 10,
+    "LargeTube": 2,
+    "Motor": 4
+  },
+  "BuggyCockpit": {
+    "InteriorPlate": 30,
+    "Construction": 25,
+    "Motor": 2,
+    "Computer": 20,
+    "Display": 4
+  },
+  "Viewport1": {
+    "SteelPlate": 10,
+    "Construction": 10,
+    "BulletproofGlass": 8
+  },
+  "Viewport2": {
+    "SteelPlate": 10,
+    "Construction": 10,
+    "BulletproofGlass": 8
+  },
+  "OffroadSuspension3x3": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "OffroadSuspension5x5": {
+    "SteelPlate": 70,
+    "Construction": 40,
+    "LargeTube": 20,
+    "SmallTube": 30,
+    "Motor": 20
+  },
+  "OffroadSuspension1x1": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "OffroadSmallSuspension3x3": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "OffroadSmallSuspension5x5": {
+    "SteelPlate": 16,
+    "Construction": 12,
+    "SmallTube": 4,
+    "Motor": 2
+  },
+  "OffroadSmallSuspension1x1": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "OffroadSuspension3x3mirrored": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "OffroadSuspension5x5mirrored": {
+    "SteelPlate": 70,
+    "Construction": 40,
+    "LargeTube": 20,
+    "SmallTube": 30,
+    "Motor": 20
+  },
+  "OffroadSuspension1x1mirrored": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "OffroadSmallSuspension3x3mirrored": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "OffroadSmallSuspension5x5mirrored": {
+    "SteelPlate": 16,
+    "Construction": 12,
+    "SmallTube": 4,
+    "Motor": 2
+  },
+  "OffroadSmallSuspension1x1mirrored": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "OffroadSmallRealWheel1x1": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "OffroadSmallRealWheel": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "OffroadSmallRealWheel5x5": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "OffroadRealWheel1x1": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "OffroadRealWheel": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "OffroadRealWheel5x5": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "OffroadSmallRealWheel1x1mirrored": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "OffroadSmallRealWheelmirrored": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "OffroadSmallRealWheel5x5mirrored": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "OffroadRealWheel1x1mirrored": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "OffroadRealWheelmirrored": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "OffroadRealWheel5x5mirrored": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "OffroadWheel1x1": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "OffroadSmallWheel1x1": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "OffroadWheel3x3": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "OffroadSmallWheel3x3": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "OffroadWheel5x5": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "OffroadSmallWheel5x5": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "OffsetLight": {
+    "Construction": 2
+  },
+  "OffsetSpotlight": {
+    "Construction": 2,
+    "BulletproofGlass": 1
+  },
+  "BarredWindow": {
+    "Girder": 1,
+    "Construction": 4
+  },
+  "BarredWindowSlope": {
+    "Girder": 1,
+    "Construction": 4
+  },
+  "BarredWindowSide": {
+    "Girder": 1,
+    "Construction": 4
+  },
+  "BarredWindowFace": {
+    "Girder": 1,
+    "Construction": 4
+  },
+  "StorageShelf1": {
+    "Girder": 10,
+    "SteelPlate": 50,
+    "Construction": 50,
+    "SmallTube": 50,
+    "InteriorPlate": 50
+  },
+  "StorageShelf2": {
+    "Girder": 30,
+    "PowerCell": 20,
+    "Motor": 20,
+    "MetalGrid": 20
+  },
+  "StorageShelf3": {
+    "Girder": 10,
+    "Reactor": 10,
+    "Superconductor": 10,
+    "Thrust": 10,
+    "GravityGenerator": 2
+  },
+  "LargeLCDPanel5x5": {
+    "InteriorPlate": 25,
+    "Construction": 150,
+    "Computer": 25,
+    "Display": 250,
+    "BulletproofGlass": 150
+  },
+  "LargeLCDPanel5x3": {
+    "InteriorPlate": 15,
+    "Construction": 90,
+    "Computer": 15,
+    "Display": 150,
+    "BulletproofGlass": 90
+  },
+  "LargeLCDPanel3x3": {
+    "InteriorPlate": 10,
+    "Construction": 50,
+    "Computer": 10,
+    "Display": 90,
+    "BulletproofGlass": 50
+  },
+  "LargeBlockSciFiWall": {
+    "InteriorPlate": 25,
+    "Construction": 10
+  },
+  "LargeNeonTubesStraight1": {
+    "InteriorPlate": 6,
+    "SmallTube": 6,
+    "Construction": 2
+  },
+  "LargeNeonTubesStraight2": {
+    "InteriorPlate": 6,
+    "SmallTube": 6,
+    "Construction": 2
+  },
+  "LargeNeonTubesCorner": {
+    "InteriorPlate": 6,
+    "SmallTube": 6,
+    "Construction": 2
+  },
+  "LargeNeonTubesBendUp": {
+    "InteriorPlate": 12,
+    "SmallTube": 12,
+    "Construction": 4
+  },
+  "LargeNeonTubesBendDown": {
+    "InteriorPlate": 3,
+    "SmallTube": 3,
+    "Construction": 1
+  },
+  "LargeNeonTubesStraightEnd1": {
+    "InteriorPlate": 6,
+    "SmallTube": 6,
+    "Construction": 2
+  },
+  "LargeNeonTubesStraightEnd2": {
+    "InteriorPlate": 10,
+    "SmallTube": 6,
+    "Construction": 4
+  },
+  "LargeNeonTubesStraightDown": {
+    "InteriorPlate": 9,
+    "SmallTube": 9,
+    "Construction": 3
+  },
+  "LargeNeonTubesU": {
+    "InteriorPlate": 18,
+    "SmallTube": 18,
+    "Construction": 6
+  },
+  "LargeBlockSciFiTerminal": {
+    "Construction": 4,
+    "Computer": 2,
+    "Display": 4,
+    "InteriorPlate": 2
+  },
+  "LargeSciFiButtonTerminal": {
+    "InteriorPlate": 5,
+    "Construction": 10,
+    "Computer": 4,
+    "Display": 4
+  },
+  "SmallSideDoor": {
+    "InteriorPlate": 10,
+    "Construction": 26,
+    "BulletproofGlass": 4,
+    "Motor": 2,
+    "Display": 1,
+    "Computer": 2,
+    "SteelPlate": 8
+  },
+  "LargeBlockBarCounter": {
+    "InteriorPlate": 16,
+    "Construction": 10,
+    "Motor": 1,
+    "BulletproofGlass": 6
+  },
+  "LargeBlockBarCounterCorner": {
+    "InteriorPlate": 24,
+    "Construction": 14,
+    "Motor": 2,
+    "BulletproofGlass": 10
+  },
+  "LargeSciFiButtonPanel": {
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "Computer": 20,
+    "Display": 5
+  },
+  "SmallBlockSmallThrustSciFi": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "LargeTube": 1,
+    "Thrust": 1
+  },
+  "SmallBlockLargeThrustSciFi": {
+    "SteelPlate": 5,
+    "Construction": 2,
+    "LargeTube": 5,
+    "Thrust": 12
+  },
+  "LargeBlockSmallThrustSciFi": {
+    "SteelPlate": 25,
+    "Construction": 60,
+    "LargeTube": 8,
+    "Thrust": 80
+  },
+  "LargeBlockLargeThrustSciFi": {
+    "SteelPlate": 150,
+    "Construction": 100,
+    "LargeTube": 40,
+    "Thrust": 960
+  },
+  "LargeBlockLargeAtmosphericThrustSciFi": {
+    "SteelPlate": 230,
+    "Construction": 60,
+    "LargeTube": 50,
+    "MetalGrid": 40,
+    "Motor": 1100
+  },
+  "LargeBlockSmallAtmosphericThrustSciFi": {
+    "SteelPlate": 35,
+    "Construction": 50,
+    "LargeTube": 8,
+    "MetalGrid": 10,
+    "Motor": 110
+  },
+  "SmallBlockLargeAtmosphericThrustSciFi": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "LargeTube": 4,
+    "MetalGrid": 8,
+    "Motor": 90
+  },
+  "SmallBlockSmallAtmosphericThrustSciFi": {
+    "SteelPlate": 3,
+    "Construction": 22,
+    "LargeTube": 1,
+    "MetalGrid": 1,
+    "Motor": 18
+  },
+  "LargeSymbolA": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolB": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolC": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolD": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolE": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolF": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolG": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolH": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolI": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolJ": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolK": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolL": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolM": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolN": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolO": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolP": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolQ": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolR": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolS": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolT": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolU": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolV": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolW": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolX": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolY": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolZ": {
+    "SteelPlate": 4
+  },
+  "SmallSymbolA": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolB": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolC": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolD": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolE": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolF": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolG": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolH": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolI": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolJ": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolK": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolL": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolM": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolN": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolO": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolP": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolQ": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolR": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolS": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolT": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolU": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolV": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolW": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolX": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolY": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolZ": {
+    "SteelPlate": 1
+  },
+  "LargeSymbol0": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol1": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol2": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol3": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol4": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol5": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol6": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol7": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol8": {
+    "SteelPlate": 4
+  },
+  "LargeSymbol9": {
+    "SteelPlate": 4
+  },
+  "SmallSymbol0": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol1": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol2": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol3": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol4": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol5": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol6": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol7": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol8": {
+    "SteelPlate": 1
+  },
+  "SmallSymbol9": {
+    "SteelPlate": 1
+  },
+  "LargeSymbolHyphen": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolUnderscore": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolDot": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolApostrophe": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolAnd": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolColon": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolExclamationMark": {
+    "SteelPlate": 4
+  },
+  "LargeSymbolQuestionMark": {
+    "SteelPlate": 4
+  },
+  "SmallSymbolHyphen": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolUnderscore": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolDot": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolApostrophe": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolAnd": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolColon": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolExclamationMark": {
+    "SteelPlate": 1
+  },
+  "SmallSymbolQuestionMark": {
+    "SteelPlate": 1
+  },
+  "SmallBlockSmallThrust": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "LargeTube": 1,
+    "Thrust": 1
+  },
+  "SmallBlockLargeThrust": {
+    "SteelPlate": 5,
+    "Construction": 2,
+    "LargeTube": 5,
+    "Thrust": 12
+  },
+  "LargeBlockSmallThrust": {
+    "SteelPlate": 25,
+    "Construction": 60,
+    "LargeTube": 8,
+    "Thrust": 80
+  },
+  "LargeBlockLargeThrust": {
+    "SteelPlate": 150,
+    "Construction": 100,
+    "LargeTube": 40,
+    "Thrust": 960
+  },
+  "LargeBlockLargeHydrogenThrust": {
+    "SteelPlate": 150,
+    "Construction": 180,
+    "MetalGrid": 250,
+    "LargeTube": 40
+  },
+  "LargeBlockSmallHydrogenThrust": {
+    "SteelPlate": 25,
+    "Construction": 60,
+    "MetalGrid": 40,
+    "LargeTube": 8
+  },
+  "SmallBlockLargeHydrogenThrust": {
+    "SteelPlate": 30,
+    "Construction": 30,
+    "MetalGrid": 22,
+    "LargeTube": 10
+  },
+  "SmallBlockSmallHydrogenThrust": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "MetalGrid": 4,
+    "LargeTube": 2
+  },
+  "LargeBlockLargeAtmosphericThrust": {
+    "SteelPlate": 230,
+    "Construction": 60,
+    "LargeTube": 50,
+    "MetalGrid": 40,
+    "Motor": 1100
+  },
+  "LargeBlockSmallAtmosphericThrust": {
+    "SteelPlate": 35,
+    "Construction": 50,
+    "LargeTube": 8,
+    "MetalGrid": 10,
+    "Motor": 110
+  },
+  "SmallBlockLargeAtmosphericThrust": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "LargeTube": 4,
+    "MetalGrid": 8,
+    "Motor": 90
+  },
+  "SmallBlockSmallAtmosphericThrust": {
+    "SteelPlate": 3,
+    "Construction": 22,
+    "LargeTube": 1,
+    "MetalGrid": 1,
+    "Motor": 18
+  },
+  "SmallBlockDrill": {
+    "SteelPlate": 32,
+    "Construction": 30,
+    "LargeTube": 4,
+    "Motor": 1,
+    "Computer": 1
+  },
+  "LargeBlockDrill": {
+    "SteelPlate": 300,
+    "Construction": 40,
+    "LargeTube": 12,
+    "Motor": 5,
+    "Computer": 5
+  },
+  "LargeShipGrinder": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "LargeTube": 1,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "SmallShipGrinder": {
+    "SteelPlate": 12,
+    "Construction": 17,
+    "SmallTube": 4,
+    "Motor": 4,
+    "Computer": 2
+  },
+  "LargeShipWelder": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "LargeTube": 1,
+    "Motor": 2,
+    "Computer": 2
+  },
+  "SmallShipWelder": {
+    "SteelPlate": 12,
+    "Construction": 17,
+    "SmallTube": 6,
+    "Motor": 2,
+    "Computer": 2
+  },
+  "LargeOreDetector": {
+    "SteelPlate": 50,
+    "Construction": 40,
+    "Motor": 5,
+    "Computer": 25,
+    "Detector": 20
+  },
+  "SmallBlockOreDetector": {
+    "SteelPlate": 3,
+    "Construction": 2,
+    "Motor": 1,
+    "Computer": 1,
+    "Detector": 1
+  },
+  "LargeBlockLandingGear": {
+    "SteelPlate": 150,
+    "Construction": 20,
+    "Motor": 6
+  },
+  "SmallBlockLandingGear": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "Motor": 1
+  },
+  "LargeJumpDrive": {
+    "SteelPlate": 60,
+    "MetalGrid": 50,
+    "GravityGenerator": 20,
+    "Detector": 20,
+    "PowerCell": 120,
+    "Superconductor": 1000,
+    "Computer": 300,
+    "Construction": 40
+  },
+  "SmallCameraBlock": {
+    "SteelPlate": 2,
+    "Computer": 3
+  },
+  "LargeCameraBlock": {
+    "SteelPlate": 2,
+    "Computer": 3
+  },
+  "LargeShipMergeBlock": {
+    "SteelPlate": 12,
+    "Construction": 15,
+    "Motor": 2,
+    "LargeTube": 6,
+    "Computer": 2
+  },
+  "SmallShipMergeBlock": {
+    "SteelPlate": 4,
+    "Construction": 5,
+    "Motor": 1,
+    "SmallTube": 2,
+    "Computer": 1
+  },
+  "LgParachute": {
+    "SteelPlate": 9,
+    "Construction": 25,
+    "SmallTube": 5,
+    "Motor": 3,
+    "Computer": 2
+  },
+  "SmParachute": {
+    "SteelPlate": 2,
+    "Construction": 2,
+    "SmallTube": 1,
+    "Motor": 1,
+    "Computer": 1
+  },
+  "LargeWarhead": {
+    "SteelPlate": 20,
+    "Girder": 24,
+    "Construction": 12,
+    "SmallTube": 12,
+    "Computer": 2,
+    "Explosives": 6
+  },
+  "SmallWarhead": {
+    "SteelPlate": 4,
+    "Girder": 1,
+    "Construction": 1,
+    "SmallTube": 2,
+    "Computer": 1,
+    "Explosives": 2
+  },
+  "LargeDecoy": {
+    "SteelPlate": 30,
+    "Construction": 10,
+    "Computer": 10,
+    "RadioCommunication": 1,
+    "LargeTube": 2
+  },
+  "SmallDecoy": {
+    "SteelPlate": 2,
+    "Construction": 1,
+    "Computer": 1,
+    "RadioCommunication": 1,
+    "SmallTube": 2
+  },
+  "SmallGatlingTurret": {
+    "SteelPlate": 30,
+    "Construction": 60,
+    "MetalGrid": 20,
+    "SmallTube": 12,
+    "Motor": 12,
+    "Computer": 20
+  },
+  "SmallMissileTurret": {
+    "SteelPlate": 30,
+    "Construction": 80,
+    "MetalGrid": 7,
+    "LargeTube": 8,
+    "Motor": 24,
+    "Computer": 24
+  },
+  "LargeInteriorTurret": {
+    "InteriorPlate": 6,
+    "Construction": 20,
+    "SmallTube": 1,
+    "Motor": 2,
+    "Computer": 5,
+    "SteelPlate": 4
+  },
+  "LargeMissileLauncher": {
+    "SteelPlate": 39,
+    "Construction": 10,
+    "MetalGrid": 31,
+    "LargeTube": 29,
+    "Motor": 7,
+    "Computer": 5
+  },
+  "SmallRocketLauncherReload": {
+    "SmallTube": 50,
+    "InteriorPlate": 50,
+    "Construction": 24,
+    "LargeTube": 8,
+    "MetalGrid": 10,
+    "Motor": 4,
+    "Computer": 2,
+    "SteelPlate": 8
+  },
+  "Suspension3x3": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "Suspension5x5": {
+    "SteelPlate": 70,
+    "Construction": 40,
+    "LargeTube": 20,
+    "SmallTube": 30,
+    "Motor": 20
+  },
+  "Suspension1x1": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "SmallSuspension3x3": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "SmallSuspension5x5": {
+    "SteelPlate": 16,
+    "Construction": 12,
+    "SmallTube": 4,
+    "Motor": 2
+  },
+  "SmallSuspension1x1": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "Suspension3x3mirrored": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "Suspension5x5mirrored": {
+    "SteelPlate": 70,
+    "Construction": 40,
+    "LargeTube": 20,
+    "SmallTube": 30,
+    "Motor": 20
+  },
+  "Suspension1x1mirrored": {
+    "SteelPlate": 25,
+    "Construction": 15,
+    "LargeTube": 6,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "SmallSuspension3x3mirrored": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "SmallSuspension5x5mirrored": {
+    "SteelPlate": 16,
+    "Construction": 12,
+    "SmallTube": 4,
+    "Motor": 2
+  },
+  "SmallSuspension1x1mirrored": {
+    "SteelPlate": 8,
+    "Construction": 7,
+    "SmallTube": 2,
+    "Motor": 1
+  },
+  "SmallRealWheel1x1": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "SmallRealWheel": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "SmallRealWheel5x5": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "RealWheel1x1": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "RealWheel": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "RealWheel5x5": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "SmallRealWheel1x1mirrored": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "SmallRealWheelmirrored": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "SmallRealWheel5x5mirrored": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "RealWheel1x1mirrored": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "RealWheelmirrored": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "RealWheel5x5mirrored": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "Wheel1x1": {
+    "SteelPlate": 8,
+    "Construction": 20,
+    "LargeTube": 4
+  },
+  "SmallWheel1x1": {
+    "SteelPlate": 2,
+    "Construction": 5,
+    "LargeTube": 1
+  },
+  "Wheel3x3": {
+    "SteelPlate": 12,
+    "Construction": 25,
+    "LargeTube": 6
+  },
+  "SmallWheel3x3": {
+    "SteelPlate": 5,
+    "Construction": 10,
+    "LargeTube": 1
+  },
+  "Wheel5x5": {
+    "SteelPlate": 16,
+    "Construction": 30,
+    "LargeTube": 8
+  },
+  "SmallWheel5x5": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "LargeTube": 2
+  },
+  "LargeWindowSquare": {
+    "InteriorPlate": 12,
+    "Construction": 8,
+    "SmallTube": 4
+  },
+  "LargeWindowEdge": {
+    "InteriorPlate": 16,
+    "Construction": 12,
+    "SmallTube": 6
+  },
+  "Window1x2Slope": {
+    "Girder": 16,
+    "BulletproofGlass": 55
+  },
+  "Window1x2Inv": {
+    "Girder": 15,
+    "BulletproofGlass": 40
+  },
+  "Window1x2Face": {
+    "Girder": 15,
+    "BulletproofGlass": 40
+  },
+  "Window1x2SideLeft": {
+    "Girder": 13,
+    "BulletproofGlass": 26
+  },
+  "Window1x2SideLeftInv": {
+    "Girder": 13,
+    "BulletproofGlass": 26
+  },
+  "Window1x2SideRight": {
+    "Girder": 13,
+    "BulletproofGlass": 26
+  },
+  "Window1x2SideRightInv": {
+    "Girder": 13,
+    "BulletproofGlass": 26
+  },
+  "Window1x1Slope": {
+    "Girder": 12,
+    "BulletproofGlass": 35
+  },
+  "Window1x1Face": {
+    "Girder": 11,
+    "BulletproofGlass": 24
+  },
+  "Window1x1Side": {
+    "Girder": 9,
+    "BulletproofGlass": 17
+  },
+  "Window1x1SideInv": {
+    "Girder": 9,
+    "BulletproofGlass": 17
+  },
+  "Window1x1Inv": {
+    "Girder": 11,
+    "BulletproofGlass": 24
+  },
+  "Window1x2Flat": {
+    "Girder": 15,
+    "BulletproofGlass": 50
+  },
+  "Window1x2FlatInv": {
+    "Girder": 15,
+    "BulletproofGlass": 50
+  },
+  "Window1x1Flat": {
+    "Girder": 10,
+    "BulletproofGlass": 25
+  },
+  "Window1x1FlatInv": {
+    "Girder": 10,
+    "BulletproofGlass": 25
+  },
+  "Window3x3Flat": {
+    "Girder": 40,
+    "BulletproofGlass": 196
+  },
+  "Window3x3FlatInv": {
+    "Girder": 40,
+    "BulletproofGlass": 196
+  },
+  "Window2x3Flat": {
+    "Girder": 25,
+    "BulletproofGlass": 140
+  },
+  "Window2x3FlatInv": {
+    "Girder": 25,
+    "BulletproofGlass": 140
+  },
+  "SmallWindow1x2Slope": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2Inv": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2Face": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2SideLeft": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2SideLeftInv": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2SideRight": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2SideRightInv": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x1Slope": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x1Face": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x1Side": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x1SideInv": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x1Inv": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x2Flat": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x2FlatInv": {
+    "Girder": 1,
+    "BulletproofGlass": 3
+  },
+  "SmallWindow1x1Flat": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow1x1FlatInv": {
+    "Girder": 1,
+    "BulletproofGlass": 2
+  },
+  "SmallWindow3x3Flat": {
+    "Girder": 3,
+    "BulletproofGlass": 12
+  },
+  "SmallWindow3x3FlatInv": {
+    "Girder": 3,
+    "BulletproofGlass": 12
+  },
+  "SmallWindow2x3Flat": {
+    "Girder": 2,
+    "BulletproofGlass": 8
+  },
+  "SmallWindow2x3FlatInv": {
+    "Girder": 2,
+    "BulletproofGlass": 8
+  }
+}

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SEBlueprintCalc
 {
@@ -18,7 +19,7 @@ namespace SEBlueprintCalc
         public Form1()
         {
             InitializeComponent();
-
+            UpdateBlocksData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,12 +32,14 @@ namespace SEBlueprintCalc
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
                 Dictionary<string, int> bp = readXMLBlueprint(bpFile);
+
+
                 dataGridView1.DataSource = getComponents(bp).ToList();
                 dataGridView2.DataSource = bp.ToList();
             }
             catch (Exception ex)
             {
-                if(ex is XmlException)
+                if (ex is XmlException)
                 {
                     MessageBox.Show("Make sure a .bp file was selected");
                 }
@@ -44,6 +47,12 @@ namespace SEBlueprintCalc
                 {
                     MessageBox.Show("File was not selected");
                 }
+                else if(ex.Message == "NullDirectory")
+                {
+                    MessageBox.Show("Set space engineers game directory location");
+                    button2_Click(sender, e);
+                }
+                else MessageBox.Show(ex.Message);
                 return;
             }
         }
@@ -101,9 +110,25 @@ namespace SEBlueprintCalc
 
         public Dictionary<string, int> getComponents(Dictionary<string, int> bpBlocks)
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
             Dictionary<string, int> comps = new Dictionary<string, int>();
-            string path = "D:\\Program Files (x86)\\SteamLibrary\\steamapps\\common\\SpaceEngineers\\Content\\Data\\CubeBlocks\\";
+            
+            foreach (var bpBlock in bpBlocks)
+            {
+                foreach(var comp in blockDict[bpBlock.Key])
+                {
+                    if (comps.ContainsKey(comp.Key)) comps[comp.Key] += comp.Value * bpBlock.Value;
+                    else comps.Add(comp.Key, comp.Value * bpBlock.Value);
+                }
+            }
+
+            return comps;
+        }
+
+        public void UpdateBlocksData()
+        {
+            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            string path = readGameDir() + "\\Content\\Data\\CubeBlocks\\";
 
             readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor.sbc"), blockDict);
             readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor_2.sbc"), blockDict);
@@ -135,21 +160,45 @@ namespace SEBlueprintCalc
             readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Wheels.sbc"), blockDict);
             readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
 
-            foreach (var bpBlock in bpBlocks)
+            string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(@"../../Data/Blocks.json", output);
+        }
+
+        public Dictionary<string, Dictionary<string, int>> readBlocksData()
+        {
+            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            JObject blocks = JObject.Parse(File.ReadAllText(@"../../Data/Blocks.json"));
+
+            foreach (var block in blocks)
             {
-                foreach(var comp in blockDict[bpBlock.Key])
-                {
-                    if (comps.ContainsKey(comp.Key)) comps[comp.Key] += comp.Value * bpBlock.Value;
-                    else comps.Add(comp.Key, comp.Value * bpBlock.Value);
-                }
+                blockDict.Add(block.Key, block.Value.ToObject<Dictionary<string, int>>());
             }
 
-            return comps;
+            return blockDict;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
+            using (FileStream fs = File.Create(@".. /../Data/SEdir.txt"))
+            {
+                Byte[] path = new UTF8Encoding(true).GetBytes(folderBrowserDialog1.SelectedPath);
+                fs.Write(path, 0, path.Length);
+            }
+        }
+
+        public string readGameDir()
+        {
+            string s = "";
+            using (StreamReader sr = File.OpenText(@"../../Data/SEdir.txt"))
+            {
+                s = sr.ReadLine();
+            }
+            if (s == null)
+            {
+                throw new Exception("NullDirectory");
+            }
+            return s;
         }
     }
 }
