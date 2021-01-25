@@ -22,6 +22,8 @@ namespace SEBlueprintCalc
             UpdateBlocksData();
         }
 
+        public string rootDir = Directory.GetCurrentDirectory();
+
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = ".bp file";
@@ -168,7 +170,7 @@ namespace SEBlueprintCalc
                 readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
 
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
-                File.WriteAllText(@"../../Data/Blocks.json", output);
+                File.WriteAllText(rootDir + "../Data/Blocks.json", output);
                 MessageBox.Show("Blocks info updated");
             }
             catch (DirectoryNotFoundException)
@@ -187,7 +189,7 @@ namespace SEBlueprintCalc
         public Dictionary<string, Dictionary<string, int>> readBlocksData()
         {
             Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
-            JObject blocks = JObject.Parse(File.ReadAllText(@"../../Data/Blocks.json"));
+            JObject blocks = JObject.Parse(File.ReadAllText(rootDir + "../Data/Blocks.json"));
 
             foreach (var block in blocks)
             {
@@ -200,7 +202,7 @@ namespace SEBlueprintCalc
         private void button2_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            using (FileStream fs = File.Create(@".. /../Data/SEdir.txt"))
+            using (FileStream fs = File.Create(rootDir + "../Data/SEdir.txt"))
             {
                 Byte[] path = new UTF8Encoding(true).GetBytes(folderBrowserDialog1.SelectedPath);
                 fs.Write(path, 0, path.Length);
@@ -210,7 +212,7 @@ namespace SEBlueprintCalc
         public string readGameDir()
         {
             string s = "";
-            using (StreamReader sr = File.OpenText(@"../../Data/SEdir.txt"))
+            using (StreamReader sr = File.OpenText(rootDir + "../Data/SEdir.txt"))
             {
                 s = sr.ReadLine();
             }
