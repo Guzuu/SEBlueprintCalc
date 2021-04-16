@@ -19,10 +19,10 @@ namespace SEBlueprintCalc
         public Form1()
         {
             InitializeComponent();
-            UpdateBlocksData();
+            UpdateData();
         }
 
-        public string rootDir = Directory.GetCurrentDirectory();
+        public string rootDir = "../"; //Directory.GetCurrentDirectory();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,15 +34,15 @@ namespace SEBlueprintCalc
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
                 label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
-                Dictionary<string, int> bp = readXMLBlueprint(bpFile);
+                Dictionary<string, int> bpBlocks = readXMLBlueprintBlocks(bpFile);
 
-
-                dataGridView1.DataSource = getComponents(bp).ToList();
-                dataGridView2.DataSource = bp.ToList();
+                dataGridView1.DataSource = getComponents(bpBlocks).ToList();
+                dataGridView2.DataSource = bpBlocks.ToList();
                 dataGridView1.Columns[0].HeaderText = "Component name";
                 dataGridView2.Columns[0].HeaderText = "Block name";
                 dataGridView1.Columns[0].Width = 175;
                 dataGridView2.Columns[0].Width = 175;
+
             }
             catch (Exception ex)
             {
@@ -64,9 +64,9 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, int> readXMLBlueprint(string file)
+        public Dictionary<string, int> readXMLBlueprintBlocks(string file)
         {
-            Dictionary<string, int> dict = new Dictionary<string, int>();
+            Dictionary<string, int> blockDict = new Dictionary<string, int>();
             string key;
             XmlDocument bp = new XmlDocument();
 
@@ -78,11 +78,11 @@ namespace SEBlueprintCalc
             {
                 key = block?.InnerText ?? "";
                 if (key == "") continue;
-                if (dict.ContainsKey(key)) dict[key]++;
-                else dict.Add(key, 1);
+                if (blockDict.ContainsKey(key)) blockDict[key]++;
+                else blockDict.Add(key, 1);
             }
 
-            return dict;
+            return blockDict;
         }
 
         public Dictionary<string, Dictionary<string, int>> readXMLBlockInfo(string file, Dictionary<string, Dictionary<string, int>> blockDict)
@@ -115,6 +115,39 @@ namespace SEBlueprintCalc
             return blockDict;
         }
 
+        public Dictionary<string, Dictionary<string, float>> readXMLComponentInfo(string file, Dictionary<string, Dictionary<string, float>> compDict)
+        {
+            Dictionary<string, float> ingotDict = new Dictionary<string, float>();
+            float ingotCount;
+
+            XmlDocument comps = new XmlDocument();
+            comps.LoadXml(file);
+
+            var compSections = comps.DocumentElement.SelectNodes("//Blueprint");
+
+            foreach (XmlNode section in compSections)
+            {
+                var compName = "";
+                var comp = section.SelectSingleNode(".//Result");
+                if (comp == null) continue;
+                compName = comp.Attributes["SubtypeId"]?.Value ?? "";
+                var ingots = section.SelectNodes(".//Prerequisites/Item");
+                foreach (XmlElement ingot in ingots)
+                {
+                    var ingotName = ingot.GetAttribute("SubtypeId") + " " + ingot.GetAttribute("TypeId");
+                    float.TryParse(ingot.GetAttribute("Amount"), out ingotCount);
+
+                    if (ingotDict.ContainsKey(ingotName)) ingotDict[ingotName] += ingotCount;
+                    else ingotDict.Add(ingotName, ingotCount);
+                }
+                if (compDict.ContainsKey(compName)) continue;
+                else compDict.Add(compName, new Dictionary<string, float>(ingotDict));
+                ingotDict.Clear();
+            }
+
+            return compDict;
+        }
+
         public Dictionary<string, int> getComponents(Dictionary<string, int> bpBlocks)
         {
             Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
@@ -132,9 +165,10 @@ namespace SEBlueprintCalc
             return comps;
         }
 
-        public void UpdateBlocksData()
+        public void UpdateData()
         {
             Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
 
             try
             {
@@ -170,9 +204,13 @@ namespace SEBlueprintCalc
                 readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Wheels.sbc"), blockDict);
                 readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
 
+                readXMLComponentInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), compDict);
+
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Blocks.json", output);
-                MessageBox.Show("Blocks info updated");
+
+
+                MessageBox.Show("Blocks and Components info updated");
             }
             catch (DirectoryNotFoundException)
             {
@@ -226,7 +264,7 @@ namespace SEBlueprintCalc
 
         private void button3_Click(object sender, EventArgs e)
         {
-                UpdateBlocksData();
+                UpdateData();
         }
 
         private void button4_Click(object sender, EventArgs e)
