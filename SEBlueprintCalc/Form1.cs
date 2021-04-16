@@ -135,7 +135,7 @@ namespace SEBlueprintCalc
                 foreach (XmlElement ingot in ingots)
                 {
                     var ingotName = ingot.GetAttribute("SubtypeId") + " " + ingot.GetAttribute("TypeId");
-                    float.TryParse(ingot.GetAttribute("Amount"), out ingotCount);
+                    float.TryParse(ingot.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out ingotCount);
 
                     if (ingotDict.ContainsKey(ingotName)) ingotDict[ingotName] += ingotCount;
                     else ingotDict.Add(ingotName, ingotCount);
