@@ -35,13 +35,18 @@ namespace SEBlueprintCalc
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
                 label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
                 Dictionary<string, int> bpBlocks = readXMLBlueprintBlocks(bpFile);
+                Dictionary<string, int> bpComps = getComponents(bpBlocks);
+                Dictionary<string, float> bpIngots = getIngots(bpComps);
 
-                dataGridView1.DataSource = getComponents(bpBlocks).ToList();
-                dataGridView2.DataSource = bpBlocks.ToList();
+                dataGridView1.DataSource = (from entry in bpComps orderby entry.Value descending select entry).ToList();
+                dataGridView2.DataSource = (from entry in bpBlocks orderby entry.Value descending select entry).ToList();
+                dataGridView3.DataSource = (from entry in bpIngots orderby entry.Value descending select entry).ToList();
                 dataGridView1.Columns[0].HeaderText = "Component name";
                 dataGridView2.Columns[0].HeaderText = "Block name";
+                dataGridView3.Columns[0].HeaderText = "Resource name";
                 dataGridView1.Columns[0].Width = 175;
                 dataGridView2.Columns[0].Width = 175;
+                dataGridView3.Columns[0].Width = 175;
 
             }
             catch (Exception ex)
@@ -129,7 +134,7 @@ namespace SEBlueprintCalc
             {
                 var compName = "";
                 var comp = section.SelectSingleNode(".//Result");
-                if (comp == null) continue;
+                if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
                 compName = comp.Attributes["SubtypeId"]?.Value ?? "";
                 var ingots = section.SelectNodes(".//Prerequisites/Item");
                 foreach (XmlElement ingot in ingots)
@@ -163,6 +168,23 @@ namespace SEBlueprintCalc
             }
 
             return comps;
+        }
+
+        public Dictionary<string, float> getIngots(Dictionary<string, int> bpComps)
+        {
+            Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
+            Dictionary<string, float> ingots = new Dictionary<string, float>();
+
+            foreach (var bpComp in bpComps)
+            {
+                foreach (var ingot in compDict[bpComp.Key])
+                {
+                    if (ingots.ContainsKey(ingot.Key)) ingots[ingot.Key] += ingot.Value * bpComp.Value;
+                    else ingots.Add(ingot.Key, ingot.Value * bpComp.Value);
+                }
+            }
+
+            return ingots;
         }
 
         public void UpdateData()
@@ -209,6 +231,8 @@ namespace SEBlueprintCalc
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Blocks.json", output);
 
+                output = JsonConvert.SerializeObject(compDict, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(rootDir + "../Data/Components.json", output);
 
                 MessageBox.Show("Blocks and Components info updated");
             }
@@ -236,6 +260,19 @@ namespace SEBlueprintCalc
             }
 
             return blockDict;
+        }
+
+        public Dictionary<string, Dictionary<string, float>> readCompsData()
+        {
+            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
+            JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
+
+            foreach (var comp in comps)
+            {
+                compDict.Add(comp.Key, comp.Value.ToObject<Dictionary<string, float>>());
+            }
+
+            return compDict;
         }
 
         private void button2_Click(object sender, EventArgs e)
