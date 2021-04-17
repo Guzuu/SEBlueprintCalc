@@ -1,1 +1,1 @@
-C:\Program Files\Steam\steamapps\common\SpaceEngineers
+D:\\Program Files (x86)\\SteamLibrary../steamapps/common/SpaceEngineers

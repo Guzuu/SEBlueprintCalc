@@ -11,6 +11,7 @@ using System.IO;
 using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.Win32;
 
 namespace SEBlueprintCalc
 {
@@ -277,10 +278,41 @@ namespace SEBlueprintCalc
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string s = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Valve\Steam", "InstallPath", "");
+            if (s == "") s = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam", "InstallPath", "");
+            else
+            {
+                if (Directory.Exists(s + "../steamapps/common/SpaceEngineers"))
+                    SaveDir(s + "../steamapps/common/SpaceEngineers");
+                else
+                {
+                    AcfReader acf = new AcfReader(s + "../steamapps/libraryfolders.vdf");
+                    acf.CheckIntegrity();
+                    ACF_Struct acfStruct = acf.ACFFileToStruct();
+                    var folders = acfStruct.SubACF.Values.First().SubItems;
+                    foreach(var folder in folders)
+                    {
+                        if (Directory.Exists(folder.Value + "../steamapps/common/SpaceEngineers"))
+                        {
+                            SaveDir(folder.Value + "../steamapps/common/SpaceEngineers");
+                            break;
+                        }
+                    }
+                }
+                MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
+                return;
+            }
+            if (s == "") MessageBox.Show("Couldnt detect game directory, set SE location manually");
+
             folderBrowserDialog1.ShowDialog();
+            SaveDir(folderBrowserDialog1.SelectedPath);
+        }
+
+        public void SaveDir(string dir)
+        {
             using (FileStream fs = File.Create(rootDir + "../Data/SEdir.txt"))
             {
-                Byte[] path = new UTF8Encoding(true).GetBytes(folderBrowserDialog1.SelectedPath);
+                Byte[] path = new UTF8Encoding(true).GetBytes(dir);
                 fs.Write(path, 0, path.Length);
             }
         }
@@ -292,7 +324,7 @@ namespace SEBlueprintCalc
             {
                 s = sr.ReadLine();
             }
-            if (s == null)
+            if (s == "")
             {
                 throw new Exception("NullDirectory");
             }
