@@ -338,7 +338,7 @@ namespace SEBlueprintCalc
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SEBlueprintCalc v1 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc");
+            MessageBox.Show("SEBlueprintCalc v2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc");
         }
     }
 }
