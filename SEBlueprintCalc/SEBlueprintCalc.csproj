@@ -130,9 +130,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\SEBPCicon.ico" />
+    <Content Include="Data\Icons\SEBPCicon.ico" />
     <Content Include="Data\SEdir.txt" />
     <Content Include="SEBPCicon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
