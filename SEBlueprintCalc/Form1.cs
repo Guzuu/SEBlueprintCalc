@@ -23,7 +23,7 @@ namespace SEBlueprintCalc
             UpdateData();
         }
 
-        public string rootDir = "../"; //Directory.GetCurrentDirectory();
+        public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
 
         private void button1_Click(object sender, EventArgs e)
         {

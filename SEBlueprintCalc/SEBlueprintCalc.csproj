@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -102,6 +102,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Content Include="Data\Blocks.json" />
+    <Content Include="Data\Components.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
