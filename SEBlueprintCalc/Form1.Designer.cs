@@ -101,7 +101,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 61);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Update blocks info";
+            this.button3.Text = "Update data";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -110,7 +110,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(951, 426);
+            this.button4.Location = new System.Drawing.Point(777, 421);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(46, 22);
             this.button4.TabIndex = 6;
@@ -135,7 +135,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(301, 422);
+            this.tabPage2.Size = new System.Drawing.Size(301, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Blocks";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(295, 416);
+            this.dataGridView2.Size = new System.Drawing.Size(295, 411);
             this.dataGridView2.TabIndex = 0;
             // 
             // tabPage1
@@ -187,7 +187,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(309, 448);
+            this.tabControl1.Size = new System.Drawing.Size(309, 443);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage3
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(997, 448);
+            this.ClientSize = new System.Drawing.Size(823, 443);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

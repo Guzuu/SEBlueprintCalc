@@ -142,6 +142,7 @@ namespace SEBlueprintCalc
                 {
                     var ingotName = ingot.GetAttribute("SubtypeId") + " " + ingot.GetAttribute("TypeId");
                     float.TryParse(ingot.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out ingotCount);
+                    ingotCount /= 3;
 
                     if (ingotDict.ContainsKey(ingotName)) ingotDict[ingotName] += ingotCount;
                     else ingotDict.Add(ingotName, ingotCount);
@@ -235,11 +236,11 @@ namespace SEBlueprintCalc
                 output = JsonConvert.SerializeObject(compDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Components.json", output);
 
-                MessageBox.Show("Blocks and Components info updated");
+                MessageBox.Show("Blocks and components data updated");
             }
             catch (DirectoryNotFoundException)
             {
-                MessageBox.Show("Couldnt update blocks info. Make sure your game directory setting is correct.");
+                MessageBox.Show("Couldnt update blocks and components data. Make sure your game directory setting is correct.");
             }
             catch (Exception ex)
             {
@@ -338,7 +339,7 @@ namespace SEBlueprintCalc
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SEBlueprintCalc v2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc");
+            MessageBox.Show("SEBlueprintCalc v2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
         }
     }
 }

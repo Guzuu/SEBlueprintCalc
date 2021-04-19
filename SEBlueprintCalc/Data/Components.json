@@ -1,94 +1,94 @@
 {
   "Construction": {
-    "Iron Ingot": 8.0
+    "Iron Ingot": 2.66666675
   },
   "Girder": {
-    "Iron Ingot": 6.0
-  },
-  "MetalGrid": {
-    "Iron Ingot": 12.0,
-    "Nickel Ingot": 5.0,
-    "Cobalt Ingot": 3.0
-  },
-  "InteriorPlate": {
-    "Iron Ingot": 3.0
-  },
-  "SteelPlate": {
-    "Iron Ingot": 21.0
-  },
-  "SmallTube": {
-    "Iron Ingot": 5.0
-  },
-  "LargeTube": {
-    "Iron Ingot": 30.0
-  },
-  "Motor": {
-    "Iron Ingot": 20.0,
-    "Nickel Ingot": 5.0
-  },
-  "Display": {
-    "Iron Ingot": 1.0,
-    "Silicon Ingot": 5.0
-  },
-  "BulletproofGlass": {
-    "Silicon Ingot": 15.0
-  },
-  "Computer": {
-    "Iron Ingot": 0.5,
-    "Silicon Ingot": 0.2
-  },
-  "Reactor": {
-    "Iron Ingot": 15.0,
-    "Stone Ingot": 20.0,
-    "Silver Ingot": 5.0
-  },
-  "Thrust": {
-    "Iron Ingot": 30.0,
-    "Cobalt Ingot": 10.0,
-    "Gold Ingot": 1.0,
-    "Platinum Ingot": 0.4
-  },
-  "GravityGenerator": {
-    "Silver Ingot": 5.0,
-    "Gold Ingot": 10.0,
-    "Cobalt Ingot": 220.0,
-    "Iron Ingot": 600.0
-  },
-  "Medical": {
-    "Iron Ingot": 60.0,
-    "Nickel Ingot": 70.0,
-    "Silver Ingot": 20.0
-  },
-  "RadioCommunication": {
-    "Iron Ingot": 8.0,
-    "Silicon Ingot": 1.0
-  },
-  "Detector": {
-    "Iron Ingot": 5.0,
-    "Nickel Ingot": 15.0
-  },
-  "Canvas": {
-    "Silicon Ingot": 35.0,
     "Iron Ingot": 2.0
   },
+  "MetalGrid": {
+    "Iron Ingot": 4.0,
+    "Nickel Ingot": 1.66666663,
+    "Cobalt Ingot": 1.0
+  },
+  "InteriorPlate": {
+    "Iron Ingot": 1.0
+  },
+  "SteelPlate": {
+    "Iron Ingot": 7.0
+  },
+  "SmallTube": {
+    "Iron Ingot": 1.66666663
+  },
+  "LargeTube": {
+    "Iron Ingot": 10.0
+  },
+  "Motor": {
+    "Iron Ingot": 6.66666651,
+    "Nickel Ingot": 1.66666663
+  },
+  "Display": {
+    "Iron Ingot": 0.333333343,
+    "Silicon Ingot": 1.66666663
+  },
+  "BulletproofGlass": {
+    "Silicon Ingot": 5.0
+  },
+  "Computer": {
+    "Iron Ingot": 0.166666672,
+    "Silicon Ingot": 0.06666667
+  },
+  "Reactor": {
+    "Iron Ingot": 5.0,
+    "Stone Ingot": 6.66666651,
+    "Silver Ingot": 1.66666663
+  },
+  "Thrust": {
+    "Iron Ingot": 10.0,
+    "Cobalt Ingot": 3.33333325,
+    "Gold Ingot": 0.333333343,
+    "Platinum Ingot": 0.13333334
+  },
+  "GravityGenerator": {
+    "Silver Ingot": 1.66666663,
+    "Gold Ingot": 3.33333325,
+    "Cobalt Ingot": 73.3333359,
+    "Iron Ingot": 200.0
+  },
+  "Medical": {
+    "Iron Ingot": 20.0,
+    "Nickel Ingot": 23.333334,
+    "Silver Ingot": 6.66666651
+  },
+  "RadioCommunication": {
+    "Iron Ingot": 2.66666675,
+    "Silicon Ingot": 0.333333343
+  },
+  "Detector": {
+    "Iron Ingot": 1.66666663,
+    "Nickel Ingot": 5.0
+  },
+  "Canvas": {
+    "Silicon Ingot": 11.666667,
+    "Iron Ingot": 0.6666667
+  },
   "Explosives": {
-    "Silicon Ingot": 0.5,
-    "Magnesium Ingot": 2.0
+    "Silicon Ingot": 0.166666672,
+    "Magnesium Ingot": 0.6666667
   },
   "SolarCell": {
-    "Nickel Ingot": 3.0,
-    "Silicon Ingot": 6.0
+    "Nickel Ingot": 1.0,
+    "Silicon Ingot": 2.0
   },
   "PowerCell": {
-    "Iron Ingot": 10.0,
-    "Silicon Ingot": 1.0,
-    "Nickel Ingot": 2.0
+    "Iron Ingot": 3.33333325,
+    "Silicon Ingot": 0.333333343,
+    "Nickel Ingot": 0.6666667
   },
   "Superconductor": {
-    "Iron Ingot": 10.0,
-    "Gold Ingot": 2.0
+    "Iron Ingot": 3.33333325,
+    "Gold Ingot": 0.6666667
   },
   "ZoneChip": {
-    "ZoneChip Component": 1.0
+    "ZoneChip Component": 0.333333343
   }
 }
