@@ -365,8 +365,8 @@
     "SteelPlate": 1
   },
   "LargeBlockHeavyArmorSlopedCornerTip": {
-    "SteelPlate": 4,
-    "MetalGrid": 1
+    "SteelPlate": 23,
+    "MetalGrid": 6
   },
   "SmallBlockHeavyArmorSlopedCornerTip": {
     "SteelPlate": 2,
@@ -409,6 +409,13 @@
     "RadioCommunication": 4,
     "Detector": 6,
     "SteelPlate": 2
+  },
+  "TargetDummy": {
+    "SteelPlate": 15,
+    "SmallTube": 10,
+    "Motor": 2,
+    "Computer": 4,
+    "Display": 1
   },
   "SmallBlockSoundBlock": {
     "InteriorPlate": 4,
@@ -1138,10 +1145,19 @@
     "Computer": 7,
     "GravityGenerator": 1
   },
+  "Passage2": {
+    "InteriorPlate": 148,
+    "Construction": 40,
+    "SmallTube": 96
+  },
+  "Passage2Wall": {
+    "InteriorPlate": 50,
+    "Construction": 14,
+    "SmallTube": 32
+  },
   "LargeStairs": {
-    "InteriorPlate": 124,
-    "Construction": 50,
-    "SmallTube": 48
+    "InteriorPlate": 50,
+    "Construction": 30
   },
   "LargeRamp": {
     "InteriorPlate": 70,

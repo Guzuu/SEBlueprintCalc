@@ -281,7 +281,7 @@ namespace SEBlueprintCalc
         {
             string s = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Valve\Steam", "InstallPath", "");
             if (s == "") s = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam", "InstallPath", "");
-            else
+            if (s != "")
             {
                 if (Directory.Exists(s + "../steamapps/common/SpaceEngineers"))
                     SaveDir(s + "../steamapps/common/SpaceEngineers");
@@ -303,7 +303,7 @@ namespace SEBlueprintCalc
                 MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
                 return;
             }
-            if (s == "") MessageBox.Show("Couldnt detect game directory, set SE location manually");
+            else MessageBox.Show("Couldnt detect game directory, set SE location manually");
 
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
