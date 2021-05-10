@@ -198,36 +198,10 @@ namespace SEBlueprintCalc
             {
                 string path = readGameDir() + "\\Content\\Data\\CubeBlocks\\";
 
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Armor_2.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Automation.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Communications.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Control.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_DecorativePack2.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Doors.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Economy.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Energy.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Extras.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Frostbite.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Gravity.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Interiors.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_LCDPanels.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Lights.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Logistics.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Mechanical.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Medical.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Production.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_ScrapRacePack.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_SparksOfTheFuturePack.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Symbols.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Thrusters.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Tools.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Utility.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Weapons.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Wheels.sbc"), blockDict);
-                readXMLBlockInfo(File.ReadAllText(path + "CubeBlocks_Windows.sbc"), blockDict);
-
+                foreach (string file in Directory.EnumerateFiles(path, "*.sbc"))
+                {
+                    readXMLBlockInfo(File.ReadAllText(file), blockDict);
+                }
                 readXMLComponentInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), compDict);
 
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);

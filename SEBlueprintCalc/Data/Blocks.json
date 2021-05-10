@@ -1,4 +1,13 @@
 {
+  "LargeRailStraight": {
+    "SteelPlate": 12,
+    "Construction": 8,
+    "LargeTube": 4
+  },
+  "DebugSphereLarge": {
+    "SteelPlate": 10,
+    "Computer": 20
+  },
   "LargeBlockArmorBlock": {
     "SteelPlate": 25
   },
@@ -2592,6 +2601,72 @@
     "SmallTube": 1,
     "Motor": 1,
     "Computer": 1
+  },
+  "LargeBlockWeaponRack": {
+    "InteriorPlate": 30,
+    "Construction": 20
+  },
+  "SmallBlockWeaponRack": {
+    "InteriorPlate": 3,
+    "Construction": 3
+  },
+  "FireCover": {
+    "SteelPlate": 4,
+    "Construction": 10
+  },
+  "FireCoverCorner": {
+    "SteelPlate": 8,
+    "Construction": 20
+  },
+  "HalfWindow": {
+    "Girder": 4,
+    "SteelPlate": 10,
+    "BulletproofGlass": 10
+  },
+  "HalfWindowInv": {
+    "Girder": 4,
+    "SteelPlate": 10,
+    "BulletproofGlass": 10
+  },
+  "HalfWindowCorner": {
+    "Girder": 8,
+    "SteelPlate": 20,
+    "BulletproofGlass": 20
+  },
+  "HalfWindowCornerInv": {
+    "Girder": 8,
+    "SteelPlate": 20,
+    "BulletproofGlass": 20
+  },
+  "Embrasure": {
+    "SteelPlate": 30,
+    "Construction": 20,
+    "MetalGrid": 10
+  },
+  "PassageSciFi": {
+    "InteriorPlate": 74,
+    "Construction": 20,
+    "SmallTube": 48
+  },
+  "PassageSciFiWall": {
+    "InteriorPlate": 50,
+    "Construction": 14,
+    "SmallTube": 32
+  },
+  "PassageSciFiIntersection": {
+    "InteriorPlate": 35,
+    "Construction": 10,
+    "SmallTube": 25
+  },
+  "PassageSciFiGate": {
+    "InteriorPlate": 35,
+    "Construction": 10,
+    "SmallTube": 25
+  },
+  "PassageSciFiLight": {
+    "InteriorPlate": 74,
+    "Construction": 20,
+    "SmallTube": 48
   },
   "LargeWarhead": {
     "SteelPlate": 20,
