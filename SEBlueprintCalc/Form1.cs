@@ -78,7 +78,7 @@ namespace SEBlueprintCalc
 
             bp.LoadXml(file);
 
-            var blocks = bp.DocumentElement.SelectNodes("//CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
+            var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
 
             foreach(XmlNode block in blocks)
             {
