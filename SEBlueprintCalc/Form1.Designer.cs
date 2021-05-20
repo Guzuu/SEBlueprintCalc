@@ -49,6 +49,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -63,9 +65,9 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(369, 368);
+            this.button1.Location = new System.Drawing.Point(343, 372);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 61);
+            this.button1.Size = new System.Drawing.Size(147, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "Open blueprint";
             this.button1.UseVisualStyleBackColor = false;
@@ -85,11 +87,11 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(650, 368);
+            this.button2.Location = new System.Drawing.Point(599, 393);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 61);
+            this.button2.Size = new System.Drawing.Size(82, 29);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Set game directory";
+            this.button2.Text = "Auto";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -97,9 +99,9 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(548, 368);
+            this.button3.Location = new System.Drawing.Point(512, 372);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 61);
+            this.button3.Size = new System.Drawing.Size(70, 64);
             this.button3.TabIndex = 5;
             this.button3.Text = "Update data";
             this.button3.UseVisualStyleBackColor = false;
@@ -110,7 +112,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(777, 421);
+            this.button4.Location = new System.Drawing.Point(754, 436);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(46, 22);
             this.button4.TabIndex = 6;
@@ -135,7 +137,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(301, 417);
+            this.tabPage2.Size = new System.Drawing.Size(301, 432);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Blocks";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -151,7 +153,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(295, 411);
+            this.dataGridView2.Size = new System.Drawing.Size(295, 426);
             this.dataGridView2.TabIndex = 0;
             // 
             // tabPage1
@@ -160,7 +162,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(301, 422);
+            this.tabPage1.Size = new System.Drawing.Size(301, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Components";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -175,7 +177,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(295, 416);
+            this.dataGridView1.Size = new System.Drawing.Size(295, 411);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl1
@@ -187,7 +189,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(309, 443);
+            this.tabControl1.Size = new System.Drawing.Size(309, 458);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage3
@@ -196,7 +198,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(301, 422);
+            this.tabPage3.Size = new System.Drawing.Size(301, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ingots";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -211,15 +213,40 @@
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.Size = new System.Drawing.Size(295, 416);
+            this.dataGridView3.Size = new System.Drawing.Size(295, 411);
             this.dataGridView3.TabIndex = 3;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.Location = new System.Drawing.Point(687, 393);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(82, 29);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Manually";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(609, 372);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Set game directory";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(823, 443);
+            this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -263,6 +290,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label2;
     }
 }
 

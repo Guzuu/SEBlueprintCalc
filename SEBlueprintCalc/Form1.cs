@@ -315,5 +315,11 @@ namespace SEBlueprintCalc
         {
             MessageBox.Show("SEBlueprintCalc v2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.ShowDialog();
+            SaveDir(folderBrowserDialog1.SelectedPath);
+        }
     }
 }
