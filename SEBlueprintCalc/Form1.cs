@@ -17,6 +17,18 @@ namespace SEBlueprintCalc
 {
     public partial class Form1 : Form
     {
+        public struct ItemData<T>
+        {
+            public string IconPath;
+            public Dictionary<string, T> Cost;
+
+            public ItemData(string DDSPath, Dictionary<string, T> Cost)
+            {
+                this.IconPath = DDSPath;
+                this.Cost = new Dictionary<string, T>(Cost);
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -96,11 +108,10 @@ namespace SEBlueprintCalc
             return blockDict;
         }
 
-        public Dictionary<string, Dictionary<string, int>> readXMLBlockInfo(string file, Dictionary<string, Dictionary<string, int>> blockDict)
+        public Dictionary<string, ItemData<int>> readXMLBlockInfo(string file, Dictionary<string, ItemData<int>> blockDict)
         {
             Dictionary<string, int> compDict = new Dictionary<string, int>();
             int compCount;
-
             XmlDocument blocks = new XmlDocument();
             blocks.LoadXml(file);
 
@@ -113,6 +124,7 @@ namespace SEBlueprintCalc
                 {
                     blockName = section.SelectSingleNode(".//Id/TypeId")?.InnerText ?? "";
                 }
+                var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
                 var components = section.SelectNodes(".//Components/Component");
                 foreach(XmlElement component in components)
                 {
@@ -123,14 +135,13 @@ namespace SEBlueprintCalc
                     else compDict.Add(compName, compCount);
                 }
                 if (blockDict.ContainsKey(blockName)) continue;
-                else blockDict.Add(blockName, new Dictionary<string, int>(compDict));
+                else blockDict.Add(blockName, new ItemData<int>(IconPath, compDict));
                 compDict.Clear();
             }
-
             return blockDict;
         }
 
-        public Dictionary<string, Dictionary<string, float>> readXMLComponentInfo(string file, Dictionary<string, Dictionary<string, float>> compDict)
+        public Dictionary<string, ItemData<float>> readXMLComponentInfo(string file, Dictionary<string, ItemData<float>> compDict)
         {
             Dictionary<string, float> ingotDict = new Dictionary<string, float>();
             float ingotCount;
@@ -146,6 +157,7 @@ namespace SEBlueprintCalc
                 var comp = section.SelectSingleNode(".//Result");
                 if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
                 compName = comp.Attributes["SubtypeId"]?.Value ?? "";
+                var IconPath = section.SelectSingleNode(".//Icon")?.InnerText?? "";
                 var ingots = section.SelectNodes(".//Prerequisites/Item");
                 foreach (XmlElement ingot in ingots)
                 {
@@ -157,7 +169,7 @@ namespace SEBlueprintCalc
                     else ingotDict.Add(ingotName, ingotCount);
                 }
                 if (compDict.ContainsKey(compName)) continue;
-                else compDict.Add(compName, new Dictionary<string, float>(ingotDict));
+                else compDict.Add(compName, new ItemData<float>(IconPath, ingotDict));
                 ingotDict.Clear();
             }
 
@@ -166,12 +178,12 @@ namespace SEBlueprintCalc
 
         public Dictionary<string, int> getComponents(Dictionary<string, int> bpBlocks)
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
+            Dictionary<string, ItemData<int>> blockDict = readBlocksData();
             Dictionary<string, int> comps = new Dictionary<string, int>();
             
             foreach (var bpBlock in bpBlocks)
             {
-                foreach(var comp in blockDict[bpBlock.Key])
+                foreach(var comp in blockDict[bpBlock.Key].Cost)
                 {
                     if (comps.ContainsKey(comp.Key)) comps[comp.Key] += comp.Value * bpBlock.Value;
                     else comps.Add(comp.Key, comp.Value * bpBlock.Value);
@@ -183,12 +195,12 @@ namespace SEBlueprintCalc
 
         public Dictionary<string, float> getIngots(Dictionary<string, int> bpComps)
         {
-            Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
+            Dictionary<string, ItemData<float>> compDict = readCompsData();
             Dictionary<string, float> ingots = new Dictionary<string, float>();
 
             foreach (var bpComp in bpComps)
             {
-                foreach (var ingot in compDict[bpComp.Key])
+                foreach (var ingot in compDict[bpComp.Key].Cost)
                 {
                     if (ingots.ContainsKey(ingot.Key)) ingots[ingot.Key] += ingot.Value * bpComp.Value;
                     else ingots.Add(ingot.Key, ingot.Value * bpComp.Value);
@@ -200,8 +212,8 @@ namespace SEBlueprintCalc
 
         public void UpdateData()
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
-            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
+            Dictionary<string, ItemData<int>> blockDict = new Dictionary<string, ItemData<int>>();
+            Dictionary<string, ItemData<float>> compDict = new Dictionary<string, ItemData<float>>();
 
             try
             {
@@ -234,27 +246,27 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, Dictionary<string, int>> readBlocksData()
+        public Dictionary<string, ItemData<int>> readBlocksData()
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            Dictionary<string, ItemData<int>> blockDict = new Dictionary<string, ItemData<int>>();
             JObject blocks = JObject.Parse(File.ReadAllText(rootDir + "../Data/Blocks.json"));
 
             foreach (var block in blocks)
             {
-                blockDict.Add(block.Key, block.Value.ToObject<Dictionary<string, int>>());
+                blockDict.Add(block.Key, block.Value.ToObject<ItemData<int>>());
             }
 
             return blockDict;
         }
 
-        public Dictionary<string, Dictionary<string, float>> readCompsData()
+        public Dictionary<string, ItemData<float>> readCompsData()
         {
-            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
+            Dictionary<string, ItemData<float>> compDict = new Dictionary<string, ItemData<float>>();
             JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
 
             foreach (var comp in comps)
             {
-                compDict.Add(comp.Key, comp.Value.ToObject<Dictionary<string, float>>());
+                compDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>());
             }
 
             return compDict;

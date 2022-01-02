@@ -162,7 +162,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(301, 417);
+            this.tabPage1.Size = new System.Drawing.Size(301, 432);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Components";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -177,7 +177,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(295, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(295, 426);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl1
@@ -198,7 +198,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(301, 417);
+            this.tabPage3.Size = new System.Drawing.Size(301, 432);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ingots";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.Size = new System.Drawing.Size(295, 411);
+            this.dataGridView3.Size = new System.Drawing.Size(295, 426);
             this.dataGridView3.TabIndex = 3;
             // 
             // button5
@@ -245,13 +245,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
