@@ -227,6 +227,230 @@
     "SteelPlate": 5,
     "MetalGrid": 1
   },
+  "LargeArmorPanelLight": {
+    "SteelPlate": 5
+  },
+  "LargeArmorSlopedSidePanelLight": {
+    "SteelPlate": 3
+  },
+  "LargeArmorSlopedPanelLight": {
+    "SteelPlate": 6
+  },
+  "LargeArmorHalfPanelLight": {
+    "SteelPlate": 3
+  },
+  "LargeArmorQuarterPanelLight": {
+    "SteelPlate": 2
+  },
+  "LargeArmor2x1SlopedPanelLight": {
+    "SteelPlate": 5
+  },
+  "LargeArmor2x1SlopedPanelTipLight": {
+    "SteelPlate": 5
+  },
+  "LargeArmor2x1SlopedSideBasePanelLight": {
+    "SteelPlate": 5
+  },
+  "LargeArmor2x1SlopedSideTipPanelLight": {
+    "SteelPlate": 3
+  },
+  "LargeArmor2x1SlopedSideBasePanelLightInv": {
+    "SteelPlate": 5
+  },
+  "LargeArmor2x1SlopedSideTipPanelLightInv": {
+    "SteelPlate": 3
+  },
+  "LargeArmorHalfSlopedPanelLight": {
+    "SteelPlate": 4
+  },
+  "LargeArmor2x1HalfSlopedPanelLightRight": {
+    "SteelPlate": 3
+  },
+  "LargeArmor2x1HalfSlopedTipPanelLightRight": {
+    "SteelPlate": 3
+  },
+  "LargeArmor2x1HalfSlopedPanelLightLeft": {
+    "SteelPlate": 3
+  },
+  "LargeArmor2x1HalfSlopedTipPanelLightLeft": {
+    "SteelPlate": 3
+  },
+  "LargeArmorPanelHeavy": {
+    "SteelPlate": 15,
+    "MetalGrid": 5
+  },
+  "LargeArmorSlopedSidePanelHeavy": {
+    "SteelPlate": 8,
+    "MetalGrid": 3
+  },
+  "LargeArmorSlopedPanelHeavy": {
+    "SteelPlate": 21,
+    "MetalGrid": 7
+  },
+  "LargeArmorHalfPanelHeavy": {
+    "SteelPlate": 8,
+    "MetalGrid": 3
+  },
+  "LargeArmorQuarterPanelHeavy": {
+    "SteelPlate": 5,
+    "MetalGrid": 2
+  },
+  "LargeArmor2x1SlopedPanelHeavy": {
+    "SteelPlate": 18,
+    "MetalGrid": 6
+  },
+  "LargeArmor2x1SlopedPanelTipHeavy": {
+    "SteelPlate": 18,
+    "MetalGrid": 6
+  },
+  "LargeArmor2x1SlopedSideBasePanelHeavy": {
+    "SteelPlate": 12,
+    "MetalGrid": 4
+  },
+  "LargeArmor2x1SlopedSideTipPanelHeavy": {
+    "SteelPlate": 6,
+    "MetalGrid": 2
+  },
+  "LargeArmor2x1SlopedSideBasePanelHeavyInv": {
+    "SteelPlate": 12,
+    "MetalGrid": 4
+  },
+  "LargeArmor2x1SlopedSideTipPanelHeavyInv": {
+    "SteelPlate": 6,
+    "MetalGrid": 2
+  },
+  "LargeArmorHalfSlopedPanelHeavy": {
+    "SteelPlate": 9,
+    "MetalGrid": 3
+  },
+  "LargeArmor2x1HalfSlopedPanelHeavyRight": {
+    "SteelPlate": 9,
+    "MetalGrid": 3
+  },
+  "LargeArmor2x1HalfSlopedTipPanelHeavyRight": {
+    "SteelPlate": 9,
+    "MetalGrid": 3
+  },
+  "LargeArmor2x1HalfSlopedPanelHeavyLeft": {
+    "SteelPlate": 9,
+    "MetalGrid": 3
+  },
+  "LargeArmor2x1HalfSlopedTipPanelHeavyLeft": {
+    "SteelPlate": 9,
+    "MetalGrid": 3
+  },
+  "SmallArmorPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmorSlopedSidePanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmorSlopedPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmorHalfPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmorQuarterPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedPanelTipLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedSideBasePanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedSideTipPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedSideBasePanelLightInv": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1SlopedSideTipPanelLightInv": {
+    "SteelPlate": 1
+  },
+  "SmallArmorHalfSlopedPanelLight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1HalfSlopedPanelLightRight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1HalfSlopedTipPanelLightRight": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1HalfSlopedPanelLightLeft": {
+    "SteelPlate": 1
+  },
+  "SmallArmor2x1HalfSlopedTipPanelLightLeft": {
+    "SteelPlate": 1
+  },
+  "SmallArmorPanelHeavy": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmorSlopedSidePanelHeavy": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmorSlopedPanelHeavy": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmorHalfPanelHeavy": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmorQuarterPanelHeavy": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedPanelHeavy": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedPanelTipHeavy": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedSideBasePanelHeavy": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedSideTipPanelHeavy": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedSideBasePanelHeavyInv": {
+    "SteelPlate": 3,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1SlopedSideTipPanelHeavyInv": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmorHalfSlopedPanelHeavy": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1HalfSlopedPanelHeavyRight": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1HalfSlopedTipPanelHeavyRight": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1HalfSlopedPanelHeavyLeft": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
+  "SmallArmor2x1HalfSlopedTipPanelHeavyLeft": {
+    "SteelPlate": 2,
+    "MetalGrid": 1
+  },
   "LargeBlockArmorCornerSquare": {
     "SteelPlate": 7
   },
@@ -874,7 +1098,7 @@
     "InteriorPlate": 18,
     "Construction": 24
   },
-  "": {
+  "Door": {
     "InteriorPlate": 10,
     "Construction": 40,
     "SmallTube": 4,
@@ -892,13 +1116,20 @@
     "Computer": 2,
     "SteelPlate": 6
   },
+  "AirtightHangarDoor": {
+    "SteelPlate": 350,
+    "Construction": 40,
+    "SmallTube": 40,
+    "Motor": 16,
+    "Computer": 2
+  },
   "LargeBlockSlideDoor": {
-    "SteelPlate": 370,
-    "Construction": 80,
-    "SmallTube": 44,
-    "Motor": 20,
-    "Computer": 4,
+    "SteelPlate": 20,
+    "Construction": 40,
+    "SmallTube": 4,
+    "Motor": 4,
     "Display": 1,
+    "Computer": 2,
     "BulletproofGlass": 15
   },
   "ArmorCenter": {
@@ -1126,14 +1357,28 @@
     "RadioCommunication": 1,
     "Display": 1
   },
+  "GravityGenerator": {
+    "SteelPlate": 150,
+    "GravityGenerator": 6,
+    "Construction": 60,
+    "LargeTube": 4,
+    "Motor": 6,
+    "Computer": 40
+  },
+  "GravityGeneratorSphere": {
+    "SteelPlate": 150,
+    "GravityGenerator": 6,
+    "Construction": 60,
+    "LargeTube": 4,
+    "Motor": 6,
+    "Computer": 40
+  },
   "VirtualMassLarge": {
-    "SteelPlate": 390,
-    "GravityGenerator": 21,
-    "Construction": 150,
-    "LargeTube": 8,
-    "Motor": 12,
-    "Computer": 100,
-    "Superconductor": 20
+    "SteelPlate": 90,
+    "Superconductor": 20,
+    "Construction": 30,
+    "Computer": 20,
+    "GravityGenerator": 9
   },
   "VirtualMassSmall": {
     "SteelPlate": 3,
@@ -1154,10 +1399,197 @@
     "Computer": 7,
     "GravityGenerator": 1
   },
-  "Passage2": {
-    "InteriorPlate": 148,
+  "LargeBlockMagneticPlate": {
+    "SteelPlate": 450,
+    "Construction": 60,
+    "Motor": 20
+  },
+  "SmallBlockMagneticPlate": {
+    "SteelPlate": 6,
+    "Construction": 15,
+    "Motor": 3
+  },
+  "LargeBlockLargeIndustrialContainer": {
+    "InteriorPlate": 360,
+    "Construction": 80,
+    "MetalGrid": 24,
+    "SmallTube": 60,
+    "Motor": 20,
+    "Display": 1,
+    "Computer": 8
+  },
+  "VerticalButtonPanelLarge": {
+    "InteriorPlate": 5,
+    "Construction": 10,
+    "Computer": 5
+  },
+  "LargeBlockConveyorPipeSeamless": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "LargeBlockConveyorPipeCorner": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "LargeBlockConveyorPipeJunction": {
+    "InteriorPlate": 20,
+    "Construction": 30,
+    "SmallTube": 20,
+    "Motor": 6
+  },
+  "LargeBlockConveyorPipeIntersection": {
+    "InteriorPlate": 18,
+    "Construction": 20,
+    "SmallTube": 16,
+    "Motor": 6
+  },
+  "LargeBlockConveyorPipeFlange": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "LargeBlockConveyorPipeEnd": {
+    "InteriorPlate": 14,
+    "Construction": 20,
+    "SmallTube": 12,
+    "Motor": 6
+  },
+  "LargeHydrogenTankIndustrial": {
+    "SteelPlate": 280,
+    "LargeTube": 80,
+    "SmallTube": 60,
+    "Computer": 8,
+    "Construction": 40
+  },
+  "LargeAssemblerIndustrial": {
+    "SteelPlate": 140,
+    "Construction": 80,
+    "Motor": 20,
+    "Display": 10,
+    "MetalGrid": 10,
+    "Computer": 160
+  },
+  "LargeRefineryIndustrial": {
+    "SteelPlate": 1200,
     "Construction": 40,
-    "SmallTube": 96
+    "LargeTube": 20,
+    "Motor": 16,
+    "MetalGrid": 20,
+    "Computer": 20
+  },
+  "LargeBlockCylindricalColumn": {
+    "InteriorPlate": 25,
+    "Construction": 10
+  },
+  "SmallBlockCylindricalColumn": {
+    "InteriorPlate": 5,
+    "Construction": 3
+  },
+  "LargeBlockConveyorSorterIndustrial": {
+    "InteriorPlate": 50,
+    "Construction": 120,
+    "SmallTube": 50,
+    "Computer": 20,
+    "Motor": 2
+  },
+  "LargeGridBeamBlock": {
+    "SteelPlate": 25
+  },
+  "LargeGridBeamBlockSlope": {
+    "SteelPlate": 13
+  },
+  "LargeGridBeamBlockRound": {
+    "SteelPlate": 13
+  },
+  "LargeGridBeamBlockSlope2x1Base": {
+    "SteelPlate": 19
+  },
+  "LargeGridBeamBlockSlope2x1Tip": {
+    "SteelPlate": 7
+  },
+  "LargeGridBeamBlockHalf": {
+    "SteelPlate": 12
+  },
+  "LargeGridBeamBlockHalfSlope": {
+    "SteelPlate": 7
+  },
+  "LargeGridBeamBlockEnd": {
+    "SteelPlate": 25
+  },
+  "LargeGridBeamBlockJunction": {
+    "SteelPlate": 25
+  },
+  "LargeGridBeamBlockTJunction": {
+    "SteelPlate": 25
+  },
+  "SmallGridBeamBlock": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockSlope": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockRound": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockSlope2x1Base": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockSlope2x1Tip": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockHalf": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockHalfSlope": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockEnd": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockJunction": {
+    "SteelPlate": 1
+  },
+  "SmallGridBeamBlockTJunction": {
+    "SteelPlate": 1
+  },
+  "LargeBlockLargeHydrogenThrustIndustrial": {
+    "SteelPlate": 150,
+    "Construction": 180,
+    "MetalGrid": 250,
+    "LargeTube": 40
+  },
+  "LargeBlockSmallHydrogenThrustIndustrial": {
+    "SteelPlate": 25,
+    "Construction": 60,
+    "MetalGrid": 40,
+    "LargeTube": 8
+  },
+  "SmallBlockLargeHydrogenThrustIndustrial": {
+    "SteelPlate": 30,
+    "Construction": 30,
+    "MetalGrid": 22,
+    "LargeTube": 10
+  },
+  "SmallBlockSmallHydrogenThrustIndustrial": {
+    "SteelPlate": 7,
+    "Construction": 15,
+    "MetalGrid": 4,
+    "LargeTube": 2
+  },
+  "Passage": {
+    "InteriorPlate": 74,
+    "Construction": 20,
+    "SmallTube": 48
+  },
+  "Passage2": {
+    "InteriorPlate": 74,
+    "Construction": 20,
+    "SmallTube": 48
   },
   "Passage2Wall": {
     "InteriorPlate": 50,
@@ -1217,10 +1649,15 @@
     "InteriorPlate": 20,
     "Construction": 20
   },
+  "Ladder2": {
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "SmallTube": 10
+  },
   "LadderSmall": {
-    "InteriorPlate": 20,
-    "Construction": 40,
-    "SmallTube": 20
+    "InteriorPlate": 10,
+    "Construction": 20,
+    "SmallTube": 10
   },
   "SmallTextPanel": {
     "InteriorPlate": 1,
@@ -1343,12 +1780,19 @@
     "Computer": 8,
     "Construction": 10
   },
+  "OxygenTank": {
+    "SteelPlate": 80,
+    "LargeTube": 40,
+    "SmallTube": 60,
+    "Computer": 8,
+    "Construction": 40
+  },
   "LargeHydrogenTank": {
-    "SteelPlate": 360,
-    "LargeTube": 120,
-    "SmallTube": 120,
-    "Computer": 16,
-    "Construction": 80
+    "SteelPlate": 280,
+    "LargeTube": 80,
+    "SmallTube": 60,
+    "Computer": 8,
+    "Construction": 40
   },
   "LargeHydrogenTankSmall": {
     "SteelPlate": 80,
@@ -1371,11 +1815,17 @@
     "Computer": 4,
     "Construction": 2
   },
+  "AirVent": {
+    "SteelPlate": 45,
+    "Construction": 20,
+    "Motor": 10,
+    "Computer": 5
+  },
   "SmallAirVent": {
-    "SteelPlate": 53,
-    "Construction": 30,
-    "Motor": 12,
-    "Computer": 10
+    "SteelPlate": 8,
+    "Construction": 10,
+    "Motor": 2,
+    "Computer": 5
   },
   "SmallBlockSmallContainer": {
     "InteriorPlate": 3,
@@ -1682,12 +2132,19 @@
     "Motor": 10,
     "Computer": 10
   },
+  "OxygenGenerator": {
+    "SteelPlate": 120,
+    "Construction": 5,
+    "LargeTube": 2,
+    "Motor": 4,
+    "Computer": 5
+  },
   "OxygenGeneratorSmall": {
-    "SteelPlate": 128,
-    "Construction": 13,
-    "LargeTube": 4,
-    "Motor": 5,
-    "Computer": 8
+    "SteelPlate": 8,
+    "Construction": 8,
+    "LargeTube": 2,
+    "Motor": 1,
+    "Computer": 3
   },
   "LargeAssembler": {
     "SteelPlate": 140,
@@ -2556,6 +3013,16 @@
     "Construction": 5,
     "Motor": 1
   },
+  "LargeBlockSmallMagneticPlate": {
+    "SteelPlate": 15,
+    "Construction": 3,
+    "Motor": 1
+  },
+  "SmallBlockSmallMagneticPlate": {
+    "SteelPlate": 2,
+    "Construction": 1,
+    "Motor": 1
+  },
   "LargeJumpDrive": {
     "SteelPlate": 60,
     "MetalGrid": 50,
@@ -2586,6 +3053,13 @@
     "Construction": 5,
     "Motor": 1,
     "SmallTube": 2,
+    "Computer": 1
+  },
+  "SmallShipSmallMergeBlock": {
+    "SteelPlate": 2,
+    "Construction": 3,
+    "Motor": 1,
+    "SmallTube": 1,
     "Computer": 1
   },
   "LgParachute": {
@@ -2668,6 +3142,22 @@
     "Construction": 20,
     "SmallTube": 48
   },
+  "PassageScifiCorner": {
+    "InteriorPlate": 74,
+    "Construction": 20,
+    "SmallTube": 48
+  },
+  "PassageSciFiTjunction": {
+    "InteriorPlate": 55,
+    "Construction": 16,
+    "SmallTube": 38
+  },
+  "PassageSciFiWindow": {
+    "InteriorPlate": 60,
+    "Construction": 16,
+    "BulletproofGlass": 16,
+    "SmallTube": 38
+  },
   "LargeWarhead": {
     "SteelPlate": 20,
     "Girder": 24,
@@ -2698,21 +3188,37 @@
     "RadioCommunication": 1,
     "SmallTube": 2
   },
+  "LargeGatlingTurret": {
+    "SteelPlate": 20,
+    "Construction": 30,
+    "MetalGrid": 15,
+    "SmallTube": 6,
+    "Motor": 8,
+    "Computer": 10
+  },
   "SmallGatlingTurret": {
-    "SteelPlate": 30,
-    "Construction": 60,
-    "MetalGrid": 20,
-    "SmallTube": 12,
-    "Motor": 12,
-    "Computer": 20
+    "SteelPlate": 10,
+    "Construction": 30,
+    "MetalGrid": 5,
+    "SmallTube": 6,
+    "Motor": 4,
+    "Computer": 10
+  },
+  "LargeMissileTurret": {
+    "SteelPlate": 20,
+    "Construction": 40,
+    "MetalGrid": 5,
+    "LargeTube": 6,
+    "Motor": 16,
+    "Computer": 12
   },
   "SmallMissileTurret": {
-    "SteelPlate": 30,
-    "Construction": 80,
-    "MetalGrid": 7,
-    "LargeTube": 8,
-    "Motor": 24,
-    "Computer": 24
+    "SteelPlate": 10,
+    "Construction": 40,
+    "MetalGrid": 2,
+    "LargeTube": 2,
+    "Motor": 8,
+    "Computer": 12
   },
   "LargeInteriorTurret": {
     "InteriorPlate": 6,
@@ -2722,13 +3228,21 @@
     "Computer": 5,
     "SteelPlate": 4
   },
+  "SmallMissileLauncher": {
+    "SteelPlate": 4,
+    "Construction": 2,
+    "MetalGrid": 1,
+    "LargeTube": 4,
+    "Motor": 1,
+    "Computer": 1
+  },
   "LargeMissileLauncher": {
-    "SteelPlate": 39,
-    "Construction": 10,
-    "MetalGrid": 31,
-    "LargeTube": 29,
-    "Motor": 7,
-    "Computer": 5
+    "SteelPlate": 35,
+    "Construction": 8,
+    "MetalGrid": 30,
+    "LargeTube": 25,
+    "Motor": 6,
+    "Computer": 4
   },
   "SmallRocketLauncherReload": {
     "SmallTube": 50,
@@ -2739,6 +3253,14 @@
     "Motor": 4,
     "Computer": 2,
     "SteelPlate": 8
+  },
+  "SmallGatlingGun": {
+    "SteelPlate": 4,
+    "Construction": 1,
+    "MetalGrid": 2,
+    "SmallTube": 6,
+    "Motor": 1,
+    "Computer": 1
   },
   "Suspension3x3": {
     "SteelPlate": 25,

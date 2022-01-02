@@ -83,6 +83,11 @@ namespace SEBlueprintCalc
             foreach(XmlNode block in blocks)
             {
                 key = block?.InnerText ?? "";
+                if (key == "")
+                {
+                    key = block.ParentNode.Attributes[0]?.InnerText ?? "";
+                    key = key.Substring(16);
+                }
                 if (key == "") continue;
                 if (blockDict.ContainsKey(key)) blockDict[key]++;
                 else blockDict.Add(key, 1);
@@ -104,6 +109,10 @@ namespace SEBlueprintCalc
             foreach(XmlNode section in blockSections)
             {
                 var blockName = section.SelectSingleNode(".//Id/SubtypeId")?.InnerText ??"";
+                if(blockName == "")
+                {
+                    blockName = section.SelectSingleNode(".//Id/TypeId")?.InnerText ?? "";
+                }
                 var components = section.SelectNodes(".//Components/Component");
                 foreach(XmlElement component in components)
                 {
