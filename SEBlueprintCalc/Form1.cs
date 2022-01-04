@@ -12,6 +12,10 @@ using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
+using Pfim;
+using System.Drawing.Imaging;
+using ImageFormat = Pfim.ImageFormat;
+using System.Runtime.InteropServices;
 
 namespace SEBlueprintCalc
 {
@@ -19,8 +23,8 @@ namespace SEBlueprintCalc
     {
         public struct ItemData<T>
         {
-            public string IconPath;
-            public Dictionary<string, T> Cost;
+            public string IconPath { get; set; }
+            public Dictionary<string, T> Cost { get; set; }
 
             public ItemData(string DDSPath, Dictionary<string, T> Cost)
             {
@@ -29,10 +33,68 @@ namespace SEBlueprintCalc
             }
         }
 
+        public class DGVItemData<T>
+        {
+            public Bitmap Icon { get; set; }
+            public string Name { get; set; }
+            public T Count { get; set; }
+
+            public DGVItemData(string Name, T Count, string path)
+            {
+                this.Name = Name;
+                this.Count = Count;
+                this.Icon = Convert(path);
+            }
+
+            public static Bitmap Convert(string path)
+            {
+                try
+                {
+                    using (var image = Pfim.Pfim.FromFile(path))
+                    {
+                        PixelFormat format;
+
+                        // Convert from Pfim's backend agnostic image format into GDI+'s image format
+                        switch (image.Format)
+                        {
+                            case ImageFormat.Rgba32:
+                                format = PixelFormat.Format32bppArgb;
+                                break;
+                            default:
+                                // see the sample for more details
+                                throw new NotImplementedException();
+                        }
+
+                        // Pin pfim's data array so that it doesn't get reaped by GC, unnecessary
+                        // in this snippet but useful technique if the data was going to be used in
+                        // control like a picture box
+                        var handle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
+                        try
+                        {
+                            var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
+                            var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
+                            return new Bitmap(bitmap, new Size(50, 50));
+                        }
+                        finally
+                        {
+                            handle.Free();
+                        }
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
             UpdateData();
+            dataGridView1.RowTemplate.Height = 50;
+            dataGridView2.RowTemplate.Height = 50;
+            dataGridView3.RowTemplate.Height = 50;
         }
 
         public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
@@ -47,20 +109,26 @@ namespace SEBlueprintCalc
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
                 label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
-                Dictionary<string, int> bpBlocks = readXMLBlueprintBlocks(bpFile);
-                Dictionary<string, int> bpComps = getComponents(bpBlocks);
-                Dictionary<string, float> bpIngots = getIngots(bpComps);
+                BindingList<DGVItemData<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
+                BindingList<DGVItemData<int>> bpComps = getComponents(bpBlocks);
+                BindingList<DGVItemData<float>> bpIngots = getIngots(bpComps);
 
-                dataGridView1.DataSource = (from entry in bpComps orderby entry.Value descending select entry).ToList();
-                dataGridView2.DataSource = (from entry in bpBlocks orderby entry.Value descending select entry).ToList();
-                dataGridView3.DataSource = (from entry in bpIngots orderby entry.Value descending select entry).ToList();
-                dataGridView1.Columns[0].HeaderText = "Component name";
-                dataGridView2.Columns[0].HeaderText = "Block name";
-                dataGridView3.Columns[0].HeaderText = "Resource name";
-                dataGridView1.Columns[0].Width = 175;
-                dataGridView2.Columns[0].Width = 175;
-                dataGridView3.Columns[0].Width = 175;
+                dataGridView2.DataSource = bpBlocks;
+                dataGridView1.DataSource = bpComps;
+                dataGridView3.DataSource = bpIngots;
 
+                dataGridView2.Columns[0].Width = 50;
+                dataGridView2.Columns[1].Width = 175;
+                dataGridView2.Columns[2].Width = 50;
+                dataGridView1.Columns[0].Width = 50;
+                dataGridView1.Columns[1].Width = 150;
+                dataGridView1.Columns[2].Width = 75;
+                dataGridView3.Columns[0].Width = 50;
+                dataGridView3.Columns[1].Width = 125;
+                dataGridView3.Columns[2].Width = 100;
+                dataGridView2.Columns[1].HeaderText = "Block name";
+                dataGridView1.Columns[1].HeaderText = "Component name";
+                dataGridView3.Columns[1].HeaderText = "Ingot name";
             }
             catch (Exception ex)
             {
@@ -82,32 +150,6 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, int> readXMLBlueprintBlocks(string file)
-        {
-            Dictionary<string, int> blockDict = new Dictionary<string, int>();
-            string key;
-            XmlDocument bp = new XmlDocument();
-
-            bp.LoadXml(file);
-
-            var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
-
-            foreach(XmlNode block in blocks)
-            {
-                key = block?.InnerText ?? "";
-                if (key == "")
-                {
-                    key = block.ParentNode.Attributes[0]?.InnerText ?? "";
-                    key = key.Substring(16);
-                }
-                if (key == "") continue;
-                if (blockDict.ContainsKey(key)) blockDict[key]++;
-                else blockDict.Add(key, 1);
-            }
-
-            return blockDict;
-        }
-
         public Dictionary<string, ItemData<int>> readXMLBlockInfo(string file, Dictionary<string, ItemData<int>> blockDict)
         {
             Dictionary<string, int> compDict = new Dictionary<string, int>();
@@ -117,16 +159,16 @@ namespace SEBlueprintCalc
 
             var blockSections = blocks.DocumentElement.SelectNodes("//Definition");
 
-            foreach(XmlNode section in blockSections)
+            foreach (XmlNode section in blockSections)
             {
-                var blockName = section.SelectSingleNode(".//Id/SubtypeId")?.InnerText ??"";
-                if(blockName == "")
+                var blockName = section.SelectSingleNode(".//Id/SubtypeId")?.InnerText ?? "";
+                if (blockName == "")
                 {
                     blockName = section.SelectSingleNode(".//Id/TypeId")?.InnerText ?? "";
                 }
                 var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
                 var components = section.SelectNodes(".//Components/Component");
-                foreach(XmlElement component in components)
+                foreach (XmlElement component in components)
                 {
                     var compName = component.GetAttribute("Subtype");
                     int.TryParse(component.GetAttribute("Count"), out compCount);
@@ -157,7 +199,7 @@ namespace SEBlueprintCalc
                 var comp = section.SelectSingleNode(".//Result");
                 if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
                 compName = comp.Attributes["SubtypeId"]?.Value ?? "";
-                var IconPath = section.SelectSingleNode(".//Icon")?.InnerText?? "";
+                var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
                 var ingots = section.SelectNodes(".//Prerequisites/Item");
                 foreach (XmlElement ingot in ingots)
                 {
@@ -172,41 +214,113 @@ namespace SEBlueprintCalc
                 else compDict.Add(compName, new ItemData<float>(IconPath, ingotDict));
                 ingotDict.Clear();
             }
-
             return compDict;
         }
 
-        public Dictionary<string, int> getComponents(Dictionary<string, int> bpBlocks)
+        public Dictionary<string, ItemData<float>> readXMLIngotInfo(string file, Dictionary<string, ItemData<float>> ingotDict)
         {
-            Dictionary<string, ItemData<int>> blockDict = readBlocksData();
-            Dictionary<string, int> comps = new Dictionary<string, int>();
-            
+            Dictionary<string, float> oreDict = new Dictionary<string, float>();
+            float oreCount;
+
+            XmlDocument ingots = new XmlDocument();
+            ingots.LoadXml(file);
+
+            var ingotSections = ingots.DocumentElement.SelectNodes("//Blueprint");
+
+            foreach (XmlNode section in ingotSections)
+            {
+                var ingotName = "";
+                var ingot = section.SelectSingleNode(".//Prerequisites/Item");
+                if (ingot == null || ingot.Attributes["TypeId"].Value != "Ore") continue;
+                ingotName = ingot.Attributes["SubtypeId"]?.Value ?? "";
+                ingotName += " Ingot";
+                var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
+
+                if (ingotName == "Stone Ingot" && !ingotDict.ContainsKey("Stone Ingot"))
+                {
+                    oreDict.Add("Stone Ore", 1);
+                    ingotDict.Add(ingotName, new ItemData<float>(IconPath, oreDict));
+                    oreDict.Clear();
+                    continue;
+                }
+                var ores = section.SelectNodes(".//Result");
+                foreach (XmlElement ore in ores)
+                {
+                    var oreName = ore.GetAttribute("SubtypeId") + " Ore";
+                    float.TryParse(ore.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out oreCount);
+
+                    if (oreDict.ContainsKey(oreName)) continue;
+                    else oreDict.Add(oreName, oreCount);
+                }
+                if (ingotDict.ContainsKey(ingotName)) continue;
+                else ingotDict.Add(ingotName, new ItemData<float>(IconPath, oreDict));
+                oreDict.Clear();
+            }
+            return ingotDict;
+        }
+
+        public BindingList<DGVItemData<int>> readXMLBlueprintBlocks(string file)
+        {
+            BindingList<DGVItemData<int>> bpBlocks = new BindingList<DGVItemData<int>>();
+            var iconPaths = readBlocksIconsData();
+            string name, partialPath = readGameDir() + "\\Content\\";
+            XmlDocument bp = new XmlDocument();
+
+            bp.LoadXml(file);
+
+            var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
+
+            foreach(XmlNode block in blocks)
+            {
+                name = block?.InnerText ?? "";
+                if (name == "")
+                {
+                    name = block.ParentNode.Attributes[0]?.InnerText ?? "";
+                    name = name.Substring(16);
+                }
+                if (name == "") continue;
+                DGVItemData<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
+                if (foundBlock != null) foundBlock.Count++;
+                else bpBlocks.Add(new DGVItemData<int>(name, 1, partialPath+iconPaths[name]));
+            }
+            return bpBlocks;
+        }
+
+        public BindingList<DGVItemData<int>> getComponents(BindingList<DGVItemData<int>> bpBlocks)
+        {
+            Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
+            Dictionary<string, string> iconPaths = readCompsIconsData();
+            string partialPath = readGameDir() + "\\Content\\";
+            BindingList<DGVItemData<int>> comps = new BindingList<DGVItemData<int>>();
+
             foreach (var bpBlock in bpBlocks)
             {
-                foreach(var comp in blockDict[bpBlock.Key].Cost)
+                foreach(var comp in blockDict[bpBlock.Name])
                 {
-                    if (comps.ContainsKey(comp.Key)) comps[comp.Key] += comp.Value * bpBlock.Value;
-                    else comps.Add(comp.Key, comp.Value * bpBlock.Value);
+                    DGVItemData<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
+                    if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
+                    else comps.Add(new DGVItemData<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
                 }
             }
-
             return comps;
         }
 
-        public Dictionary<string, float> getIngots(Dictionary<string, int> bpComps)
+        public BindingList<DGVItemData<float>> getIngots(BindingList<DGVItemData<int>> bpComps)
         {
-            Dictionary<string, ItemData<float>> compDict = readCompsData();
-            Dictionary<string, float> ingots = new Dictionary<string, float>();
+            Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
+            Dictionary<string, string> iconPaths = readIngotsIconsData();
+            string partialPath = readGameDir() + "\\Content\\";
+            BindingList<DGVItemData<float>> ingots = new BindingList<DGVItemData<float>>();
 
             foreach (var bpComp in bpComps)
             {
-                foreach (var ingot in compDict[bpComp.Key].Cost)
+                foreach (var ingot in compDict[bpComp.Name])
                 {
-                    if (ingots.ContainsKey(ingot.Key)) ingots[ingot.Key] += ingot.Value * bpComp.Value;
-                    else ingots.Add(ingot.Key, ingot.Value * bpComp.Value);
+                    DGVItemData<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
+                    if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
+                    else ingots.Add(new DGVItemData<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
                 }
             }
-
             return ingots;
         }
 
@@ -214,6 +328,7 @@ namespace SEBlueprintCalc
         {
             Dictionary<string, ItemData<int>> blockDict = new Dictionary<string, ItemData<int>>();
             Dictionary<string, ItemData<float>> compDict = new Dictionary<string, ItemData<float>>();
+            Dictionary<string, ItemData<float>> ingotDict = new Dictionary<string, ItemData<float>>();
 
             try
             {
@@ -224,6 +339,7 @@ namespace SEBlueprintCalc
                     readXMLBlockInfo(File.ReadAllText(file), blockDict);
                 }
                 readXMLComponentInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), compDict);
+                readXMLIngotInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), ingotDict);
 
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Blocks.json", output);
@@ -231,11 +347,14 @@ namespace SEBlueprintCalc
                 output = JsonConvert.SerializeObject(compDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Components.json", output);
 
-                MessageBox.Show("Blocks and components data updated");
+                output = JsonConvert.SerializeObject(ingotDict, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(rootDir + "../Data/Ingots.json", output);
+
+                MessageBox.Show("Data updated");
             }
             catch (DirectoryNotFoundException)
             {
-                MessageBox.Show("Couldnt update blocks and components data. Make sure your game directory setting is correct.");
+                MessageBox.Show("Couldnt update data. Make sure your game directory setting is correct.");
             }
             catch (Exception ex)
             {
@@ -246,30 +365,69 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, ItemData<int>> readBlocksData()
+        public Dictionary<string, Dictionary<string, int>> readBlocksData()
         {
-            Dictionary<string, ItemData<int>> blockDict = new Dictionary<string, ItemData<int>>();
+            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
             JObject blocks = JObject.Parse(File.ReadAllText(rootDir + "../Data/Blocks.json"));
 
             foreach (var block in blocks)
             {
-                blockDict.Add(block.Key, block.Value.ToObject<ItemData<int>>());
+                blockDict.Add(block.Key, block.Value.ToObject<ItemData<int>>().Cost);
             }
 
             return blockDict;
         }
 
-        public Dictionary<string, ItemData<float>> readCompsData()
+        public Dictionary<string, string> readBlocksIconsData()
         {
-            Dictionary<string, ItemData<float>> compDict = new Dictionary<string, ItemData<float>>();
+            Dictionary<string, string> blockIconDict = new Dictionary<string, string>();
+            JObject blocks = JObject.Parse(File.ReadAllText(rootDir + "../Data/Blocks.json"));
+
+            foreach (var block in blocks)
+            {
+                blockIconDict.Add(block.Key, block.Value.ToObject<ItemData<int>>().IconPath);
+            }
+
+            return blockIconDict;
+        }
+
+        public Dictionary<string, Dictionary<string, float>> readCompsData()
+        {
+            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
             JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
 
             foreach (var comp in comps)
             {
-                compDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>());
+                compDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>().Cost);
             }
 
             return compDict;
+        }
+
+        public Dictionary<string, string> readCompsIconsData()
+        {
+            Dictionary<string, string> compIconDict = new Dictionary<string, string>();
+            JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
+
+            foreach (var comp in comps)
+            {
+                compIconDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>().IconPath);
+            }
+
+            return compIconDict;
+        }
+
+        public Dictionary<string, string> readIngotsIconsData()
+        {
+            Dictionary<string, string> ingotIconDict = new Dictionary<string, string>();
+            JObject ingots = JObject.Parse(File.ReadAllText(rootDir + "../Data/Ingots.json"));
+
+            foreach (var ingot in ingots)
+            {
+                ingotIconDict.Add(ingot.Key, ingot.Value.ToObject<ItemData<float>>().IconPath);
+            }
+
+            return ingotIconDict;
         }
 
         private void button2_Click(object sender, EventArgs e)

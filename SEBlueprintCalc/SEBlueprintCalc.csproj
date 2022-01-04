@@ -115,6 +115,7 @@
     </Compile>
     <Content Include="Data\Blocks.json" />
     <Content Include="Data\Components.json" />
+    <None Include="Data\Ingots.json" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
