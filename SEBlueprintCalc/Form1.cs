@@ -32,62 +32,7 @@ namespace SEBlueprintCalc
                 this.Cost = new Dictionary<string, T>(Cost);
             }
         }
-
-        public class DGVItemData<T>
-        {
-            public Bitmap Icon { get; set; }
-            public string Name { get; set; }
-            public T Count { get; set; }
-
-            public DGVItemData(string Name, T Count, string path)
-            {
-                this.Name = Name;
-                this.Count = Count;
-                this.Icon = Convert(path);
-            }
-
-            public static Bitmap Convert(string path)
-            {
-                try
-                {
-                    using (var image = Pfim.Pfim.FromFile(path))
-                    {
-                        PixelFormat format;
-
-                        // Convert from Pfim's backend agnostic image format into GDI+'s image format
-                        switch (image.Format)
-                        {
-                            case ImageFormat.Rgba32:
-                                format = PixelFormat.Format32bppArgb;
-                                break;
-                            default:
-                                // see the sample for more details
-                                throw new NotImplementedException();
-                        }
-
-                        // Pin pfim's data array so that it doesn't get reaped by GC, unnecessary
-                        // in this snippet but useful technique if the data was going to be used in
-                        // control like a picture box
-                        var handle = GCHandle.Alloc(image.Data, GCHandleType.Pinned);
-                        try
-                        {
-                            var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
-                            var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
-                            return new Bitmap(bitmap, new Size(50, 50));
-                        }
-                        finally
-                        {
-                            handle.Free();
-                        }
-                    }
-                }
-                catch
-                {
-                    return null;
-                }
-            }
-        }
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -109,9 +54,9 @@ namespace SEBlueprintCalc
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
                 pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
                 label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
-                BindingList<DGVItemData<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
-                BindingList<DGVItemData<int>> bpComps = getComponents(bpBlocks);
-                BindingList<DGVItemData<float>> bpIngots = getIngots(bpComps);
+                MySortableBindingList<DGVItem<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
+                MySortableBindingList<DGVItem<int>> bpComps = getComponents(bpBlocks);
+                MySortableBindingList<DGVItem<float>> bpIngots = getIngots(bpComps);
 
                 dataGridView2.DataSource = bpBlocks;
                 dataGridView1.DataSource = bpComps;
@@ -259,9 +204,9 @@ namespace SEBlueprintCalc
             return ingotDict;
         }
 
-        public BindingList<DGVItemData<int>> readXMLBlueprintBlocks(string file)
+        public MySortableBindingList<DGVItem<int>> readXMLBlueprintBlocks(string file)
         {
-            BindingList<DGVItemData<int>> bpBlocks = new BindingList<DGVItemData<int>>();
+            MySortableBindingList<DGVItem<int>> bpBlocks = new MySortableBindingList<DGVItem<int>>();
             var iconPaths = readBlocksIconsData();
             string name, partialPath = readGameDir() + "\\Content\\";
             XmlDocument bp = new XmlDocument();
@@ -279,46 +224,46 @@ namespace SEBlueprintCalc
                     name = name.Substring(16);
                 }
                 if (name == "") continue;
-                DGVItemData<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
+                DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
-                else bpBlocks.Add(new DGVItemData<int>(name, 1, partialPath+iconPaths[name]));
+                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath+iconPaths[name]));
             }
             return bpBlocks;
         }
 
-        public BindingList<DGVItemData<int>> getComponents(BindingList<DGVItemData<int>> bpBlocks)
+        public MySortableBindingList<DGVItem<int>> getComponents(MySortableBindingList<DGVItem<int>> bpBlocks)
         {
             Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
             Dictionary<string, string> iconPaths = readCompsIconsData();
             string partialPath = readGameDir() + "\\Content\\";
-            BindingList<DGVItemData<int>> comps = new BindingList<DGVItemData<int>>();
+            MySortableBindingList<DGVItem<int>> comps = new MySortableBindingList<DGVItem<int>>();
 
             foreach (var bpBlock in bpBlocks)
             {
                 foreach(var comp in blockDict[bpBlock.Name])
                 {
-                    DGVItemData<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
+                    DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
                     if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
-                    else comps.Add(new DGVItemData<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                    else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
                 }
             }
             return comps;
         }
 
-        public BindingList<DGVItemData<float>> getIngots(BindingList<DGVItemData<int>> bpComps)
+        public MySortableBindingList<DGVItem<float>> getIngots(MySortableBindingList<DGVItem<int>> bpComps)
         {
             Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
             Dictionary<string, string> iconPaths = readIngotsIconsData();
             string partialPath = readGameDir() + "\\Content\\";
-            BindingList<DGVItemData<float>> ingots = new BindingList<DGVItemData<float>>();
+            MySortableBindingList<DGVItem<float>> ingots = new MySortableBindingList<DGVItem<float>>();
 
             foreach (var bpComp in bpComps)
             {
                 foreach (var ingot in compDict[bpComp.Name])
                 {
-                    DGVItemData<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
+                    DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
-                    else ingots.Add(new DGVItemData<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
+                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
                 }
             }
             return ingots;
