@@ -11,5 +11,5 @@ Space Engineers Blueprint Calculator
 • Added sorting
 • Fixed SE directory automatic search
 • Installer now checks for updates
-
+ 
 # Issues
