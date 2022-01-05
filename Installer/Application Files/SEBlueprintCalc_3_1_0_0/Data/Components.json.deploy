@@ -1,0 +1,163 @@
+{
+  "Construction": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\construction_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 2.66666675
+    }
+  },
+  "Girder": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\girder_component.dds",
+    "Cost": {
+      "Iron Ingot": 2.0
+    }
+  },
+  "MetalGrid": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\metal_grid_component.dds",
+    "Cost": {
+      "Iron Ingot": 4.0,
+      "Nickel Ingot": 1.66666663,
+      "Cobalt Ingot": 1.0
+    }
+  },
+  "InteriorPlate": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\interior_plate_component.dds",
+    "Cost": {
+      "Iron Ingot": 1.0
+    }
+  },
+  "SteelPlate": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\steel_plate_component.dds",
+    "Cost": {
+      "Iron Ingot": 7.0
+    }
+  },
+  "SmallTube": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\small_tube_component.dds",
+    "Cost": {
+      "Iron Ingot": 1.66666663
+    }
+  },
+  "LargeTube": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\large_tube_component.dds",
+    "Cost": {
+      "Iron Ingot": 10.0
+    }
+  },
+  "Motor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\motor_component.dds",
+    "Cost": {
+      "Iron Ingot": 6.66666651,
+      "Nickel Ingot": 1.66666663
+    }
+  },
+  "Display": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\display_component.dds",
+    "Cost": {
+      "Iron Ingot": 0.333333343,
+      "Silicon Ingot": 1.66666663
+    }
+  },
+  "BulletproofGlass": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\bulletproof_glass_component.dds",
+    "Cost": {
+      "Silicon Ingot": 5.0
+    }
+  },
+  "Computer": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\computer_component.dds",
+    "Cost": {
+      "Iron Ingot": 0.166666672,
+      "Silicon Ingot": 0.06666667
+    }
+  },
+  "Reactor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\reactor_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 5.0,
+      "Stone Ingot": 6.66666651,
+      "Silver Ingot": 1.66666663
+    }
+  },
+  "Thrust": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\thrust_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 10.0,
+      "Cobalt Ingot": 3.33333325,
+      "Gold Ingot": 0.333333343,
+      "Platinum Ingot": 0.13333334
+    }
+  },
+  "GravityGenerator": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\gravity_generator_components_component.dds",
+    "Cost": {
+      "Silver Ingot": 1.66666663,
+      "Gold Ingot": 3.33333325,
+      "Cobalt Ingot": 73.3333359,
+      "Iron Ingot": 200.0
+    }
+  },
+  "Medical": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\medical_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 20.0,
+      "Nickel Ingot": 23.333334,
+      "Silver Ingot": 6.66666651
+    }
+  },
+  "RadioCommunication": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\radio_communication_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 2.66666675,
+      "Silicon Ingot": 0.333333343
+    }
+  },
+  "Detector": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\detector_components_component.dds",
+    "Cost": {
+      "Iron Ingot": 1.66666663,
+      "Nickel Ingot": 5.0
+    }
+  },
+  "Canvas": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\Cartridge_Icon.dds",
+    "Cost": {
+      "Silicon Ingot": 11.666667,
+      "Iron Ingot": 0.6666667
+    }
+  },
+  "Explosives": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\ExplosivesComponent.dds",
+    "Cost": {
+      "Silicon Ingot": 0.166666672,
+      "Magnesium Ingot": 0.6666667
+    }
+  },
+  "SolarCell": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\SolarCellComponent.dds",
+    "Cost": {
+      "Nickel Ingot": 1.0,
+      "Silicon Ingot": 2.0
+    }
+  },
+  "PowerCell": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\BatteryComponent.dds",
+    "Cost": {
+      "Iron Ingot": 3.33333325,
+      "Silicon Ingot": 0.333333343,
+      "Nickel Ingot": 0.6666667
+    }
+  },
+  "Superconductor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\superconductor_conducts_component.dds",
+    "Cost": {
+      "Iron Ingot": 3.33333325,
+      "Gold Ingot": 0.6666667
+    }
+  },
+  "ZoneChip": {
+    "IconPath": "Textures\\GUI\\Icons\\Items\\ZoneChip_Item.dds",
+    "Cost": {
+      "ZoneChip Component": 0.333333343
+    }
+  }
+}
