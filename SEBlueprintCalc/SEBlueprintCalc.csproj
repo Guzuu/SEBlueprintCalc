@@ -12,20 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Mateusz\Desktop\SEBlueprintCalc_v2_2\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Background</UpdateMode>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <MinimumRequiredVersion>2.2.0.0</MinimumRequiredVersion>
+    <InstallUrl>https://raw.githubusercontent.com/Guzuu/SEBlueprintCalc/gh-pages/Installer/</InstallUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/Guzuu/SEBlueprintCalc/gh-pages/Installer/</UpdateUrl>
+    <MinimumRequiredVersion>0.0.0.1</MinimumRequiredVersion>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.2.0.%2a</ApplicationVersion>
+    <ApplicationVersion>3.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -116,7 +118,7 @@
     </Compile>
     <Content Include="Data\Blocks.json" />
     <Content Include="Data\Components.json" />
-    <None Include="Data\Ingots.json" />
+    <Content Include="Data\Ingots.json" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

@@ -12,10 +12,6 @@ using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
-using Pfim;
-using System.Drawing.Imaging;
-using ImageFormat = Pfim.ImageFormat;
-using System.Runtime.InteropServices;
 
 namespace SEBlueprintCalc
 {
@@ -382,16 +378,19 @@ namespace SEBlueprintCalc
             if (s != "")
             {
                 if (Directory.Exists(s + "../steamapps/common/SpaceEngineers"))
+                {
+                    MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
                     SaveDir(s + "../steamapps/common/SpaceEngineers");
+                }
                 else
                 {
                     AcfReader acf = new AcfReader(s + "../steamapps/libraryfolders.vdf");
                     acf.CheckIntegrity();
                     ACF_Struct acfStruct = acf.ACFFileToStruct();
                     var folders = acfStruct.SubACF.Values.First().SubACF;
-                    foreach(var folder in folders)
+                    foreach (var folder in folders)
                     {
-                        foreach(var subItem in folder.Value.SubItems)
+                        foreach (var subItem in folder.Value.SubItems)
                         {
                             if (Directory.Exists(subItem.Value + "../steamapps/common/SpaceEngineers"))
                             {
@@ -404,7 +403,7 @@ namespace SEBlueprintCalc
                 }
                 return;
             }
-            else MessageBox.Show("Couldnt detect game directory, set SE location manually");
+            else MessageBox.Show("Couldnt detect steam directory, set SE location manually");
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
         }
