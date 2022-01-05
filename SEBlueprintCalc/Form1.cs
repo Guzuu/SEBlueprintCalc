@@ -38,7 +38,7 @@ namespace SEBlueprintCalc
             dataGridView3.RowTemplate.Height = 50;
         }
 
-        public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
+        public string rootDir = Directory.GetCurrentDirectory();
 
         private void button1_Click(object sender, EventArgs e)
         {
