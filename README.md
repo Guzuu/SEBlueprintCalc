@@ -8,7 +8,7 @@ Space Engineers Blueprint Calculator
 # How to use
 Find your blueprints folder(Make sure SE saves your blueprints locally not in the steam cloud, you can change it in the game settings) 
 My blueprints are located in C:\Users\Username\AppData\Roaming\SpaceEngineers\Blueprints\local
-After clicking open blueprint button, enter any blueprint folder and select **bp.sbc** file for the program.
+Click **open blueprint** button, enter any blueprint folder and select **bp.sbc** file for the program.
 
 # Changes
 * Added alternative comparison search for missing blocks
