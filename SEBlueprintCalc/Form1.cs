@@ -388,21 +388,23 @@ namespace SEBlueprintCalc
                     AcfReader acf = new AcfReader(s + "../steamapps/libraryfolders.vdf");
                     acf.CheckIntegrity();
                     ACF_Struct acfStruct = acf.ACFFileToStruct();
-                    var folders = acfStruct.SubACF.Values.First().SubItems;
+                    var folders = acfStruct.SubACF.Values.First().SubACF;
                     foreach(var folder in folders)
                     {
-                        if (Directory.Exists(folder.Value + "../steamapps/common/SpaceEngineers"))
+                        foreach(var subItem in folder.Value.SubItems)
                         {
-                            SaveDir(folder.Value + "../steamapps/common/SpaceEngineers");
-                            break;
+                            if (Directory.Exists(subItem.Value + "../steamapps/common/SpaceEngineers"))
+                            {
+                                MessageBox.Show("Detected SE game directory at: " + subItem.Value + "\\steamapps\\common\\SpaceEngineers");
+                                SaveDir(subItem.Value + "../steamapps/common/SpaceEngineers");
+                                break;
+                            }
                         }
                     }
                 }
-                MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
                 return;
             }
             else MessageBox.Show("Couldnt detect game directory, set SE location manually");
-
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
         }
@@ -437,7 +439,7 @@ namespace SEBlueprintCalc
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SEBlueprintCalc v2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
+            MessageBox.Show("SEBlueprintCalc v3 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
         }
 
         private void button5_Click(object sender, EventArgs e)
