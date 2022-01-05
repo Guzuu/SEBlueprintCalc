@@ -5,4 +5,11 @@ Space Engineers Blueprint Calculator
 # Download
 ### [LATEST v3.1 download](https://raw.githubusercontent.com/Guzuu/SEBlueprintCalc/gh-pages/Installer/setup.exe)
 
+# Changes
+• Added alternative comparison search for missing blocks
+• Added icons
+• Added sorting
+• Fixed SE directory automatic search
+• Installer now checks for updates
+
 # Issues
