@@ -6,6 +6,7 @@ Space Engineers Blueprint Calculator
 ### [LATEST v3.1 download](https://raw.githubusercontent.com/Guzuu/SEBlueprintCalc/gh-pages/Installer/setup.exe)
 
 # How to use
+https://youtu.be/F-6uBlZuRsc
 Find your blueprints folder(Make sure SE saves your blueprints locally not in the steam cloud, you can change it in the game settings) 
 My blueprints are located in C:\Users\Username\AppData\Roaming\SpaceEngineers\Blueprints\local
 Click **open blueprint** button, enter any blueprint folder and select **bp.sbc** file for the program.
