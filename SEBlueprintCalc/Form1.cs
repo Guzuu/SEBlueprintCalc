@@ -213,6 +213,7 @@ namespace SEBlueprintCalc
         {
             MySortableBindingList<DGVItem<int>> bpBlocks = new MySortableBindingList<DGVItem<int>>();
             var iconPaths = readBlocksIconsData();
+            bool mod = false;
             string name, partialPath = readGameDir() + "\\Content\\";
             XmlDocument bp = new XmlDocument();
 
@@ -229,10 +230,16 @@ namespace SEBlueprintCalc
                     name = name.Substring(16);
                 }
                 if (name == "") continue;
+                if (!iconPaths.ContainsKey(name))
+                {
+                    mod = true;
+                    continue;
+                }
                 DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
                 else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath+iconPaths[name]));
             }
+            if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
             return bpBlocks;
         }
 
@@ -245,11 +252,14 @@ namespace SEBlueprintCalc
 
             foreach (var bpBlock in bpBlocks)
             {
-                foreach(var comp in blockDict[bpBlock.Name])
+                if (blockDict.ContainsKey(bpBlock.Name))
                 {
-                    DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
-                    if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
-                    else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                    foreach (var comp in blockDict[bpBlock.Name])
+                    {
+                        DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
+                        if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
+                        else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                    }
                 }
             }
             return comps;
