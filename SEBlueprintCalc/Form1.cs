@@ -48,8 +48,17 @@ namespace SEBlueprintCalc
             try
             {
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
-                pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
-                label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
+                var path = Path.GetDirectoryName(openFileDialog1.FileName);
+                if (File.Exists(path + "\\thumb.png"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + "\\thumb.png");
+                    label1.Text = Path.GetFileName(path);
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                    label1.Text = "Blueprint";
+                }
                 MySortableBindingList<DGVItem<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
                 MySortableBindingList<DGVItem<int>> bpComps = getComponents(bpBlocks);
                 MySortableBindingList<DGVItem<float>> bpIngots = getIngots(bpComps);
@@ -377,14 +386,14 @@ namespace SEBlueprintCalc
             if (s == "") s = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Valve\Steam", "InstallPath", "");
             if (s != "")
             {
-                if (Directory.Exists(s + "../steamapps/common/SpaceEngineers"))
+                if (Directory.Exists(s + "/steamapps/common/SpaceEngineers"))
                 {
                     MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
-                    SaveDir(s + "../steamapps/common/SpaceEngineers");
+                    SaveDir(s + "/steamapps/common/SpaceEngineers");
                 }
                 else
                 {
-                    AcfReader acf = new AcfReader(s + "../steamapps/libraryfolders.vdf");
+                    AcfReader acf = new AcfReader(s + "/steamapps/libraryfolders.vdf");
                     acf.CheckIntegrity();
                     ACF_Struct acfStruct = acf.ACFFileToStruct();
                     var folders = acfStruct.SubACF.Values.First().SubACF;
@@ -392,10 +401,10 @@ namespace SEBlueprintCalc
                     {
                         foreach (var subItem in folder.Value.SubItems)
                         {
-                            if (Directory.Exists(subItem.Value + "../steamapps/common/SpaceEngineers"))
+                            if (Directory.Exists(subItem.Value + "/steamapps/common/SpaceEngineers"))
                             {
                                 MessageBox.Show("Detected SE game directory at: " + subItem.Value + "\\steamapps\\common\\SpaceEngineers");
-                                SaveDir(subItem.Value + "../steamapps/common/SpaceEngineers");
+                                SaveDir(subItem.Value + "/steamapps/common/SpaceEngineers");
                                 break;
                             }
                         }
