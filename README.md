@@ -1,9 +1,21 @@
 # SEBlueprintCalc
 Space Engineers Blueprint Calculator
-![AppScreen](https://repository-images.githubusercontent.com/332502325/a2d2099c-8f67-4010-b9e4-c1e2042cf57d)
+![AppScreen](https://repository-images.githubusercontent.com/332502325/0c3fb71a-744f-48cc-bc1b-e5fc2b6ba56d)
 
 # Download
-### [LATEST v2.2 download](https://github.com/Guzuu/SEBlueprintCalc/releases/download/v2.2/SEBlueprintCalc_v2_2.rar)
+### [LATEST v3.1 download](https://raw.githubusercontent.com/Guzuu/SEBlueprintCalc/gh-pages/Installer/setup.exe)
+
+# How to use
+https://youtu.be/F-6uBlZuRsc
+Find your blueprints folder(Make sure SE saves your blueprints locally not in the steam cloud, you can change it in the game settings) 
+My blueprints are located in C:\Users\Username\AppData\Roaming\SpaceEngineers\Blueprints\local
+Click **open blueprint** button, enter any blueprint folder and select **bp.sbc** file for the program.
+
+# Changes
+* Added alternative comparison search for missing blocks
+* Added icons
+* Added sorting
+* Fixed SE directory automatic search
+* Installer now checks for updates
 
 # Issues
-Some game files containing blocks have missing values thus created blueprint has blank blockid values and calculator skips them while counting blocks in a blueprint. There are 2 possbile ways to fix it, either keen fills missing spots or I create a mod that overwrites files with complete version. The list of blocks is not long and for now the issue has been [reported here](https://support.keenswh.com/spaceengineers/pc/topic/null-subtypeid-values_1).
