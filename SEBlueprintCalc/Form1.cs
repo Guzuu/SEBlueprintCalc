@@ -28,7 +28,7 @@ namespace SEBlueprintCalc
                 this.Cost = new Dictionary<string, T>(Cost);
             }
         }
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace SEBlueprintCalc
             dataGridView3.RowTemplate.Height = 50;
         }
 
-        public string rootDir = Directory.GetCurrentDirectory();
+        public string rootDir = Directory.GetCurrentDirectory(); 
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -48,8 +48,17 @@ namespace SEBlueprintCalc
             try
             {
                 var bpFile = File.ReadAllText(openFileDialog1.FileName);
-                pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(openFileDialog1.FileName) + "\\thumb.png");
-                label1.Text = Path.GetFileName(Path.GetDirectoryName(openFileDialog1.FileName));
+                var path = Path.GetDirectoryName(openFileDialog1.FileName);
+                if (File.Exists(path + "\\thumb.png"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + "\\thumb.png");
+                    label1.Text = Path.GetFileName(path);
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                    label1.Text = "Blueprint";
+                }
                 MySortableBindingList<DGVItem<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
                 MySortableBindingList<DGVItem<int>> bpComps = getComponents(bpBlocks);
                 MySortableBindingList<DGVItem<float>> bpIngots = getIngots(bpComps);
@@ -81,7 +90,7 @@ namespace SEBlueprintCalc
                 {
                     MessageBox.Show("File was not selected");
                 }
-                else if(ex.Message == "NullDirectory")
+                else if (ex.Message == "NullDirectory")
                 {
                     MessageBox.Show("Set space engineers game directory location");
                     button2_Click(sender, e);
@@ -204,6 +213,7 @@ namespace SEBlueprintCalc
         {
             MySortableBindingList<DGVItem<int>> bpBlocks = new MySortableBindingList<DGVItem<int>>();
             var iconPaths = readBlocksIconsData();
+            bool mod = false;
             string name, partialPath = readGameDir() + "\\Content\\";
             XmlDocument bp = new XmlDocument();
 
@@ -211,7 +221,7 @@ namespace SEBlueprintCalc
 
             var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
 
-            foreach(XmlNode block in blocks)
+            foreach (XmlNode block in blocks)
             {
                 name = block?.InnerText ?? "";
                 if (name == "")
@@ -220,10 +230,16 @@ namespace SEBlueprintCalc
                     name = name.Substring(16);
                 }
                 if (name == "") continue;
+                if (!iconPaths.ContainsKey(name))
+                {
+                    mod = true;
+                    continue;
+                }
                 DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
-                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath+iconPaths[name]));
+                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath + iconPaths[name]));
             }
+            if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
             return bpBlocks;
         }
 
@@ -236,11 +252,14 @@ namespace SEBlueprintCalc
 
             foreach (var bpBlock in bpBlocks)
             {
-                foreach(var comp in blockDict[bpBlock.Name])
+                if (blockDict.ContainsKey(bpBlock.Name))
                 {
-                    DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
-                    if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
-                    else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                    foreach (var comp in blockDict[bpBlock.Name])
+                    {
+                        DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
+                        if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
+                        else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                    }
                 }
             }
             return comps;
@@ -259,7 +278,7 @@ namespace SEBlueprintCalc
                 {
                     DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
-                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
+                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath + iconPaths[ingot.Key]));
                 }
             }
             return ingots;
@@ -433,7 +452,7 @@ namespace SEBlueprintCalc
 
         private void button3_Click(object sender, EventArgs e)
         {
-                UpdateData();
+            UpdateData();
         }
 
         private void button4_Click(object sender, EventArgs e)
