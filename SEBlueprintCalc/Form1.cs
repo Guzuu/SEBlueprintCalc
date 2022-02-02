@@ -465,5 +465,10 @@ namespace SEBlueprintCalc
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
