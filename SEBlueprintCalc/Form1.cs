@@ -28,7 +28,7 @@ namespace SEBlueprintCalc
                 this.Cost = new Dictionary<string, T>(Cost);
             }
         }
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +38,10 @@ namespace SEBlueprintCalc
             dataGridView3.RowTemplate.Height = 50;
         }
 
-        public string rootDir = Directory.GetCurrentDirectory(); 
+        public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
+        MySortableBindingList<DGVItem<int>> bpBlocks;
+        MySortableBindingList<DGVItem<int>> bpComps;
+        MySortableBindingList<DGVItem<float>> bpIngots;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,23 +62,24 @@ namespace SEBlueprintCalc
                     pictureBox1.Image = null;
                     label1.Text = "Blueprint";
                 }
-                MySortableBindingList<DGVItem<int>> bpBlocks = readXMLBlueprintBlocks(bpFile);
-                MySortableBindingList<DGVItem<int>> bpComps = getComponents(bpBlocks);
-                MySortableBindingList<DGVItem<float>> bpIngots = getIngots(bpComps);
+                bpBlocks = readXMLBlueprintBlocks(bpFile);
+                bpComps = getComponents(bpBlocks);
+                bpIngots = getIngots(bpComps);
 
                 dataGridView2.DataSource = bpBlocks;
                 dataGridView1.DataSource = bpComps;
                 dataGridView3.DataSource = bpIngots;
 
-                dataGridView2.Columns[0].Width = 50;
-                dataGridView2.Columns[1].Width = 175;
-                dataGridView2.Columns[2].Width = 50;
-                dataGridView1.Columns[0].Width = 50;
-                dataGridView1.Columns[1].Width = 150;
-                dataGridView1.Columns[2].Width = 75;
-                dataGridView3.Columns[0].Width = 50;
-                dataGridView3.Columns[1].Width = 125;
-                dataGridView3.Columns[2].Width = 100;
+                dataGridView2.Columns[0].FillWeight = 100;
+                dataGridView2.Columns[1].FillWeight = 350;
+                dataGridView2.Columns[2].FillWeight = 100;
+                dataGridView1.Columns[0].FillWeight = 100;
+                dataGridView1.Columns[1].FillWeight = 300;
+                dataGridView1.Columns[2].FillWeight = 150;
+                dataGridView3.Columns[0].FillWeight = 100;
+                dataGridView3.Columns[1].FillWeight = 250;
+                dataGridView3.Columns[2].FillWeight = 200;
+
                 dataGridView2.Columns[1].HeaderText = "Block name";
                 dataGridView1.Columns[1].HeaderText = "Component name";
                 dataGridView3.Columns[1].HeaderText = "Ingot name";
@@ -90,7 +94,7 @@ namespace SEBlueprintCalc
                 {
                     MessageBox.Show("File was not selected");
                 }
-                else if (ex.Message == "NullDirectory")
+                else if(ex.Message == "NullDirectory")
                 {
                     MessageBox.Show("Set space engineers game directory location");
                     button2_Click(sender, e);
@@ -153,7 +157,7 @@ namespace SEBlueprintCalc
                 var ingots = section.SelectNodes(".//Prerequisites/Item");
                 foreach (XmlElement ingot in ingots)
                 {
-                    var ingotName = ingot.GetAttribute("SubtypeId") + " " + ingot.GetAttribute("TypeId");
+                    var ingotName = ingot.GetAttribute("SubtypeId"); //+ " " + ingot.GetAttribute("TypeId");
                     float.TryParse(ingot.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out ingotCount);
                     ingotCount /= 3;
 
@@ -183,12 +187,12 @@ namespace SEBlueprintCalc
                 var ingot = section.SelectSingleNode(".//Prerequisites/Item");
                 if (ingot == null || ingot.Attributes["TypeId"].Value != "Ore") continue;
                 ingotName = ingot.Attributes["SubtypeId"]?.Value ?? "";
-                ingotName += " Ingot";
+                //ingotName += " Ingot";
                 var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
 
-                if (ingotName == "Stone Ingot" && !ingotDict.ContainsKey("Stone Ingot"))
+                if (ingotName == "Stone" && !ingotDict.ContainsKey("Stone"))
                 {
-                    oreDict.Add("Stone Ore", 1);
+                    oreDict.Add("Stone", 1);
                     ingotDict.Add(ingotName, new ItemData<float>(IconPath, oreDict));
                     oreDict.Clear();
                     continue;
@@ -221,7 +225,7 @@ namespace SEBlueprintCalc
 
             var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
 
-            foreach (XmlNode block in blocks)
+            foreach(XmlNode block in blocks)
             {
                 name = block?.InnerText ?? "";
                 if (name == "")
@@ -237,7 +241,7 @@ namespace SEBlueprintCalc
                 }
                 DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
-                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath + iconPaths[name]));
+                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath+iconPaths[name]));
             }
             if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
             return bpBlocks;
@@ -274,11 +278,12 @@ namespace SEBlueprintCalc
 
             foreach (var bpComp in bpComps)
             {
+                if (bpComp.Name == "ZoneChip") continue;
                 foreach (var ingot in compDict[bpComp.Name])
                 {
                     DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
-                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath + iconPaths[ingot.Key]));
+                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
                 }
             }
             return ingots;
@@ -452,18 +457,44 @@ namespace SEBlueprintCalc
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UpdateData();
+                UpdateData();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SEBlueprintCalc v3 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
+            MessageBox.Show("SEBlueprintCalc v3.2 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (bpComps == null || bpIngots == null) return;
+            string Isy = "";
+            foreach(var item in bpComps)
+            {
+                Isy += "Component/" + item.Name + "=" + string.Format("{0:F0}", item.Count) + "\n";
+            }
+            foreach (var item in bpIngots)
+            {
+                Isy += "Ingot/" + item.Name + "=" + string.Format("{0:F0}", Math.Ceiling(item.Count)) + "\n";
+            }
+            Clipboard.SetText(Isy);
+            button6.Text = "Copied";
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            button6.Text = "Isy's IM";
         }
     }
 }
