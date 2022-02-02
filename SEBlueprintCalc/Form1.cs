@@ -38,7 +38,7 @@ namespace SEBlueprintCalc
             dataGridView3.RowTemplate.Height = 50;
         }
 
-        public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
+        public string rootDir = Directory.GetCurrentDirectory();
         MySortableBindingList<DGVItem<int>> bpBlocks;
         MySortableBindingList<DGVItem<int>> bpComps;
         MySortableBindingList<DGVItem<float>> bpIngots;
