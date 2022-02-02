@@ -67,15 +67,16 @@ namespace SEBlueprintCalc
                 dataGridView1.DataSource = bpComps;
                 dataGridView3.DataSource = bpIngots;
 
-                dataGridView2.Columns[0].Width = 50;
-                dataGridView2.Columns[1].Width = 175;
-                dataGridView2.Columns[2].Width = 50;
-                dataGridView1.Columns[0].Width = 50;
-                dataGridView1.Columns[1].Width = 150;
-                dataGridView1.Columns[2].Width = 75;
-                dataGridView3.Columns[0].Width = 50;
-                dataGridView3.Columns[1].Width = 125;
-                dataGridView3.Columns[2].Width = 100;
+                dataGridView2.Columns[0].FillWeight = 100;
+                dataGridView2.Columns[1].FillWeight = 350;
+                dataGridView2.Columns[2].FillWeight = 100;
+                dataGridView1.Columns[0].FillWeight = 100;
+                dataGridView1.Columns[1].FillWeight = 300;
+                dataGridView1.Columns[2].FillWeight = 150;
+                dataGridView3.Columns[0].FillWeight = 100;
+                dataGridView3.Columns[1].FillWeight = 250;
+                dataGridView3.Columns[2].FillWeight = 200;
+
                 dataGridView2.Columns[1].HeaderText = "Block name";
                 dataGridView1.Columns[1].HeaderText = "Component name";
                 dataGridView3.Columns[1].HeaderText = "Ingot name";
