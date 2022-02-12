@@ -12,6 +12,7 @@ using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
+using System.Configuration;
 
 namespace SEBlueprintCalc
 {
@@ -28,24 +29,33 @@ namespace SEBlueprintCalc
                 this.Cost = new Dictionary<string, T>(Cost);
             }
         }
-        
+
         public Form1()
         {
             InitializeComponent();
+            if (int.TryParse(ConfigurationManager.AppSettings["RowHeight"], out int tempRH)) rowHeight = tempRH;
+            if (float.TryParse(ConfigurationManager.AppSettings["FontSize"], out float tempFS)) fontSize = tempFS;
             UpdateData();
-            dataGridView1.RowTemplate.Height = 50;
-            dataGridView2.RowTemplate.Height = 50;
-            dataGridView3.RowTemplate.Height = 50;
+            dataGridView1.RowTemplate.Height = rowHeight;
+            dataGridView2.RowTemplate.Height = rowHeight;
+            dataGridView3.RowTemplate.Height = rowHeight;
+            dataGridView1.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+            dataGridView2.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+            dataGridView3.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+            textBox3.Text = rowHeight.ToString();
+            textBox2.Text = fontSize.ToString();
         }
 
-        public string rootDir = "../"; //Directory.GetCurrentDirectory(); 
+        public string rootDir = "../"; //Directory.GetCurrentDirectory();
+        public int rowHeight = 50;
+        public float fontSize = 9.75f;
         MySortableBindingList<DGVItem<int>> bpBlocks;
         MySortableBindingList<DGVItem<int>> bpComps;
         MySortableBindingList<DGVItem<float>> bpIngots;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.FileName = ".bp file";
+            openFileDialog1.FileName = ".sbc file";
             openFileDialog1.ShowDialog();
 
             try
@@ -69,6 +79,9 @@ namespace SEBlueprintCalc
                 dataGridView2.DataSource = bpBlocks;
                 dataGridView1.DataSource = bpComps;
                 dataGridView3.DataSource = bpIngots;
+                ((DataGridViewImageColumn)dataGridView1.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+                ((DataGridViewImageColumn)dataGridView2.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+                ((DataGridViewImageColumn)dataGridView3.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
 
                 dataGridView2.Columns[0].FillWeight = 100;
                 dataGridView2.Columns[1].FillWeight = 350;
@@ -88,13 +101,13 @@ namespace SEBlueprintCalc
             {
                 if (ex is XmlException)
                 {
-                    MessageBox.Show("Make sure a .bp file was selected");
+                    MessageBox.Show("Make sure an .sbc file was selected");
                 }
                 else if (ex is FileNotFoundException)
                 {
                     MessageBox.Show("File was not selected");
                 }
-                else if(ex.Message == "NullDirectory")
+                else if (ex.Message == "NullDirectory")
                 {
                     MessageBox.Show("Set space engineers game directory location");
                     button2_Click(sender, e);
@@ -225,7 +238,7 @@ namespace SEBlueprintCalc
 
             var blocks = bp.DocumentElement.SelectNodes("//CubeGrids/CubeGrid/CubeBlocks/MyObjectBuilder_CubeBlock/SubtypeName");
 
-            foreach(XmlNode block in blocks)
+            foreach (XmlNode block in blocks)
             {
                 name = block?.InnerText ?? "";
                 if (name == "")
@@ -241,7 +254,7 @@ namespace SEBlueprintCalc
                 }
                 DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
-                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath+iconPaths[name]));
+                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath + iconPaths[name]));
             }
             if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
             return bpBlocks;
@@ -283,7 +296,7 @@ namespace SEBlueprintCalc
                 {
                     DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
-                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath+iconPaths[ingot.Key]));
+                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath + iconPaths[ingot.Key]));
                 }
             }
             return ingots;
@@ -457,30 +470,19 @@ namespace SEBlueprintCalc
 
         private void button3_Click(object sender, EventArgs e)
         {
-                UpdateData();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("SEBlueprintCalc v4 by Guzuu\nReport any issues by a discord DM:\nDizzy#5556 or 186104843478368256\nPage: https://github.com/Guzuu/SEBlueprintCalc \nCtrl+C to copy contents");
+            UpdateData();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1.ShowDialog();
-            SaveDir(folderBrowserDialog1.SelectedPath);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) SaveDir(folderBrowserDialog1.SelectedPath);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             if (bpComps == null || bpIngots == null) return;
             string Isy = "";
-            foreach(var item in bpComps)
+            foreach (var item in bpComps)
             {
                 Isy += "Component/" + item.Name + "=" + string.Format("{0:F0}", item.Count) + "\n";
             }
@@ -495,6 +497,50 @@ namespace SEBlueprintCalc
         private void button6_MouseLeave(object sender, EventArgs e)
         {
             button6.Text = "Isy's IM";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            if (textBox3.Text != "" && int.TryParse(textBox3.Text, out int rowHeight))
+            {
+                dataGridView1.RowTemplate.Height = rowHeight;
+                dataGridView2.RowTemplate.Height = rowHeight;
+                dataGridView3.RowTemplate.Height = rowHeight;
+                foreach(DataGridViewRow r in dataGridView1.Rows)
+                {
+                    r.Height = rowHeight;
+                }
+                foreach (DataGridViewRow r in dataGridView2.Rows)
+                {
+                    r.Height = rowHeight;
+                }
+                foreach (DataGridViewRow r in dataGridView3.Rows)
+                {
+                    r.Height = rowHeight;
+                }
+                
+                if(config.AppSettings.Settings["RowHeight"] != null)
+                {
+                    config.AppSettings.Settings["RowHeight"].Value = rowHeight.ToString();
+                }
+                else config.AppSettings.Settings.Add("RowHeight", rowHeight.ToString());
+            }
+            if(textBox2.Text != "" && float.TryParse(textBox2.Text, out float fontSize))
+            {
+                dataGridView1.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+                dataGridView2.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+                dataGridView3.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
+
+                if (config.AppSettings.Settings["FontSize"] != null)
+                {
+                    config.AppSettings.Settings["FontSize"].Value = fontSize.ToString();
+                }
+                else config.AppSettings.Settings.Add("FontSize", fontSize.ToString());
+            }
+
+            config.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
         }
     }
 }

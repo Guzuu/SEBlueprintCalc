@@ -152,14 +152,14 @@
   "LargeHalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/LightArmorSlopeSlab.dds",
     "Cost": {
-      "SteelPlate": 7
+      "SteelPlate": 4
     }
   },
   "LargeHeavyHalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/HeavyArmorSlopeSlab.dds",
     "Cost": {
-      "SteelPlate": 45,
-      "MetalGrid": 15
+      "SteelPlate": 19,
+      "MetalGrid": 6
     }
   },
   "HalfArmorBlock": {
@@ -275,7 +275,7 @@
   "LargeBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Slope2x1x1Tip.dds",
     "Cost": {
-      "SteelPlate": 7
+      "SteelPlate": 6
     }
   },
   "LargeBlockArmorCorner2Base": {
@@ -287,7 +287,7 @@
   "LargeBlockArmorCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Corner2x1x1Tip.dds",
     "Cost": {
-      "SteelPlate": 4
+      "SteelPlate": 3
     }
   },
   "LargeBlockArmorInvCorner2Base": {
@@ -306,14 +306,14 @@
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 112,
-      "MetalGrid": 45
+      "MetalGrid": 40
     }
   },
   "LargeHeavyBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Tip.dds",
     "Cost": {
-      "SteelPlate": 35,
-      "MetalGrid": 6
+      "SteelPlate": 40,
+      "MetalGrid": 12
     }
   },
   "LargeHeavyBlockArmorCorner2Base": {
@@ -384,7 +384,7 @@
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 4,
-      "MetalGrid": 1
+      "MetalGrid": 2
     }
   },
   "SmallHeavyBlockArmorSlope2Tip": {
@@ -905,7 +905,7 @@
   "LargeBlockHeavyArmorHalfCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfCorner.dds",
     "Cost": {
-      "SteelPlate": 35,
+      "SteelPlate": 40,
       "MetalGrid": 12
     }
   },
@@ -919,7 +919,7 @@
   "LargeBlockArmorHalfSlopeCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeCorner.dds",
     "Cost": {
-      "SteelPlate": 3
+      "SteelPlate": 2
     }
   },
   "SmallBlockArmorHalfSlopeCorner": {
@@ -1244,6 +1244,30 @@
       "Motor": 1,
       "Display": 1,
       "Computer": 2
+    }
+  },
+  "LargeTurretControlBlock": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\TurretControlBlockLarge.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 30,
+      "Detector": 20,
+      "Motor": 4,
+      "Display": 6,
+      "Computer": 20,
+      "SteelPlate": 20
+    }
+  },
+  "SmallTurretControlBlock": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\TurretControlBlockSmall.dds",
+    "Cost": {
+      "InteriorPlate": 4,
+      "Construction": 10,
+      "Detector": 4,
+      "Motor": 2,
+      "Display": 1,
+      "Computer": 10,
+      "SteelPlate": 4
     }
   },
   "LargeBlockRadioAntenna": {
@@ -2344,6 +2368,14 @@
       "Computer": 5
     }
   },
+  "VerticalButtonPanelSmall": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\VerticalButtonPanel.dds",
+    "Cost": {
+      "InteriorPlate": 5,
+      "Construction": 10,
+      "Computer": 5
+    }
+  },
   "LargeBlockConveyorPipeSeamless": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\PipeSeamless.dds",
     "Cost": {
@@ -2717,6 +2749,20 @@
     }
   },
   "PassengerSeatSmall": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\PassengerSeat.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 20
+    }
+  },
+  "PassengerSeatSmallNew": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\PassengerSeat.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 20
+    }
+  },
+  "PassengerSeatSmallOffset": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\PassengerSeat.dds",
     "Cost": {
       "InteriorPlate": 20,
@@ -3184,9 +3230,9 @@
   "SmallShipConveyorHub": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Conveyor.dds",
     "Cost": {
-      "InteriorPlate": 25,
-      "Construction": 45,
-      "SmallTube": 25,
+      "InteriorPlate": 15,
+      "Construction": 20,
+      "SmallTube": 15,
       "Motor": 2
     }
   },
@@ -3713,41 +3759,41 @@
   "OffroadSmallRealWheel": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3_RacingRight.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "OffroadSmallRealWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5_RacingRight.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "OffroadRealWheel1x1": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension1x1_RacingRight.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "OffroadRealWheel": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3_RacingRight.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "OffroadRealWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5_RacingRight.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "OffroadSmallRealWheel1x1mirrored": {
@@ -3761,49 +3807,49 @@
   "OffroadSmallRealWheelmirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3_RacingLeft.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "OffroadSmallRealWheel5x5mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5_RacingLeft.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "OffroadRealWheel1x1mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension1x1_RacingLeft.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "OffroadRealWheelmirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3_RacingLeft.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "OffroadRealWheel5x5mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5_RacingLeft.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "OffroadWheel1x1": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel1x1_Racing.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "OffroadSmallWheel1x1": {
@@ -3817,33 +3863,33 @@
   "OffroadWheel3x3": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel3x3_Racing.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "OffroadSmallWheel3x3": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel3x3_Racing.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "OffroadWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel5x5_Racing.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "OffroadSmallWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel5x5_Racing.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "OffsetLight": {
@@ -5120,6 +5166,284 @@
       "SmallTube": 38
     }
   },
+  "BridgeWindow1x1Slope": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\BridgeWindow1x1Slope.dds",
+    "Cost": {
+      "Girder": 8,
+      "SteelPlate": 5,
+      "InteriorPlate": 10,
+      "BulletproofGlass": 25
+    }
+  },
+  "BridgeWindow1x1Face": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\BridgeWindow1x1Face.dds",
+    "Cost": {
+      "Girder": 8,
+      "SteelPlate": 2,
+      "InteriorPlate": 4,
+      "BulletproofGlass": 18
+    }
+  },
+  "PassengerBench": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\PassengerBench.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 20
+    }
+  },
+  "LargeLightPanel": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightPanel.dds",
+    "Cost": {
+      "Construction": 10,
+      "InteriorPlate": 5
+    }
+  },
+  "SmallLightPanel": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightPanel.dds",
+    "Cost": {
+      "Construction": 2,
+      "InteriorPlate": 1
+    }
+  },
+  "LargeBlockSmallGeneratorWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\ReactorReskinSmall.dds",
+    "Cost": {
+      "SteelPlate": 80,
+      "Construction": 40,
+      "MetalGrid": 4,
+      "LargeTube": 8,
+      "Reactor": 100,
+      "Motor": 6,
+      "Computer": 25
+    }
+  },
+  "LargeBlockLargeGeneratorWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\ReactorReskinLarge.dds",
+    "Cost": {
+      "SteelPlate": 1000,
+      "Construction": 70,
+      "MetalGrid": 40,
+      "LargeTube": 40,
+      "Superconductor": 100,
+      "Reactor": 2000,
+      "Motor": 20,
+      "Computer": 75
+    }
+  },
+  "SmallBlockSmallGeneratorWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SmallGridReactorReskinSmall.dds",
+    "Cost": {
+      "SteelPlate": 3,
+      "Construction": 10,
+      "MetalGrid": 2,
+      "LargeTube": 1,
+      "Reactor": 3,
+      "Motor": 1,
+      "Computer": 10
+    }
+  },
+  "SmallBlockLargeGeneratorWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SmallGridReactorReskinLarge.dds",
+    "Cost": {
+      "SteelPlate": 60,
+      "Construction": 9,
+      "MetalGrid": 9,
+      "LargeTube": 3,
+      "Reactor": 95,
+      "Motor": 5,
+      "Computer": 25
+    }
+  },
+  "AirtightHangarDoorWarfare2A": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HangarDoorWarfareA_Base.dds",
+    "Cost": {
+      "SteelPlate": 350,
+      "Construction": 40,
+      "SmallTube": 40,
+      "Motor": 16,
+      "Computer": 2
+    }
+  },
+  "AirtightHangarDoorWarfare2B": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HangarDoorWarfareB_Base.dds",
+    "Cost": {
+      "SteelPlate": 350,
+      "Construction": 40,
+      "SmallTube": 40,
+      "Motor": 16,
+      "Computer": 2
+    }
+  },
+  "AirtightHangarDoorWarfare2C": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HangarDoorWarfareC_Base.dds",
+    "Cost": {
+      "SteelPlate": 350,
+      "Construction": 40,
+      "SmallTube": 40,
+      "Motor": 16,
+      "Computer": 2
+    }
+  },
+  "SmallMissileLauncherWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\RocketlauncherReskin.dds",
+    "Cost": {
+      "SteelPlate": 4,
+      "Construction": 2,
+      "MetalGrid": 1,
+      "LargeTube": 4,
+      "Motor": 1,
+      "Computer": 1
+    }
+  },
+  "SmallGatlingGunWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\gatlingGunReskin.dds",
+    "Cost": {
+      "SteelPlate": 4,
+      "Construction": 1,
+      "MetalGrid": 2,
+      "SmallTube": 6,
+      "Motor": 1,
+      "Computer": 1
+    }
+  },
+  "LargeBlockBatteryBlockWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\BatteryReskin.dds",
+    "Cost": {
+      "SteelPlate": 80,
+      "Construction": 30,
+      "PowerCell": 80,
+      "Computer": 25
+    }
+  },
+  "SmallBlockBatteryBlockWarfare2": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\BatteryReskin_Small.dds",
+    "Cost": {
+      "SteelPlate": 25,
+      "Construction": 5,
+      "PowerCell": 20,
+      "Computer": 2
+    }
+  },
+  "SlidingHatchDoor": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HatchDoor.dds",
+    "Cost": {
+      "SteelPlate": 40,
+      "Construction": 50,
+      "SmallTube": 10,
+      "Motor": 4,
+      "Display": 2,
+      "Computer": 2,
+      "BulletproofGlass": 10
+    }
+  },
+  "SlidingHatchDoorHalf": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HatchDoorHalf.dds",
+    "Cost": {
+      "SteelPlate": 30,
+      "Construction": 50,
+      "SmallTube": 10,
+      "Motor": 4,
+      "Display": 2,
+      "Computer": 2,
+      "BulletproofGlass": 10
+    }
+  },
+  "SmallSearchlight": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\Small_Searchlight_Racing.dds",
+    "Cost": {
+      "SteelPlate": 1,
+      "Construction": 3,
+      "LargeTube": 1,
+      "Motor": 2,
+      "Computer": 5,
+      "BulletproofGlass": 2
+    }
+  },
+  "LargeSearchlight": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\Large_Searchlight_Racing.dds",
+    "Cost": {
+      "SteelPlate": 5,
+      "Construction": 20,
+      "LargeTube": 2,
+      "Motor": 4,
+      "Computer": 5,
+      "BulletproofGlass": 4
+    }
+  },
+  "LargeHeatVentBlock": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeatVent.dds",
+    "Cost": {
+      "SteelPlate": 25,
+      "Construction": 20,
+      "LargeTube": 10,
+      "Motor": 5
+    }
+  },
+  "SmallHeatVentBlock": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeatVent_small.dds",
+    "Cost": {
+      "SteelPlate": 2,
+      "Construction": 1,
+      "LargeTube": 1,
+      "Motor": 1
+    }
+  },
+  "SmallBlockStandingCockpit": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\StandingBridge.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 20,
+      "Motor": 1,
+      "Computer": 20,
+      "Display": 2
+    }
+  },
+  "LargeBlockStandingCockpit": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\StandingBridge.dds",
+    "Cost": {
+      "InteriorPlate": 20,
+      "Construction": 20,
+      "Motor": 1,
+      "Computer": 20,
+      "Display": 2
+    }
+  },
+  "SmallBlockSmallModularThruster": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SmallGridModularIonThrusterSmall.dds",
+    "Cost": {
+      "SteelPlate": 2,
+      "Construction": 2,
+      "LargeTube": 1,
+      "Thrust": 1
+    }
+  },
+  "SmallBlockLargeModularThruster": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SmallGridModularIonThrusterLarge.dds",
+    "Cost": {
+      "SteelPlate": 5,
+      "Construction": 2,
+      "LargeTube": 5,
+      "Thrust": 12
+    }
+  },
+  "LargeBlockSmallModularThruster": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\LargeGridModularIonThrusterSmall.dds",
+    "Cost": {
+      "SteelPlate": 25,
+      "Construction": 60,
+      "LargeTube": 8,
+      "Thrust": 80
+    }
+  },
+  "LargeBlockLargeModularThruster": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\LargeGridModularIonThrusterLarge.dds",
+    "Cost": {
+      "SteelPlate": 150,
+      "Construction": 100,
+      "LargeTube": 40,
+      "Thrust": 960
+    }
+  },
   "LargeWarhead": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\warhead.dds",
     "Cost": {
@@ -5165,8 +5489,8 @@
   "LargeGatlingTurret": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\gatling_turret.dds",
     "Cost": {
-      "SteelPlate": 20,
-      "Construction": 30,
+      "SteelPlate": 40,
+      "Construction": 40,
       "MetalGrid": 15,
       "SmallTube": 6,
       "Motor": 8,
@@ -5176,7 +5500,7 @@
   "SmallGatlingTurret": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\gatling_turret.dds",
     "Cost": {
-      "SteelPlate": 10,
+      "SteelPlate": 15,
       "Construction": 30,
       "MetalGrid": 5,
       "SmallTube": 6,
@@ -5187,23 +5511,23 @@
   "LargeMissileTurret": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\missile_turret.dds",
     "Cost": {
-      "SteelPlate": 20,
-      "Construction": 40,
-      "MetalGrid": 5,
+      "SteelPlate": 40,
+      "Construction": 50,
+      "MetalGrid": 15,
       "LargeTube": 6,
       "Motor": 16,
-      "Computer": 12
+      "Computer": 10
     }
   },
   "SmallMissileTurret": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\missile_turret.dds",
     "Cost": {
-      "SteelPlate": 10,
+      "SteelPlate": 15,
       "Construction": 40,
-      "MetalGrid": 2,
+      "MetalGrid": 5,
       "LargeTube": 2,
       "Motor": 8,
-      "Computer": 12
+      "Computer": 10
     }
   },
   "LargeInteriorTurret": {
@@ -5261,6 +5585,103 @@
       "SmallTube": 6,
       "Motor": 1,
       "Computer": 1
+    }
+  },
+  "SmallBlockAutocannon": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\AutoCannon.dds",
+    "Cost": {
+      "SteelPlate": 6,
+      "Construction": 2,
+      "MetalGrid": 2,
+      "SmallTube": 2,
+      "Motor": 1,
+      "Computer": 1
+    }
+  },
+  "SmallBlockMediumCalibreGun": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\MediumCaliberGun.dds",
+    "Cost": {
+      "SteelPlate": 25,
+      "Construction": 10,
+      "MetalGrid": 5,
+      "LargeTube": 10,
+      "Computer": 1
+    }
+  },
+  "LargeBlockLargeCalibreGun": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCalibreGun.dds",
+    "Cost": {
+      "SteelPlate": 250,
+      "Construction": 20,
+      "MetalGrid": 20,
+      "LargeTube": 20,
+      "Computer": 5
+    }
+  },
+  "LargeRailgun": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\RailGun.dds",
+    "Cost": {
+      "SteelPlate": 350,
+      "Construction": 150,
+      "Superconductor": 150,
+      "LargeTube": 60,
+      "PowerCell": 100,
+      "Computer": 100
+    }
+  },
+  "SmallRailgun": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\RailGun.dds",
+    "Cost": {
+      "SteelPlate": 25,
+      "Construction": 20,
+      "Superconductor": 20,
+      "LargeTube": 6,
+      "PowerCell": 10,
+      "Computer": 20
+    }
+  },
+  "LargeCalibreTurret": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCalibreTurret.dds",
+    "Cost": {
+      "SteelPlate": 450,
+      "Construction": 400,
+      "MetalGrid": 50,
+      "LargeTube": 40,
+      "Motor": 30,
+      "Computer": 20
+    }
+  },
+  "LargeBlockMediumCalibreTurret": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\MediumCalibreTurretLarge.dds",
+    "Cost": {
+      "SteelPlate": 300,
+      "Construction": 280,
+      "MetalGrid": 30,
+      "LargeTube": 30,
+      "Motor": 20,
+      "Computer": 20
+    }
+  },
+  "SmallBlockMediumCalibreTurret": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\MediumCalibreTurret_Small.dds",
+    "Cost": {
+      "SteelPlate": 50,
+      "Construction": 100,
+      "MetalGrid": 10,
+      "LargeTube": 6,
+      "Motor": 10,
+      "Computer": 20
+    }
+  },
+  "AutoCannonTurret": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\AutocannonTurret_icon.dds",
+    "Cost": {
+      "SteelPlate": 20,
+      "Construction": 40,
+      "MetalGrid": 6,
+      "SmallTube": 4,
+      "Motor": 4,
+      "Computer": 10
     }
   },
   "Suspension3x3": {
@@ -5388,41 +5809,41 @@
   "SmallRealWheel": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3Right.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "SmallRealWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5Right.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "RealWheel1x1": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension1x1Right.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "RealWheel": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3Right.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "RealWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5Right.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "SmallRealWheel1x1mirrored": {
@@ -5436,49 +5857,49 @@
   "SmallRealWheelmirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3Left.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "SmallRealWheel5x5mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5Left.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "RealWheel1x1mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension1x1Left.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "RealWheelmirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension3x3Left.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "RealWheel5x5mirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\WheelSuspension5x5Left.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "Wheel1x1": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel1x1.dds",
     "Cost": {
-      "SteelPlate": 8,
-      "Construction": 20,
-      "LargeTube": 4
+      "SteelPlate": 30,
+      "Construction": 30,
+      "LargeTube": 10
     }
   },
   "SmallWheel1x1": {
@@ -5492,33 +5913,33 @@
   "Wheel3x3": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel3x3.dds",
     "Cost": {
-      "SteelPlate": 12,
-      "Construction": 25,
-      "LargeTube": 6
+      "SteelPlate": 70,
+      "Construction": 50,
+      "LargeTube": 20
     }
   },
   "SmallWheel3x3": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel3x3.dds",
     "Cost": {
-      "SteelPlate": 5,
-      "Construction": 10,
-      "LargeTube": 1
+      "SteelPlate": 8,
+      "Construction": 15,
+      "LargeTube": 3
     }
   },
   "Wheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel5x5.dds",
     "Cost": {
-      "SteelPlate": 16,
-      "Construction": 30,
-      "LargeTube": 8
+      "SteelPlate": 130,
+      "Construction": 70,
+      "LargeTube": 30
     }
   },
   "SmallWheel5x5": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Wheel5x5.dds",
     "Cost": {
-      "SteelPlate": 7,
-      "Construction": 15,
-      "LargeTube": 2
+      "SteelPlate": 15,
+      "Construction": 25,
+      "LargeTube": 5
     }
   },
   "LargeWindowSquare": {

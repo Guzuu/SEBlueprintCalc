@@ -81,6 +81,7 @@
       <HintPath>packages\Pfim.0.10.2\lib\netstandard2.0\Pfim.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />

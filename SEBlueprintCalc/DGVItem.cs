@@ -21,10 +21,10 @@ namespace SEBlueprintCalc
         {
             this.Name = Name;
             this.Count = Count;
-            this.Icon = Convert(path);
+            this.Icon = Convert(path, 100);
         }
 
-        public static Bitmap Convert(string path)
+        public static Bitmap Convert(string path, int size)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace SEBlueprintCalc
                     {
                         var data = Marshal.UnsafeAddrOfPinnedArrayElement(image.Data, 0);
                         var bitmap = new Bitmap(image.Width, image.Height, image.Stride, format, data);
-                        return new Bitmap(bitmap, new Size(50, 50));
+                        return new Bitmap(bitmap, new Size(size, size));
                     }
                     finally
                     {
