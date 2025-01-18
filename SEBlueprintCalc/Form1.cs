@@ -112,7 +112,7 @@ namespace SEBlueprintCalc
                     MessageBox.Show("Set space engineers game directory location");
                     button2_Click(sender, e);
                 }
-                else MessageBox.Show(ex.Message);
+                else MessageBox.Show(ex.Message, "Error");
                 return;
             }
         }
@@ -163,16 +163,33 @@ namespace SEBlueprintCalc
             foreach (XmlNode section in compSections)
             {
                 var compName = "";
+                var prototech = false;
                 var comp = section.SelectSingleNode(".//Result");
                 if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
                 compName = comp.Attributes["SubtypeId"]?.Value ?? "";
                 var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
+
+                //Fix, for a SE blueprints.sbc file containing wrong icon path for prototech frame recipe
+                if (compName == "PrototechFrame" && IconPath.Substring(IconPath.LastIndexOf('\\') + 1) == "PrototechPanel_Component.dds")
+                {
+                    IconPath = IconPath.Substring(0, IconPath.LastIndexOf('\\') + 1) + "PrototechFrame.dds";
+                }
+                if (compName.Contains("Prototech"))
+                {
+                    prototech = true;
+                }
+
                 var ingots = section.SelectNodes(".//Prerequisites/Item");
                 foreach (XmlElement ingot in ingots)
                 {
                     var ingotName = ingot.GetAttribute("SubtypeId"); //+ " " + ingot.GetAttribute("TypeId");
                     float.TryParse(ingot.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out ingotCount);
-                    ingotCount /= 3;
+
+                    //For some reason in files - recipe for standard blocks are exactly three times that we see in game. Why i dont know but to make matters worse, Newly added ProtoTech is NOT done the same way.
+                    if (!prototech)
+                    {
+                        ingotCount /= 3;
+                    }
 
                     if (ingotDict.ContainsKey(ingotName)) ingotDict[ingotName] += ingotCount;
                     else ingotDict.Add(ingotName, ingotCount);
@@ -198,10 +215,17 @@ namespace SEBlueprintCalc
             {
                 var ingotName = "";
                 var ingot = section.SelectSingleNode(".//Prerequisites/Item");
-                if (ingot == null || ingot.Attributes["TypeId"].Value != "Ore") continue;
+                if (ingot == null || ingot.Attributes["TypeId"].Value != "Ore" && ingot.Attributes["SubtypeId"].Value != "PrototechScrap") continue;
                 ingotName = ingot.Attributes["SubtypeId"]?.Value ?? "";
                 //ingotName += " Ingot";
+
                 var IconPath = section.SelectSingleNode(".//Icon")?.InnerText ?? "";
+
+                //Fix, for a SE blueprints.sbc file containing wrong icon path for prototech scrap recipe
+                if (ingotName == "PrototechScrap" && IconPath.Substring(IconPath.LastIndexOf('\\') + 1) == "PrototechPanel_Component.dds")
+                {
+                    IconPath = IconPath.Substring(0, IconPath.LastIndexOf('\\') + 1) + "ScrapPrototechComponent.dds";
+                }
 
                 if (ingotName == "Stone" && !ingotDict.ContainsKey("Stone"))
                 {
@@ -213,7 +237,8 @@ namespace SEBlueprintCalc
                 var ores = section.SelectNodes(".//Result");
                 foreach (XmlElement ore in ores)
                 {
-                    var oreName = ore.GetAttribute("SubtypeId") + " Ore";
+                    var oreName = ore.GetAttribute("SubtypeId");
+                    if (oreName != "PrototechScrap") oreName +=" Ore";
                     float.TryParse(ore.GetAttribute("Amount"), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out oreCount);
 
                     if (oreDict.ContainsKey(oreName)) continue;
@@ -291,12 +316,12 @@ namespace SEBlueprintCalc
 
             foreach (var bpComp in bpComps)
             {
-                if (bpComp.Name == "ZoneChip") continue;
+                if (bpComp.Name == "ZoneChip" || bpComp.Name == "PrototechFrame") continue;
                 foreach (var ingot in compDict[bpComp.Name])
                 {
                     DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
-                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath + iconPaths[ingot.Key]));
+                    else ingots.Add(new DGVItem<float>(ingot.Key, ingot.Value * bpComp.Count, partialPath + iconPaths[ingot.Key])); //+ iconPaths[ingot.Key]
                 }
             }
             return ingots;

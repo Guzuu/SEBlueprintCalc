@@ -70,5 +70,11 @@
     "Cost": {
       "Stone Ore": 0.9
     }
+  },
+  "PrototechScrap": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\ScrapPrototechComponent.dds",
+    "Cost": {
+      "PrototechScrap": 1.0
+    }
   }
 }

@@ -118,13 +118,6 @@
       "Nickel": 5.0
     }
   },
-  "Canvas": {
-    "IconPath": "Textures\\GUI\\Icons\\component\\Cartridge_Icon.dds",
-    "Cost": {
-      "Silicon": 11.666667,
-      "Iron": 0.6666667
-    }
-  },
   "Explosives": {
     "IconPath": "Textures\\GUI\\Icons\\component\\ExplosivesComponent.dds",
     "Cost": {
@@ -154,10 +147,93 @@
       "Gold": 0.6666667
     }
   },
+  "Canvas": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\Cartridge_Icon.dds",
+    "Cost": {
+      "Silicon": 11.666667,
+      "Iron": 0.6666667
+    }
+  },
   "ZoneChip": {
     "IconPath": "Textures\\GUI\\Icons\\Items\\ZoneChip_Item.dds",
     "Cost": {
       "ZoneChip": 0.333333343
+    }
+  },
+  "EngineerPlushie": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\Plushie.dds",
+    "Cost": {
+      "EngineerPlushie": 0.0
+    }
+  },
+  "SabiroidPlushie": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SabiroidPlushie.dds",
+    "Cost": {
+      "SabiroidPlushie": 0.0
+    }
+  },
+  "PrototechFrame": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechFrame.dds",
+    "Cost": {
+      "PrototechFrame": 1.0
+    }
+  },
+  "PrototechPanel": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechPanel_Component.dds",
+    "Cost": {
+      "Iron": 35.0,
+      "Nickel": 7.0,
+      "Cobalt": 3.0,
+      "Magnesium": 4.0
+    }
+  },
+  "PrototechCapacitor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechCapacitor_Component.dds",
+    "Cost": {
+      "Iron": 12.0,
+      "Silicon": 4.0,
+      "Silver": 3.0,
+      "Gold": 6.0,
+      "PrototechScrap": 1.5
+    }
+  },
+  "PrototechPropulsionUnit": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechThrusterComponent.dds",
+    "Cost": {
+      "Iron": 60.0,
+      "Cobalt": 24.0,
+      "Gold": 6.0,
+      "Platinum": 3.0,
+      "PrototechScrap": 1.25
+    }
+  },
+  "PrototechMachinery": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechMachinery_Icon.dds",
+    "Cost": {
+      "Iron": 45.0,
+      "Nickel": 12.0,
+      "Silicon": 7.0,
+      "Gold": 3.0,
+      "PrototechScrap": 1.15
+    }
+  },
+  "PrototechCircuitry": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\prototech_circuitry_component.dds",
+    "Cost": {
+      "Iron": 5.0,
+      "Silicon": 8.0,
+      "Gold": 2.0,
+      "Platinum": 1.5,
+      "PrototechScrap": 1.75
+    }
+  },
+  "PrototechCoolingUnit": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechCoolingUnit.dds",
+    "Cost": {
+      "Iron": 80.0,
+      "Gold": 12.0,
+      "Platinum": 3.25,
+      "PrototechScrap": 2.5
     }
   }
 }
