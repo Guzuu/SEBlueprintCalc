@@ -1,0 +1,239 @@
+{
+  "Construction": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\construction_components_component.dds",
+    "Cost": {
+      "Iron": 2.66666675
+    }
+  },
+  "Girder": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\girder_component.dds",
+    "Cost": {
+      "Iron": 2.0
+    }
+  },
+  "MetalGrid": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\metal_grid_component.dds",
+    "Cost": {
+      "Iron": 4.0,
+      "Nickel": 1.66666663,
+      "Cobalt": 1.0
+    }
+  },
+  "InteriorPlate": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\interior_plate_component.dds",
+    "Cost": {
+      "Iron": 1.0
+    }
+  },
+  "SteelPlate": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\steel_plate_component.dds",
+    "Cost": {
+      "Iron": 7.0
+    }
+  },
+  "SmallTube": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\small_tube_component.dds",
+    "Cost": {
+      "Iron": 1.66666663
+    }
+  },
+  "LargeTube": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\large_tube_component.dds",
+    "Cost": {
+      "Iron": 10.0
+    }
+  },
+  "Motor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\motor_component.dds",
+    "Cost": {
+      "Iron": 6.66666651,
+      "Nickel": 1.66666663
+    }
+  },
+  "Display": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\display_component.dds",
+    "Cost": {
+      "Iron": 0.333333343,
+      "Silicon": 1.66666663
+    }
+  },
+  "BulletproofGlass": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\bulletproof_glass_component.dds",
+    "Cost": {
+      "Silicon": 5.0
+    }
+  },
+  "Computer": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\computer_component.dds",
+    "Cost": {
+      "Iron": 0.166666672,
+      "Silicon": 0.06666667
+    }
+  },
+  "Reactor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\reactor_components_component.dds",
+    "Cost": {
+      "Iron": 5.0,
+      "Stone": 6.66666651,
+      "Silver": 1.66666663
+    }
+  },
+  "Thrust": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\thrust_components_component.dds",
+    "Cost": {
+      "Iron": 10.0,
+      "Cobalt": 3.33333325,
+      "Gold": 0.333333343,
+      "Platinum": 0.13333334
+    }
+  },
+  "GravityGenerator": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\gravity_generator_components_component.dds",
+    "Cost": {
+      "Silver": 1.66666663,
+      "Gold": 3.33333325,
+      "Cobalt": 73.3333359,
+      "Iron": 200.0
+    }
+  },
+  "Medical": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\medical_components_component.dds",
+    "Cost": {
+      "Iron": 20.0,
+      "Nickel": 23.333334,
+      "Silver": 6.66666651
+    }
+  },
+  "RadioCommunication": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\radio_communication_components_component.dds",
+    "Cost": {
+      "Iron": 2.66666675,
+      "Silicon": 0.333333343
+    }
+  },
+  "Detector": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\detector_components_component.dds",
+    "Cost": {
+      "Iron": 1.66666663,
+      "Nickel": 5.0
+    }
+  },
+  "Explosives": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\ExplosivesComponent.dds",
+    "Cost": {
+      "Silicon": 0.166666672,
+      "Magnesium": 0.6666667
+    }
+  },
+  "SolarCell": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\SolarCellComponent.dds",
+    "Cost": {
+      "Nickel": 1.0,
+      "Silicon": 2.0
+    }
+  },
+  "PowerCell": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\BatteryComponent.dds",
+    "Cost": {
+      "Iron": 3.33333325,
+      "Silicon": 0.333333343,
+      "Nickel": 0.6666667
+    }
+  },
+  "Superconductor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\superconductor_conducts_component.dds",
+    "Cost": {
+      "Iron": 3.33333325,
+      "Gold": 0.6666667
+    }
+  },
+  "Canvas": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\Cartridge_Icon.dds",
+    "Cost": {
+      "Silicon": 11.666667,
+      "Iron": 0.6666667
+    }
+  },
+  "ZoneChip": {
+    "IconPath": "Textures\\GUI\\Icons\\Items\\ZoneChip_Item.dds",
+    "Cost": {
+      "ZoneChip": 0.333333343
+    }
+  },
+  "EngineerPlushie": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\Plushie.dds",
+    "Cost": {
+      "EngineerPlushie": 0.0
+    }
+  },
+  "SabiroidPlushie": {
+    "IconPath": "Textures\\GUI\\Icons\\Cubes\\SabiroidPlushie.dds",
+    "Cost": {
+      "SabiroidPlushie": 0.0
+    }
+  },
+  "PrototechFrame": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechFrame.dds",
+    "Cost": {
+      "PrototechFrame": 1.0
+    }
+  },
+  "PrototechPanel": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechPanel_Component.dds",
+    "Cost": {
+      "Iron": 35.0,
+      "Nickel": 7.0,
+      "Cobalt": 3.0,
+      "Magnesium": 4.0
+    }
+  },
+  "PrototechCapacitor": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechCapacitor_Component.dds",
+    "Cost": {
+      "Iron": 12.0,
+      "Silicon": 4.0,
+      "Silver": 3.0,
+      "Gold": 6.0,
+      "PrototechScrap": 1.5
+    }
+  },
+  "PrototechPropulsionUnit": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechThrusterComponent.dds",
+    "Cost": {
+      "Iron": 60.0,
+      "Cobalt": 24.0,
+      "Gold": 6.0,
+      "Platinum": 3.0,
+      "PrototechScrap": 1.25
+    }
+  },
+  "PrototechMachinery": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechMachinery_Icon.dds",
+    "Cost": {
+      "Iron": 45.0,
+      "Nickel": 12.0,
+      "Silicon": 7.0,
+      "Gold": 3.0,
+      "PrototechScrap": 1.15
+    }
+  },
+  "PrototechCircuitry": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\prototech_circuitry_component.dds",
+    "Cost": {
+      "Iron": 5.0,
+      "Silicon": 8.0,
+      "Gold": 2.0,
+      "Platinum": 1.5,
+      "PrototechScrap": 1.75
+    }
+  },
+  "PrototechCoolingUnit": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\PrototechCoolingUnit.dds",
+    "Cost": {
+      "Iron": 80.0,
+      "Gold": 12.0,
+      "Platinum": 3.25,
+      "PrototechScrap": 2.5
+    }
+  }
+}

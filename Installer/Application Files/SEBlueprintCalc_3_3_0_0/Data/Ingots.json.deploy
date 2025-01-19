@@ -1,0 +1,80 @@
+{
+  "Stone": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\ingot_class.dds",
+    "Cost": {
+      "Stone": 1.0
+    }
+  },
+  "Iron": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\iron_ingot.dds",
+    "Cost": {
+      "Iron Ore": 0.7
+    }
+  },
+  "Nickel": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\nickel_ingot.dds",
+    "Cost": {
+      "Nickel Ore": 0.4
+    }
+  },
+  "Cobalt": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\cobalt_ingot.dds",
+    "Cost": {
+      "Cobalt Ore": 0.3
+    }
+  },
+  "Magnesium": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\magnesium_ingot.dds",
+    "Cost": {
+      "Magnesium Ore": 0.007
+    }
+  },
+  "Silicon": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\silicon_ingot.dds",
+    "Cost": {
+      "Silicon Ore": 0.7
+    }
+  },
+  "Silver": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\silver_ingot.dds",
+    "Cost": {
+      "Silver Ore": 0.1
+    }
+  },
+  "Gold": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\gold_ingot.dds",
+    "Cost": {
+      "Gold Ore": 0.01
+    }
+  },
+  "Platinum": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\platinum_ingot.dds",
+    "Cost": {
+      "Platinum Ore": 0.005
+    }
+  },
+  "Uranium": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\uranium_ingot.dds",
+    "Cost": {
+      "Uranium Ore": 0.01
+    }
+  },
+  "Scrap": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\ScrapMetalComponent.dds",
+    "Cost": {
+      "Iron Ore": 0.8
+    }
+  },
+  "Ice": {
+    "IconPath": "Textures\\GUI\\Icons\\ingot\\gravel_ingot.dds",
+    "Cost": {
+      "Stone Ore": 0.9
+    }
+  },
+  "PrototechScrap": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\ScrapPrototechComponent.dds",
+    "Cost": {
+      "PrototechScrap": 1.0
+    }
+  }
+}
