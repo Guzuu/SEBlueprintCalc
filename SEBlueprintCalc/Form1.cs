@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
 using System.Configuration;
+using System.Diagnostics;
 
 namespace SEBlueprintCalc
 {
@@ -42,8 +43,9 @@ namespace SEBlueprintCalc
             dataGridView1.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
             dataGridView2.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
             dataGridView3.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
-            textBox3.Text = rowHeight.ToString();
-            textBox2.Text = fontSize.ToString();
+            numericUpDown2.Value = rowHeight;
+            numericUpDown1.Value = (decimal)fontSize;
+            richTextBox1.LinkClicked += RichTextBox_LinkClicked;
         }
 
         public string rootDir = "../"; //Directory.GetCurrentDirectory();
@@ -55,65 +57,84 @@ namespace SEBlueprintCalc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.FileName = ".sbc file";
-            openFileDialog1.ShowDialog();
-
-            try
+            openFileDialog1 = new OpenFileDialog
             {
-                var bpFile = File.ReadAllText(openFileDialog1.FileName);
-                var path = Path.GetDirectoryName(openFileDialog1.FileName);
-                if (File.Exists(path + "\\thumb.png"))
-                {
-                    pictureBox1.Image = Image.FromFile(path + "\\thumb.png");
-                    label1.Text = Path.GetFileName(path);
-                }
-                else
-                {
-                    pictureBox1.Image = null;
-                    label1.Text = "Blueprint";
-                }
-                bpBlocks = readXMLBlueprintBlocks(bpFile);
-                bpComps = getComponents(bpBlocks);
-                bpIngots = getIngots(bpComps);
+                Filter = "Space Engineers Blueprint Files (*.sbc)|*.sbc|All Files (*.*)|*.*",
+                Title = "Select a .sbc File",
+                DefaultExt = "sbc",
+            };
 
-                dataGridView2.DataSource = bpBlocks;
-                dataGridView1.DataSource = bpComps;
-                dataGridView3.DataSource = bpIngots;
-                ((DataGridViewImageColumn)dataGridView1.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-                ((DataGridViewImageColumn)dataGridView2.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-                ((DataGridViewImageColumn)dataGridView3.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-
-                dataGridView2.Columns[0].FillWeight = 100;
-                dataGridView2.Columns[1].FillWeight = 350;
-                dataGridView2.Columns[2].FillWeight = 100;
-                dataGridView1.Columns[0].FillWeight = 100;
-                dataGridView1.Columns[1].FillWeight = 300;
-                dataGridView1.Columns[2].FillWeight = 150;
-                dataGridView3.Columns[0].FillWeight = 100;
-                dataGridView3.Columns[1].FillWeight = 250;
-                dataGridView3.Columns[2].FillWeight = 200;
-
-                dataGridView2.Columns[1].HeaderText = "Block name";
-                dataGridView1.Columns[1].HeaderText = "Component name";
-                dataGridView3.Columns[1].HeaderText = "Ingot name";
+            // Set default path
+            string defaultPath = Environment.ExpandEnvironmentVariables("%appdata%\\SpaceEngineers\\Blueprints\\local");
+            if (Directory.Exists(defaultPath))
+            {
+                openFileDialog1.InitialDirectory = defaultPath;
             }
-            catch (Exception ex)
+
+            // Show the dialog
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (ex is XmlException)
+                try
                 {
-                    MessageBox.Show("Make sure an .sbc file was selected");
+                    var bpFile = File.ReadAllText(openFileDialog1.FileName);
+                    var path = Path.GetDirectoryName(openFileDialog1.FileName);
+                    if (File.Exists(path + "\\thumb.png"))
+                    {
+                        pictureBox1.Image = Image.FromFile(path + "\\thumb.png");
+                        label1.Text = Path.GetFileName(path);
+                    }
+                    else
+                    {
+                        pictureBox1.Image = null;
+                        label1.Text = "Blueprint";
+                    }
+                    bpBlocks = readXMLBlueprintBlocks(bpFile);
+                    bpComps = getComponents(bpBlocks);
+                    bpIngots = getIngots(bpComps);
+
+                    dataGridView2.DataSource = bpBlocks;
+                    dataGridView1.DataSource = bpComps;
+                    dataGridView3.DataSource = bpIngots;
+                    ((DataGridViewImageColumn)dataGridView1.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+                    ((DataGridViewImageColumn)dataGridView2.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+                    ((DataGridViewImageColumn)dataGridView3.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+                    dataGridView2.Columns[0].FillWeight = 100;
+                    dataGridView2.Columns[1].FillWeight = 350;
+                    dataGridView2.Columns[2].FillWeight = 100;
+                    dataGridView1.Columns[0].FillWeight = 100;
+                    dataGridView1.Columns[1].FillWeight = 300;
+                    dataGridView1.Columns[2].FillWeight = 150;
+                    dataGridView3.Columns[0].FillWeight = 100;
+                    dataGridView3.Columns[1].FillWeight = 250;
+                    dataGridView3.Columns[2].FillWeight = 200;
+
+                    dataGridView2.Columns[1].HeaderText = "Block name";
+                    dataGridView1.Columns[1].HeaderText = "Component name";
+                    dataGridView3.Columns[1].HeaderText = "Ingot name";
                 }
-                else if (ex is FileNotFoundException)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("File was not selected");
+                    if (ex is XmlException)
+                    {
+                        MessageBox.Show(this, "Make sure an .sbc file was selected", "Info");
+                    }
+                    else if (ex is FileNotFoundException)
+                    {
+                        MessageBox.Show(this, "File was not selected", "Info");
+                    }
+                    else if (ex.Message == "NullDirectory")
+                    {
+                        MessageBox.Show(this, "Set space engineers game directory location", "Warning");
+                        button2_Click(sender, e);
+                    }
+                    else MessageBox.Show(this, ex.Message, "Error");
+                    return;
                 }
-                else if (ex.Message == "NullDirectory")
-                {
-                    MessageBox.Show("Set space engineers game directory location");
-                    button2_Click(sender, e);
-                }
-                else MessageBox.Show(ex.Message, "Error");
-                return;
+            }
+            else
+            {
+                MessageBox.Show(this, "No file selected.", "Info");
             }
         }
 
@@ -281,7 +302,7 @@ namespace SEBlueprintCalc
                 if (foundBlock != null) foundBlock.Count++;
                 else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath + iconPaths[name]));
             }
-            if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
+            if (mod) MessageBox.Show(this, "Some unrecognized blocks have been ignored", "Warning");
             return bpBlocks;
         }
 
@@ -353,17 +374,17 @@ namespace SEBlueprintCalc
                 output = JsonConvert.SerializeObject(ingotDict, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(rootDir + "../Data/Ingots.json", output);
 
-                MessageBox.Show("Data updated");
+                MessageBox.Show(this, "Data updated", "Info");
             }
             catch (DirectoryNotFoundException)
             {
-                MessageBox.Show("Couldnt update data. Make sure your game directory setting is correct.");
+                MessageBox.Show(this, "Couldnt update data. Make sure your game directory setting is correct.", "Error");
             }
             catch (Exception ex)
             {
                 if (ex.Message == "NullDirectory")
                 {
-                    MessageBox.Show("Set space engineers game directory location");
+                    MessageBox.Show(this, "Set space engineers game directory location", "Warning");
                 }
             }
         }
@@ -441,7 +462,7 @@ namespace SEBlueprintCalc
             {
                 if (Directory.Exists(s + "/steamapps/common/SpaceEngineers"))
                 {
-                    MessageBox.Show("Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers");
+                    MessageBox.Show(this, "Detected SE game directory at: " + s + "\\steamapps\\common\\SpaceEngineers", "Info");
                     SaveDir(s + "/steamapps/common/SpaceEngineers");
                 }
                 else
@@ -456,7 +477,7 @@ namespace SEBlueprintCalc
                         {
                             if (Directory.Exists(subItem.Value + "/steamapps/common/SpaceEngineers"))
                             {
-                                MessageBox.Show("Detected SE game directory at: " + subItem.Value + "\\steamapps\\common\\SpaceEngineers");
+                                MessageBox.Show(this, "Detected SE game directory at: " + subItem.Value + "\\steamapps\\common\\SpaceEngineers", "Info");
                                 SaveDir(subItem.Value + "/steamapps/common/SpaceEngineers");
                                 break;
                             }
@@ -465,7 +486,7 @@ namespace SEBlueprintCalc
                 }
                 return;
             }
-            else MessageBox.Show("Couldnt detect steam directory, set SE location manually");
+            else MessageBox.Show(this, "Couldnt detect steam directory, set SE location manually", "Error");
             folderBrowserDialog1.ShowDialog();
             SaveDir(folderBrowserDialog1.SelectedPath);
         }
@@ -527,8 +548,10 @@ namespace SEBlueprintCalc
         private void button7_Click(object sender, EventArgs e)
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            if (textBox3.Text != "" && int.TryParse(textBox3.Text, out int rowHeight))
+            if (numericUpDown2.Value != 0)
             {
+                rowHeight = (int)numericUpDown2.Value;
+
                 dataGridView1.RowTemplate.Height = rowHeight;
                 dataGridView2.RowTemplate.Height = rowHeight;
                 dataGridView3.RowTemplate.Height = rowHeight;
@@ -551,8 +574,10 @@ namespace SEBlueprintCalc
                 }
                 else config.AppSettings.Settings.Add("RowHeight", rowHeight.ToString());
             }
-            if(textBox2.Text != "" && float.TryParse(textBox2.Text, out float fontSize))
+            if(numericUpDown1.Value != 0)
             {
+                fontSize = (int)numericUpDown1.Value;
+
                 dataGridView1.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
                 dataGridView2.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
                 dataGridView3.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
@@ -566,6 +591,20 @@ namespace SEBlueprintCalc
 
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        private void RichTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            try
+            {
+                // Open the link in the default browser
+                Process.Start(new ProcessStartInfo(e.LinkText) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                // Handle errors (e.g., invalid URL)
+                MessageBox.Show(this, $"Failed to open link: {ex.Message}", "Error");
+            }
         }
     }
 }
